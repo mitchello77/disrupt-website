@@ -4,16 +4,19 @@
   <div class="container">
 
     <div class="wrapper">
-      <div
-      class="profile circle small"
-      style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"
-      ></div>
 
-      <div class="slider circle large">
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-      </div> <!-- .slider -->
+      <div class="image">
+        <div
+        class="profile circle small"
+        style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"
+        ></div>
+
+        <div class="slider circle large">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+        </div> <!-- .slider -->
+      </div>
 
       <div class="text">
         <?php
