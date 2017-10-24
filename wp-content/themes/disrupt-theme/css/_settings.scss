@@ -1,0 +1,35 @@
+/* COLOURS
+---------------------------------------------------------------------------------------------------- */
+$white: #FFFFFF;
+$black: #000000;
+
+$primary: #FF5F09;
+$heading: $black;
+$paragraph: #647077;
+$input-text: #82939E;
+
+/* BACKGROUND */
+$background-light: #F6F8FA;
+$background-lighter: #EDF0F4;
+
+/* FOOTER */
+$footer-background: #222328;
+$footer-grey: #8A8E91;
+
+
+/* GRADIENTS
+---------------------------------------------------------------------------------------------------- */
+$gradient-rainbow: linear-gradient(-225deg, #1A2A6C 0%, #B21F1F 63%, #F58E3E 98%);
+$gradient-orange: linear-gradient(-45deg, #FF9916 0%, #FF5F09 100%);
+
+
+
+/* FONTS
+---------------------------------------------------------------------------------------------------- */
+$font-primary: "sofia-pro", arial, sans-serif;
+
+
+
+/* GRID
+---------------------------------------------------------------------------------------------------- */
+$column-gap: 3rem;

@@ -1,0 +1,14 @@
+{
+  "name": "wordpress-default",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-pipelog": "0.0.3",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglifycss": "^1.0.8"
+  }
+}
