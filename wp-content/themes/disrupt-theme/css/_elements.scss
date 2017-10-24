@@ -3,25 +3,21 @@
 h1 {
 	font-size: 6rem;
 	line-height: 6rem;
-	letter-spacing: 0;
 }
 
 h2 {
 	font-size: 3.4rem;
 	line-height: 4.6rem;
-	letter-spacing: 0;
 }
 
 h3 {
 	font-size: 2.4rem;
 	line-height: 3.3rem;
-	letter-spacing: 0;
 }
 
 h4 {
 	font-size: 2rem;
 	line-height: 2.8rem;
-	letter-spacing: 0;
 }
 
 p {
@@ -33,6 +29,10 @@ p {
 		font-size: 1.8rem;
 		line-height: 3.3rem;
 	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-heading;
 }
 
 // Ordered / Unordered List
