@@ -33,7 +33,13 @@ $gradient-orange: linear-gradient(-45deg, #FF9916 0%, #FF5F09 100%);
 
 /* FONTS
 ---------------------------------------------------------------------------------------------------- */
-$font-primary: "sofia-pro", arial, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Karla:100,400,700");
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
+
+$font-body: "Karla", arial, sans-serif;
+$font-heading: "Saira Condensed", arial, sans-serif;
+$font-nav: "Saira Condensed", arial, sans-serif;
+$font-title: "Futura", arial, sans-serif;
 
 
 
