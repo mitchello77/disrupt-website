@@ -16,7 +16,10 @@
 
             <div class="circle medium sam">
               <div class="graduate-name">
+                <h1>Samuel Dale</h1>
+                <h2>Samuel Dale</h2>
                 <h3>Samuel Dale</h3>
+                <h4>Samuel Dale</h4>
               </div>
 
               <div class="graduate-discipline">

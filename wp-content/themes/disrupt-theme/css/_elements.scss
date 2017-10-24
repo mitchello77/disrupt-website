@@ -3,36 +3,44 @@
 h1 {
 	font-size: 6rem;
 	line-height: 6rem;
+	letter-spacing: 0.5rem;
 }
 
 h2 {
 	font-size: 3.4rem;
 	line-height: 4.6rem;
+	letter-spacing: 0.35rem;
 }
 
 h3 {
 	font-size: 2.4rem;
 	line-height: 3.3rem;
+	letter-spacing: 0.2rem;
 }
 
 h4 {
 	font-size: 2rem;
 	line-height: 2.8rem;
+	letter-spacing: 0.15rem;
 }
 
 p {
 	font-size: 1.6rem;
-	line-height: 2.6rem;
+	line-height: 2;
 	letter-spacing: 0.04rem;
-
-	&:first-of-type {
-		font-size: 1.8rem;
-		line-height: 3.3rem;
-	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading;
+	text-transform: uppercase;
+}
+
+.title {
+	font-family: $font-title;
+}
+
+.disrupt-title {
+	font-weight: $font-disrupt;
 }
 
 // Ordered / Unordered List
