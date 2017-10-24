@@ -11,12 +11,17 @@
       flex: 1 1 50%;
       position: relative;
       padding-right: 2.5rem;
-      margin-bottom: -12.25rem;
+      margin-bottom: -12.5rem;
+
+      @media (max-width: 500px) {
+        margin-bottom: -8.75rem;
+      }
 
       .circle.large {
         margin: auto;
         position: relative;
         overflow: hidden;
+        box-shadow: 5px -5px 20px rgba($black, .4);
 
         .slider {
           height: 100%;
@@ -56,12 +61,39 @@
         transform: translateY(-50%);
         background-position: center;
         background-size: cover;
+        box-shadow: 5px -5px 20px rgba($black, .4);
+
+        @media (max-width: 500px) {
+          max-width: 17.5rem;
+        }
       }
     }
 
     .text {
       flex: 1 1 50%;
+      z-index: 10;
       padding-left: 2.5rem;
+
+      .caption {
+        margin-bottom: 1.25rem;
+        display: inline-block;
+        color: $magenta;
+      }
+
+      a {
+        display: inline-block;
+        color: $white;
+        font-size: 3.2rem;
+        margin-right: 1.5rem;
+
+        &:last-of-type {
+          margin: 0;
+        }
+
+        &:hover {
+          color: rgba($white, .6);
+        }
+      }
     }
 
     @media (max-width: 768px) {

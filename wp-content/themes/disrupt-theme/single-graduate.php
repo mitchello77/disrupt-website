@@ -31,6 +31,9 @@
             <h2>".get_the_title()."</h2>
             <p>".get_field('graduate_philosophy')."</p>
             <p>".get_field('graduate_description')."</p>
+            ".(get_field('graduate_linkedin') ? "<a href=\"".get_field('graduate_linkedin')."\"><i class=\"fab fa-linkedin-in\"></i></a>" : false)."
+            ".(get_field('graduate_instagram') ? "<a href=\"".get_field('graduate_instagram')."\"><i class=\"fab fa-instagram\"></i></a>" : false)."
+            ".(get_field('graduate_behance') ? "<a href=\"".get_field('graduate_behance')."\"><i class=\"fab fa-behance\"></i></a>" : false)."
           ";
 
          ?>
