@@ -14,9 +14,9 @@
 
           <div class="row">
 
-            <div class="circle-item medium sam">
+            <div class="circle medium sam">
               <div class="graduate-name">
-                Samuel Dale
+                <h3>Samuel Dale</h3>
               </div>
 
               <div class="graduate-discipline">
