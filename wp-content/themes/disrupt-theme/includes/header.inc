@@ -7,7 +7,7 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, minimal-ui, user-scalable=0'>
 	<?php
 		if (ENVIRONMENT !== 'live') {
-			echo "<meta name='robots' content='noindex, nofollow'>";
+			echo "<meta name='robots' content='noindex, nofollow'>";			
 		}
 	?>
 
