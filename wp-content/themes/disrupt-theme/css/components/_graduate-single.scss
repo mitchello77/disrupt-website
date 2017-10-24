@@ -7,5 +7,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    display: flex;
+    align-items: center;
+
+    .image {
+      flex: 1 1 50%;
+      margin-right: 10rem;
+    }
+
+    .text {
+      flex: 1 1 50%;      
+    }
   }
 }
