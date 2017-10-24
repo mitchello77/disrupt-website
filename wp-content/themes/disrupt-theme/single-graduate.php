@@ -7,7 +7,7 @@
 
       <div class="image">
         <div
-        class="profile circle small"
+        class="profile circle medium"
         style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"
         ></div>
 
