@@ -1,7 +1,14 @@
+/* STYLES */
 @import 'settings';
 @import 'tools';
 @import 'normalize';
 @import 'generic';
 @import 'elements';
 @import 'objects';
-@import 'components';
+
+
+/* COMPONENT STYLES */
+@import 'components/header';
+@import 'components/footer';
+@import 'components/graduates';
+@import 'components/graduate-single';
