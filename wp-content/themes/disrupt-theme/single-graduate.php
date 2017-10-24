@@ -12,17 +12,23 @@
         ></div>
 
         <div class="slider circle large">
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
+          <?php
+            foreach (get_field('graduate_slider') as  $slide) {
+              echo "<div class=\"slide\"></div>";
+            }
+          ?>
         </div> <!-- .slider -->
       </div>
 
       <div class="text">
         <?php
 
+          foreach (get_terms() as $i => $term) {
+            $terms .= ($i > 0 ? ', ' : '').$term->name;
+          }
+
           echo "
-            <span class=\"caption\">Interaction Designer</span>
+            <span class=\"caption\">".$terms."</span>
             <h2>".get_the_title()."</h2>
             <p>".get_field('graduate_philosophy')."</p>
             <p>".get_field('graduate_description')."</p>
