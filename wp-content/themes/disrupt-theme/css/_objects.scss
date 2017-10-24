@@ -8,6 +8,7 @@
 	background-color: $purple;
 	width: 100%;
 	max-width: 50rem;
+	position: relative;
 
 	&:after {
 		content: '';
@@ -29,7 +30,36 @@
 		width: 40rem;
 		height: 40rem;
 	}
+
+	&.background-image {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&.sam {
+		background-image: url('../img/sam.png');
+	}
 }
+
+.graduate-discipline {
+	position: absolute;
+	left: -5rem;
+	top: 1.5rem;
+	max-width: 25rem;
+	text-transform: uppercase;
+	color: $magenta;
+}
+
+.graduate-name {
+	position: absolute;
+	right: -5rem;
+	bottom: 1rem;
+	max-width: 25rem;
+	background: rgba(3, 12, 64, 0.6);
+	padding: 0 1rem;
+}
+
 
 
 /* CONTAINER

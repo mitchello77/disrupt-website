@@ -14,19 +14,13 @@
 
           <div class="row">
 
-            <div class="circle large sam">
-              <div class="graduate-name">
-                <h1>Samuel Dale</h1>
-                <h2>Samuel Dale</h2>
-                <h3>Samuel Dale</h3>
-                <h4>Samuel Dale</h4>
-                <span class="title">futura</span>
-                <span class="disrupt-title">disrupt</span>
-              </div>
-
+            <div class="circle background-image medium sam">
               <div class="graduate-discipline">
-                UI/UX Design
+                <p>UI/UX Design</p>
               </div>
+              <div class="graduate-name">
+                <h2>Samuel Dale</h1>
+              </div>          
             </div>
 
           </div>
