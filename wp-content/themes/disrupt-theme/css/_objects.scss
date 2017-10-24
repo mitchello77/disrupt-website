@@ -1,98 +1,20 @@
 /* OBJECTS - Class based selectors (Grid System, Wrapper)
 ---------------------------------------------------------------------------------------------------- */
 
-
-
-/* CARDS
+/* CONTAINER
 ---------------------------------------------------------------------------------------------------- */
-.card {
-	border-radius: 10px;
-	border: 1px solid #E3E8ED;
-	box-shadow: 10px 10px 20px 0 #D5DFE9;
+.container {
+	width: 100%;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;	
 }
-
-
 
 /* BUTTONS
 ---------------------------------------------------------------------------------------------------- */
 .button {
-	font-size: 1.3rem;
-	line-height: 2rem;
-	letter-spacing: .15rem;
-
-	height: 4.5rem;
-	min-width: 15rem;
-	border-radius: 5px;
-	padding-top: 1.8rem;
-	padding-right: 1.8rem;
-	padding-bottom: 1.8rem;
-	padding-left: 1.8rem;
-
-	span {
-		text-transform: uppercase;
-	}
-
-	i {
-
-	}
-
-	&--orange {
-		border: 1px solid red;
-		color: red;
-
-		&:hover {
-			// Do Arrow
-		}
-
-		&:active {
-			background: red;
-			color: $white;
-		}
-
-		&--fill {
-			background: red;
-			color: $white;
-
-			&:hover {
-				// Do Arrow
-			}
-
-			&:active {
-				background: #FD7E3A;
-			}
-
-		}
-	}
-
-	&--white {
-		border: 1px solid $white;
-		color: $white;
-
-		&:hover {
-			// Do Arrow
-		}
-
-		&:active {
-			background: $white;
-			color: $black;
-		}
-	}
-}
-
-
-/* ARROWS
----------------------------------------------------------------------------------------------------- */
-.arrows {
-	background: $white;
-	border-radius: 10px;
-	box-shadow: 0 -10px 30px 0 #E3E8ED;
-	border: 1px solid #DBDBDB;
-}
-
-
-/* PAGINATION
----------------------------------------------------------------------------------------------------- */
-.pagination {
 
 }
 
