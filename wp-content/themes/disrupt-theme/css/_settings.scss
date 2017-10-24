@@ -38,7 +38,7 @@ $gradient-orange: linear-gradient(-45deg, #FF9916 0%, #FF5F09 100%);
 @import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
 
 @font-face {
-  font-family: 'disrupt';
+  font-family: 'Disrupt';
   src: url('../fonts/disrupt-webfont.woff2') format('woff2'),
        url('../fonts/disrupt-webfont.woff') format('woff');
   font-weight: normal;
@@ -47,9 +47,9 @@ $gradient-orange: linear-gradient(-45deg, #FF9916 0%, #FF5F09 100%);
 
 @font-face {
   font-family: 'Futura';
-  src: url('./fonts/FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/FuturaPT-Heavy.woff') format('woff'), url('./fonts/FuturaPT-Heavy.ttf')
-  format('truetype'), url('./fonts/FuturaPT-Heavy.svg#FuturaPT-Heavy') format('svg');
+  src: url('../fonts/FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaPT-Heavy.woff') format('woff'), url('../fonts/FuturaPT-Heavy.ttf')
+  format('truetype'), url('../fonts/FuturaPT-Heavy.svg#FuturaPT-Heavy') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -59,7 +59,7 @@ $font-body: "Karla", arial, sans-serif;
 $font-heading: "Saira Condensed", arial, sans-serif;
 $font-nav: "Saira Condensed", arial, sans-serif;
 $font-title: "Futura", arial, sans-serif;
-$font-disrupt: "disrupt", arial, sans-serif;
+$font-disrupt: "Disrupt", arial, sans-serif;
 
 
 /* GRID
