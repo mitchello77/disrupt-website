@@ -72,6 +72,18 @@ section {
 	position: relative;
 	display: block;
 	height: 100%;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+
+	@media (max-width: 768px) {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+
+	@media (max-width: 640px) {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
 }
 
 

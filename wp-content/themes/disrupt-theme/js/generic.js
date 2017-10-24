@@ -514,16 +514,33 @@ function common_abortAPI(handle) {
 
 /* STICKY FOOTER
 ------------------------------------------------------------------------------------------------------------------------ */
-function footer_sticky() {
-	var footerHeight = $('footer').outerHeight() + parseFloat($('body').css('padding-top').replace('px', ''));
-	$('.contentWrapper').css('min-height', 'calc(100vh - '+footerHeight+'px)');
+// function footer_sticky() {
+// 	var footerHeight = $('footer').outerHeight() + parseFloat($('body').css('padding-top').replace('px', ''));
+// 	$('.contentWrapper').css('min-height', 'calc(100vh - '+footerHeight+'px)');
+// }
+//
+// $(document).ready(footer_sticky);
+// $(window).on('resize.footer', helper_debounce(function() {
+// 	footer_sticky();
+// }, 100));
+
+
+
+/* GRADUATE SLIDER
+------------------------------------------------------------------------------------------------------------------------ */
+function init_graduateSlider() {
+	var slider = $('.graduate-single .slider');
+
+	if (slider.length) {
+		slider.slick({
+			fade: true
+		});
+	}
 }
 
-$(document).ready(footer_sticky);
-$(window).on('resize.footer', helper_debounce(function() {
-	footer_sticky();
-}, 100));
-
+$(document).ready(function(){
+	init_graduateSlider();
+});
 
 
 /* WINDOW EVENTS

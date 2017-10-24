@@ -6,19 +6,18 @@
     <div class="wrapper">
 
       <div class="image">
-        <div
-        class="profile circle medium"
-        style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"
-        ></div>
+        <div class="circle large">
+          <div class="slider">
+            <?php
+              foreach (get_field('graduate_slider') as  $slide) {
+                echo "<div class=\"slide\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
+              }
+            ?>
+          </div> <!-- .slider -->
+        </div> <!-- .circle -->
 
-        <div class="slider circle large">
-          <?php
-            foreach (get_field('graduate_slider') as  $slide) {
-              echo "<div class=\"slide\" style=\"background-image: url(".$slide['image'].")\"></div>";
-            }
-          ?>
-        </div> <!-- .slider -->
-      </div>
+        <div class="profile circle medium" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div> <!-- .profile -->
+      </div> <!-- .image -->
 
       <div class="text">
         <?php
