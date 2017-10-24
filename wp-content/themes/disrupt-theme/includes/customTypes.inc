@@ -1,9 +1,9 @@
 <?php
 	/* CUSTOM POST TYPE
 	---------------------------------------------------------------------------------------------------- */
-  function register_news_type(){
-    $singular_name = 'news';
-    $plural_name = 'news';
+  function register_graduate_type() {
+    $singular_name = 'graduate';
+    $plural_name = 'graduates';
     $labels = [
       'name'            => $plural_name,
       'singular_name'   => $singular_name,
@@ -14,17 +14,34 @@
       'search_items'    => 'Search '  . $plural_name,
     ];
     $args = [
-      'label' => "News",
+      'label' => "Graduates",
       'public' => true,
       'publicly_queryable' => true,
       'has_archive' => false,
       'show_ui' => true,
       'show_in_menu' => true,
-      'menu_icon' => 'dashicons-admin-post',
-      'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
-      'rewrite' => array('slug' => 'news', 'with_front' => false),
+      'menu_icon' => 'dashicons-groups',
+      'supports' => array('title', 'thumbnail', 'page-attributes'),
+      'rewrite' => array('slug' => 'graduates', 'with_front' => false),
     ];
-    register_post_type('news', $args);
+    register_post_type('graduate', $args);
   }
-  add_action('init', 'register_news_type');
+  add_action('init', 'register_graduate_type');
+
+  function register_taxonomy_graduate() {
+		register_taxonomy(
+			'expertise',
+			'graduate',
+			[
+        'hierarchical' => true,
+				'label' => 'Expertise',
+			],
+      [
+        'rewrite' => [
+          'slug' => 'experitse'
+        ]
+      ]
+		);
+	}
+	add_action( 'init', 'register_taxonomy_graduate' );
 ?>
