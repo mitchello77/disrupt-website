@@ -41,7 +41,7 @@
 	function remove_admin_menu_links(){
 		$user = wp_get_current_user();
 
-		if ($user && isset($user->user_login) && $user->user_login !== 'margin') {
+		if ($user && isset($user->user_login) && $user->user_login !== 'admin') {
 		  remove_menu_page('edit-comments.php');
 		  remove_menu_page('themes.php');
 		  remove_menu_page('plugins.php');
