@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /marginmedia/
+RewriteBase /disrupt/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /marginmedia/index.php [L]
+RewriteRule . /disrupt/index.php [L]
 </IfModule>
 
 # END WordPress
