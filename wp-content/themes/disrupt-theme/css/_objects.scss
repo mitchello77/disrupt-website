@@ -6,22 +6,28 @@
 .circle {
 	border-radius: 50%;
 	background-color: $purple;
-	width: 10rem;
-	height: 10rem;
+	width: 100%;
+	max-width: 50rem;
 
-	.small {
-		width: 5rem;
-		height: 5rem;
+	&:after {
+		content: '';
+		display: block;
+		padding-top: 100%;
 	}
 
-	.medium {
+	&.small {
 		width: 10rem;
 		height: 10rem;
 	}
 
-	.large {
-		width: 15rem;
-		height: 15rem;
+	&.medium {
+		width: 20rem;
+		height: 20rem;
+	}
+
+	&.large {
+		width: 30rem;
+		height: 30rem;
 	}
 }
 

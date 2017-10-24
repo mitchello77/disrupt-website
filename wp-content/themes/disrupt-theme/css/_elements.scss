@@ -37,10 +37,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .title {
 	font-family: $font-title;
+	text-transform: uppercase;
+	font-size: 10rem;
+	letter-spacing: 6rem;
+	font-weight: bold;
 }
 
 .disrupt-title {
 	font-weight: $font-disrupt;
+	text-transform: uppercase;
+	font-size: 10rem;
+	letter-spacing: 4rem;
 }
 
 // Ordered / Unordered List
