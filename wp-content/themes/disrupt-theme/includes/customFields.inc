@@ -1,36 +1,81 @@
 <?php
 	/* CUSTOM FIELDS
 	---------------------------------------------------------------------------------------------------- */
-  function acf_general_options(){
+  function acf_graduate_options() {
     acf_add_local_field_group([
-  		'key' => 'social_links',
-    	'title' => 'Social Links',
+  		'key' => 'graduate_details',
+    	'title' => 'Graduate Details',
     	'fields' => [
   			[
-  				'key' => 'facebook_url',
-  				'label' => 'Facebook',
-  				'name' => 'facebook_url',
-  				'type' => 'url'
+  				'key' => 'graduate_philosophy',
+  				'label' => 'Design Philosophy',
+  				'name' => 'graduate_philosophy',
+  				'type' => 'textarea'
   			],
+        [
+          'key' => 'graduate_website',
+          'label' => 'Personal Website',
+          'name' => 'graduate_website',
+          'type' => 'url',
+          'wrapper' => [
+            'width' => '50%'
+          ]
+        ],
   			[
-  				'key' => 'instagram_url',
+  				'key' => 'graduate_instagram',
   				'label' => 'Instagram',
-  				'name' => 'instagram_url',
-  				'type' => 'url'
+  				'name' => 'graduate_instagram',
+  				'type' => 'text',
+          'prepend' => '@',
+          'wrapper' => [
+            'width' => '50%'
+          ]
   			],
   			[
-  				'key' => 'twitter_url',
-  				'label' => 'Twitter',
-  				'name' => 'twitter_url',
-  				'type' => 'url'
-  			]
+  				'key' => 'graduate_behance',
+  				'label' => 'Behance',
+  				'name' => 'graduate_behance',
+  				'type' => 'url',
+          'wrapper' => [
+            'width' => '50%'
+          ]
+  			],
+  			[
+  				'key' => 'graduate_linkedin',
+  				'label' => 'LinkedIn',
+  				'name' => 'graduate_linkedin',
+  				'type' => 'url',
+          'wrapper' => [
+            'width' => '50%'
+          ]
+  			],
+  			[
+  				'key' => 'graduate_description',
+  				'label' => 'Exhibit Piece Description',
+  				'name' => 'graduate_description',
+  				'type' => 'textarea',
+  			],
+  			[
+  				'key' => 'graduate_slider',
+  				'label' => 'Exhibition Image Slider',
+  				'name' => 'graduate_slider',
+  				'type' => 'repeater',
+          'sub_fields' => [
+            [
+              'key' => 'image',
+              'label' => 'Image',
+              'name' => 'image',
+              'type' => 'image',
+            ]
+          ]
+  			],
   		],
       'location' => [
   			[
   				[
-  					'param' => 'options_page',
+  					'param' => 'post_type',
   					'operator' => '==',
-  					'value' => 'acf-options-general',
+  					'value' => 'graduate',
   				],
   			],
   		],
@@ -39,5 +84,5 @@
     	'instruction_placement' => 'label',
     ]);
   }
-  add_action('acf/init', 'acf_general_options');
+  add_action('acf/init', 'acf_graduate_options');
 ?>

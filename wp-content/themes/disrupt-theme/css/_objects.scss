@@ -37,20 +37,20 @@
 	}
 
 	&--orange {
-		border: 1px solid $primary;
-		color: $primary;
+		border: 1px solid red;
+		color: red;
 
 		&:hover {
 			// Do Arrow
 		}
 
 		&:active {
-			background: $primary;
+			background: red;
 			color: $white;
 		}
 
 		&--fill {
-			background: $primary;
+			background: red;
 			color: $white;
 
 			&:hover {

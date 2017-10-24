@@ -13,8 +13,7 @@
 
 	// ADD OPTIONS PAGE
 	acf_add_options_page();
-	acf_add_options_sub_page('General');
-	acf_add_options_sub_page('Global');
+
 
 
 	// REGISTER MENUS
@@ -47,8 +46,10 @@
 		  remove_menu_page('plugins.php');
 		  remove_menu_page('users.php');
 		  remove_menu_page('tools.php');
+		  remove_menu_page('profile.php');
+		  remove_menu_page('pages.php');
 		  remove_menu_page('edit.php?post_type=acf-field-group');
-		  remove_menu_page('kiwi_social_sharing_settings');
+		  remove_menu_page('edit.php?post_type=page');
 		  remove_menu_page('wpseo_dashboard');
 		}
 	}
@@ -56,7 +57,7 @@
 	remove_theme_support('genesis-admin-menu');
 
 
-	// SHOW DEBUG FOR REMOVING MENU ITEMS (look at [2] for each in the array)
+	// // SHOW DEBUG FOR REMOVING MENU ITEMS (look at [2] for each in the array)
 	// add_action( 'admin_init', 'wpse_136058_debug_admin_menu' );
 	// function wpse_136058_debug_admin_menu() {
 	// 	echo '<pre>' . print_r( $GLOBALS[ 'menu' ], TRUE) . '</pre>';

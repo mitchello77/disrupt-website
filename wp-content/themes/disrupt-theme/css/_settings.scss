@@ -1,20 +1,28 @@
 /* COLOURS
 ---------------------------------------------------------------------------------------------------- */
+
+/* MAIN */
 $white: #FFFFFF;
 $black: #000000;
-
-$primary: #FF5F09;
-$heading: $black;
-$paragraph: #647077;
-$input-text: #82939E;
+$green: #66cc33;
+$magenta: #cc33cc;
+$dark-blue: #0f142c;
 
 /* BACKGROUND */
-$background-light: #F6F8FA;
-$background-lighter: #EDF0F4;
+$background: #090c1d;
 
-/* FOOTER */
-$footer-background: #222328;
-$footer-grey: #8A8E91;
+/* GLITCH BUTTON VARIABLE COLOURS */
+$charcoal: #3E3E3E;
+$light-charcoal: #4B4B4B;
+$grey: #CACACA;
+$red: #DC3D50;
+$blue: #515EA4;
+$bright-green: #84F965;
+$dull-green: #8BBE56;
+$yellow: #F8CD60;
+$purple: #B935C3;
+$neon-cyan: #00ffff;
+$neon-pink: #ff00ff;
 
 
 /* GRADIENTS
@@ -26,8 +34,32 @@ $gradient-orange: linear-gradient(-45deg, #FF9916 0%, #FF5F09 100%);
 
 /* FONTS
 ---------------------------------------------------------------------------------------------------- */
-$font-primary: "sofia-pro", arial, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Karla:100,400,700");
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
 
+@font-face {
+  font-family: 'disrupt';
+  src: url('../fonts/disrupt-webfont.woff2') format('woff2'),
+       url('../fonts/disrupt-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('./fonts/FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/FuturaPT-Heavy.woff') format('woff'), url('./fonts/FuturaPT-Heavy.ttf')
+  format('truetype'), url('./fonts/FuturaPT-Heavy.svg#FuturaPT-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$font-body: "Karla", arial, sans-serif;
+$font-heading: "Saira Condensed", arial, sans-serif;
+$font-nav: "Saira Condensed", arial, sans-serif;
+$font-title: "Futura", arial, sans-serif;
+$font-disrupt: "disrupt", arial, sans-serif;
 
 
 /* GRID
