@@ -14,8 +14,14 @@
 
           <div class="row">
 
-            <div class="graduates-single">
+            <div class="circle-item medium sam">
+              <div class="graduate-name">
+                Samuel Dale
+              </div>
 
+              <div class="graduate-discipline">
+                UI/UX Design
+              </div>
             </div>
 
           </div>
