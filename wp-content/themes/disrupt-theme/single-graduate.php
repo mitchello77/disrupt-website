@@ -14,7 +14,7 @@
         <div class="slider circle large">
           <?php
             foreach (get_field('graduate_slider') as  $slide) {
-              echo "<div class=\"slide\"></div>";
+              echo "<div class=\"slide\" style=\"background-image: url(".$slide['image'].")\"></div>";
             }
           ?>
         </div> <!-- .slider -->
