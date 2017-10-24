@@ -2,19 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-<<<<<<< Updated upstream
-RewriteBase /disrupt/
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /disrupt/index.php [L]
-=======
 RewriteBase /disrupt-website/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /disrupt-website/index.php [L]
->>>>>>> Stashed changes
 </IfModule>
 
 # END WordPress
