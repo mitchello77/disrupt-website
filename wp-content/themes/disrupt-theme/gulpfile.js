@@ -18,7 +18,7 @@ gulp.task('default', ['watch', 'styles', 'scripts']);
 
 // Styles task
 gulp.task('styles', function() {
-	gulp.src(['css/**/*.scss'])
+	gulp.src(['css/*.scss'])
 		.pipe(sass().on('error', sass.logError))
 		// .pipe(autoprefixer('last 7 versions', 'safari 5', 'ie 10', 'opera 12.1', 'ios 6', 'android 4'))
 		.pipe(uglifycss({
@@ -62,6 +62,6 @@ gulp.task('reload', function() {
 // Watch task
 gulp.task('watch', function() {
 	var server = livereload.listen();
-	gulp.watch(['css/*.scss', 'components/**/*.scss'], ['styles']);
+	gulp.watch(['css/**/*.scss'], ['styles']);
 	gulp.watch(["js/**/!(*min*).js"], ['scripts']);
 });
