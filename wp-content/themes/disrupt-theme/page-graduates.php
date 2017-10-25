@@ -10,7 +10,7 @@
 
       <div class="graduates">
 
-        <div class="graduates-group first">
+        <div class="frame first">
 
           <div class="row">
 
@@ -94,7 +94,7 @@
 
         </div>
 
-        <div class="graduates-group second">
+        <div class="frame second">
 
           <div class="row">
 
