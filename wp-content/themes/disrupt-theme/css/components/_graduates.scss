@@ -1,6 +1,13 @@
 /* GRADUATES
 ---------------------------------------------------------------------------------------------------- */
 
+.graduate-viewport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .graduates {
   position: fixed;
   -webkit-perspective-origin:50% 50%;
