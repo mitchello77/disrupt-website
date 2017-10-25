@@ -7,7 +7,7 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, minimal-ui, user-scalable=0'>
 	<?php
 		if (ENVIRONMENT !== 'live') {
-			echo "<meta name='robots' content='noindex, nofollow'>";			
+			echo "<meta name='robots' content='noindex, nofollow'>";
 		}
 	?>
 
@@ -37,6 +37,7 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/retina/retina.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/slick/slick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/fontawesome/everything.min.js'></script>
+	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/z-axis-scroll/z-axis-scroll.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/generic.min.js'></script>
 
 

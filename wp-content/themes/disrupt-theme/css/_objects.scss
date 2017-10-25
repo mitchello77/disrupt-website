@@ -9,8 +9,9 @@
 	width: 100%;
 	max-width: 50rem;
 	position: relative;
+	background: radial-gradient(circle at 20rem 20rem, $dark-blue, $purple);
 
-	&:after {
+	&::after {
 		content: '';
 		display: block;
 		padding-top: 100%;
@@ -37,6 +38,8 @@
 		background-size: cover;
 		box-shadow: 0px -15px 50px 10px rgba($dark-blue, 0.4) inset;
 	}
+
+
 
 	&.sam {
 		background-image: url('../img/sam.png');
@@ -74,6 +77,15 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
 	position: relative;
+}
+
+/* CONTAINER
+---------------------------------------------------------------------------------------------------- */
+.row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
 }
 
 /* BUTTONS

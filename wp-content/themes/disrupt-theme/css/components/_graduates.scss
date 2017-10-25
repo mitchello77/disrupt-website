@@ -1,2 +1,25 @@
 /* GRADUATES
 ---------------------------------------------------------------------------------------------------- */
+
+.graduates {
+  position: fixed;
+  -webkit-perspective-origin:50% 50%;
+  -moz-perspective-origin:50% 50%;
+  -moz-transform-style: preserve-3d;
+  -webkit-perspective:300px;
+  -moz-perspective:300px;
+   width: 120rem;
+}
+
+.graduates-group {
+  position:absolute;
+  width: 100%;
+
+  &.first{
+    transform:translateZ(-500px);
+  }
+
+  &.second {
+    transform: translateZ(-25px);
+  }
+}
