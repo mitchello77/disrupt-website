@@ -8,8 +8,6 @@
 
       </div>
 
-      <div class="graduate-viewport">
-
         <div class="graduates">
 
           <div class="frame first">
@@ -181,8 +179,6 @@
           </div>
 
         </div>
-
-      </div>
 
 
     </div>
