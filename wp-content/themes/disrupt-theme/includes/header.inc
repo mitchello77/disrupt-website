@@ -12,10 +12,6 @@
 	?>
 
 
-	<!-- GENERIC FONTS -->
-	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic'>
-
-
 	<!-- GENERIC CSS -->
 	<link type='text/css' rel='stylesheet' href='<?php echo THEME_URL; ?>js/lib/slick/slick.css'>
 	<link type='text/css' rel='stylesheet' href='<?php echo THEME_URL; ?>css/style.css'>
@@ -37,8 +33,8 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/retina/retina.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/slick/slick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/fontawesome/everything.min.js'></script>
-	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/z-axis-scroll/z-axis-scroll.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/generic.min.js'></script>
+	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/z-axis-scroll/z-axis-scroll.js'></script>
 
 
 
