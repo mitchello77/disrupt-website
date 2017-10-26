@@ -59,6 +59,7 @@
 	<!-- WORDPRESS HEADER -->
 	<?php wp_head(); ?>
 
-
-
+<?php global $wp_query; ?>
 	<!-- PAGE SPECIFIC -->
+</head>
+<body class="page-<?php echo $wp_query->query['pagename']; ?>">
