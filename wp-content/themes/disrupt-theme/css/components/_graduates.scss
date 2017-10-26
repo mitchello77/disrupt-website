@@ -1,42 +1,12 @@
 /* GRADUATES
 ---------------------------------------------------------------------------------------------------- */
 body.page-graduates {
-  height: 1200px;
+  height: 10000px;
 }
-// .graduate-viewport {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   height: 100%;
-//   min-height: 600px;
-//   width: 100%;
-// }
-//
-// .graduates {
-//   position:fixed;
-//   perspective:100px;
-//   perspective-origin:50% 50%;
-//   width: 100%;
-// }
-//
-// .frame {
-//   position:absolute;
-//   width: 100%;
-//
-//   &.first{
-//     transform:translateZ(-500px);
-//   }
-//
-//   &.second {
-//     transform: translateZ(-25px);
-//   }
-// }
-
 
 .graduates-viewport {
  position:fixed;
- perspective:100px;
+ perspective: 100px;
  perspective-origin:50% 50%;
  border: 2px solid black;
  height: 100%;
@@ -48,11 +18,11 @@ body.page-graduates {
  height: 100%;
 }
 .first {
- transform:translateZ(-100px);
+ transform:translateZ(-500px);
 }
 .second {
- transform:translateZ(-50px);
+ transform:translateZ(-250px);
 }
 .third {
-transform:translateZ(0px);
+transform:translateZ(-50px);
 }

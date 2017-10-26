@@ -1,5 +1,5 @@
 var scrollPosition = document.documentElement.scrollTop,
-    boxPositions = [-100, -50, 0];
+    boxPositions = [-500, -250, -50];
 function scrollDelta() {
   var newScrollPosition = document.documentElement.scrollTop,
       delta = newScrollPosition - scrollPosition;

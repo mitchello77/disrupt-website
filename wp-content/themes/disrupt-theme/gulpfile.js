@@ -29,9 +29,6 @@ gulp.task('styles', function() {
 				return file.base;
 			}
 		))
-		.pipe(notify({
-			message: 'Styles Successfully Compiled'
-		}))
 		.pipe(livereload());
 });
 
