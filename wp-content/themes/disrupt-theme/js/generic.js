@@ -528,6 +528,56 @@ function common_abortAPI(handle) {
 /* SNAPCHAT MODAL
 ------------------------------------------------------------------------------------------------------------------------ */
 
+var horizon = 0,
+		vertical = 0,
+		mouseX,
+		mouseY,
+		range = 10;
+
+function gradsFollowMouse() {
+	horizon = ((range * 2) * (mouseX / $(document).width())) - range;
+	vertical = -(((range * 2) * (mouseY / $(window).height())) - range);
+	$(".graduate-group").css("transform", "rotateX(" + vertical + "deg) rotateY(" + horizon + "deg)");
+}
+
+function resetSplash() {
+	$(".first").css("transform", "rotateX(0deg) rotateY(0deg)");
+}
+
+$(document).on('mousemove.page-graduates', throttle(function (e) {
+	mouseX = e.pageX;
+	mouseY = e.pageY;
+	gradsFollowMouse();
+}, 25));
+
+/* THROTTLE
+  ------------------------------------------------------------------------------------------------- */
+  function throttle(fn, threshhold, scope) {
+      threshhold || (threshhold = 250);
+      var last,
+          deferTimer;
+      return function() {
+          var context = scope || this;
+
+          var now = +new Date,
+              args = arguments;
+          if (last && now < last + threshhold) {
+              // hold on to it
+              clearTimeout(deferTimer);
+              deferTimer = setTimeout(function() {
+                  last = now;
+                  fn.apply(context, args);
+              }, threshhold);
+          } else {
+              last = now;
+              fn.apply(context, args);
+          }
+      };
+    }
+
+/* SNAPCHAT MODAL
+------------------------------------------------------------------------------------------------------------------------ */
+
 var showSnapcode = function() {
     $('.snapchatCodeContainer').removeClass('hidden');
     $('main').addClass('blur');
