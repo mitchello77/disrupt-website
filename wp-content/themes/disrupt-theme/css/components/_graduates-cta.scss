@@ -24,6 +24,12 @@ section.graduates-cta {
         font-size: 2rem;
         color: $white;
         text-decoration: none;
+        overflow: hidden;
+        position: relative;
+        box-sizing: border-box;
+        &:hover {
+          @include buttonBackgroundGlitch(graduateButtonAnim, $magenta, $green, $white, alternate);
+        }
       }
     }
   }

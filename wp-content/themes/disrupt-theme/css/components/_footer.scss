@@ -58,6 +58,21 @@ footer {
       @include buttonBackgroundGlitch(githubAnim, $charcoal, $white, $grey, normal);
     }
   }
+
+  &.no-walls {
+    &:hover {
+      @include buttonBackgroundGlitch(noWallsAnim, $blue, $bright-green, $neon-pink, normal);
+    }
+  }
+
+  .no-walls {
+    width: 13px;
+    height: 13px;
+    background-image: url('../img/no-walls.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .snapchatCodeContainer {
