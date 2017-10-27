@@ -1,8 +1,5 @@
 	<!-- WORDPRESS FOOTER -->
 	<footer>
-      <div class="corporate">
-        <a href="https://www.qut.edu.au/" class="icon-link qut-icon" target="_blank"></a>
-      </div>
       <div class="socials">
         <a href="https://www.facebook.com/disrupt17/" class="icon-link facebook" target="_blank">
           <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -27,7 +24,7 @@
       <p>Snap or screenshot to add</p>
     </div>
   </div>
-	
+
 	<?php
 		wp_footer();
 
