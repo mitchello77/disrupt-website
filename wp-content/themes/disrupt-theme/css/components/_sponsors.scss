@@ -1,0 +1,41 @@
+section.sponsors {
+  background-image: url('../img/background-sponsors.png');
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+
+  .content {
+    width: 60%;
+    min-width: 500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text {
+      max-width: 500px;
+
+      .caption {
+        color: $magenta;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        display: block;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        height: 4rem;
+        margin-right: 4rem;
+      }
+    }
+  }
+}

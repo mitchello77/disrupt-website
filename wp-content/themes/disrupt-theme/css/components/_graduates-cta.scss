@@ -1,0 +1,30 @@
+section.graduates-cta {
+  background-image: url('../img/background-exhibition.png');
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+
+  .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text {
+      flex: 0 1 350px;
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 2rem 2.75rem;
+        border: 1px solid $white;
+        font-size: 2rem;
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}
