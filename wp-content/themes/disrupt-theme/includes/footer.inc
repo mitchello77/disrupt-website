@@ -19,7 +19,7 @@
   </main>
 
   <div class="snapchatCodeContainer hidden">
-    <i class="fa fa-times close"></i>
+    <i class="fa fa-times close" data-fa-transform="grow-6"></i>
     <div class="modal centered scaleIn">
       <img class="snapchatCode" src="<?php echo THEME_URL ?>img/snap-code.png" alt="image">
       <h1>ivddisrupt2017</h1>

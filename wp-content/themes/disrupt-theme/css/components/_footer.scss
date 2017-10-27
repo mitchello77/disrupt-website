@@ -48,12 +48,11 @@ footer {
   background: rgba($background, 0.8);
   z-index: 999;
 
-  i {
+  .close {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 2.5rem;
-    margin: 1rem;
+    margin: 1.5rem;
     cursor: pointer;
   }
 }
