@@ -13,7 +13,7 @@
         <!-- <a href="https://github.com/zacharymctague/disrupt-website" class="icon-link github" target="_blank">
           <i class="fab fa-github" data-fa-transform="grow-6"></i>
         </a> -->
-        <a href="https://github.com/zacharymctague/disrupt-website" class="icon-link no-walls" target="_blank">
+        <a href="https://nowalls.qut.edu.au/" class="icon-link no-walls" target="_blank">
           <span class="no-walls"></span>
         </a>
       </div>
