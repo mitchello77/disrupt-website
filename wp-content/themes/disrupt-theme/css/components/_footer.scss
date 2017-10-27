@@ -34,6 +34,30 @@ footer {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+
+  &.facebook {
+    &:hover {
+      @include buttonBackgroundGlitch(facebookAnim, $blue, $purple, $neon-cyan, normal);
+    }
+  }
+
+  &.instagram {
+    &:hover {
+      @include buttonBackgroundGlitch(instagramAnim, $red, $yellow, $neon-pink, alternate-reverse);
+    }
+  }
+
+  &.snapchat {
+    &:hover {
+      @include buttonBackgroundGlitch(snapchatAnim, $yellow, $white, $grey, alternate);
+    }
+  }
+
+  &.github {
+    &:hover {
+      @include buttonBackgroundGlitch(githubAnim, $charcoal, $white, $grey, normal);
+    }
+  }
 }
 
 .snapchatCodeContainer {
