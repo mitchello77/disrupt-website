@@ -7,9 +7,13 @@
 	border-radius: 50%;
 	background-color: $purple;
 	width: 100%;
+	max-width: 50rem;
+	position: relative;
+	background: radial-gradient(circle at 20rem 20rem, $dark-blue, $purple);
+	margin: 2.5rem;
 	display: block;
 
-	&:after {
+	&::after {
 		content: '';
 		display: block;
 		padding-top: 100%;
@@ -26,7 +30,42 @@
 	&.large {
 		max-width: 45rem;
 	}
+
+	&.background-image {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		box-shadow: 0px -15px 50px 10px rgba($dark-blue, 0.4) inset;
+	}
+
+
+
+	&.sam {
+		background-image: url('../img/sam.png');
+	}
 }
+
+.graduate-discipline {
+	position: absolute;
+	left: -5rem;
+	top: 1.5rem;
+	max-width: 25rem;
+	text-transform: uppercase;
+	color: $magenta;
+	font-weight: bold;
+	display: none;
+}
+
+.graduate-name {
+	position: absolute;
+	right: -5rem;
+	bottom: 1rem;
+	max-width: 25rem;
+	background: rgba(3, 12, 64, 0.6);
+	padding: 0 1rem;
+	display: none;
+}
+
 
 
 /* CONTAINER
@@ -40,6 +79,17 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
 	position: relative;
+}
+
+/* CONTAINER
+---------------------------------------------------------------------------------------------------- */
+.row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 2rem 0;
+	width: 100%;
+	white-space: nowrap;
 }
 
 /* BUTTONS
