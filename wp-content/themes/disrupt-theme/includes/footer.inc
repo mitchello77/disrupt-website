@@ -16,6 +16,8 @@
       </div>
     </footer>
 
+  </main>
+
   <div class="snapchatCodeContainer hidden">
     <i class="fa fa-times close"></i>
     <div class="modal centered scaleIn">

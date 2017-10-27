@@ -530,11 +530,11 @@ function common_abortAPI(handle) {
 
 var showSnapcode = function() {
     $('.snapchatCodeContainer').removeClass('hidden');
-    $('.blur-overlay').addClass('blur');
+    $('main').addClass('blur');
   }
   var hideSnapcode = function() {
     $('.snapchatCodeContainer').addClass('hidden');
-    $('.blur-overlay').removeClass('blur');
+    $('main').removeClass('blur');
   }
 
 

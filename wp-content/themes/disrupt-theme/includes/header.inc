@@ -63,3 +63,4 @@
 	<!-- PAGE SPECIFIC -->
 </head>
 <body class="page-<?php echo $wp_query->query['pagename']; ?>">
+	<main>

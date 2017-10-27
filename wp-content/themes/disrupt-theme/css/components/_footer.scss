@@ -45,7 +45,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba($dark-blue, 0.7);
+  background: rgba($bakground, 0.8);
+  z-index: 999;
 
   i {
     position: absolute;

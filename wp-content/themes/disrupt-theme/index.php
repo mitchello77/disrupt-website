@@ -1,6 +1,5 @@
 <?php require_once('includes/header.inc'); ?>
 
-  <main>
     <section class="landing">
       <div class="container">
         <div class="title-wrapper">
@@ -56,5 +55,4 @@
         </div>
       </div> <!-- .container -->
     </section> <!-- .graduates-cta -->
-  </main>
 <?php require_once('includes/footer.inc'); ?>
