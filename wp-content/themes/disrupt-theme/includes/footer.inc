@@ -2,16 +2,16 @@
 	<footer>
       <div class="socials">
         <a href="https://www.facebook.com/disrupt17/" class="icon-link facebook" target="_blank">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fab fa-facebook-f" data-fa-transform="grow-6"></i>
         </a>
         <a href="https://www.instagram.com/disrupt17/" class="icon-link instagram" target="_blank">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fab fa-instagram" data-fa-transform="grow-6"></i>
         </a>
         <a class="icon-link snapchat" target="_blank">
-          <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+          <i class="fab fa-snapchat-ghost" data-fa-transform="grow-6"></i>
         </a>
-        <a href="https://github.com/kelvinoshea/disrupt-splash" class="icon-link github" target="_blank">
-          <i class="fa fa-github" aria-hidden="true"></i>
+        <a href="https://github.com/zacharymctague/disrupt-website" class="icon-link github" target="_blank">
+          <i class="fab fa-github" data-fa-transform="grow-6"></i>
         </a>
       </div>
     </footer>
