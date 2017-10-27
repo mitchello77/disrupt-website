@@ -1,0 +1,59 @@
+section.landing {
+  height: 100vh;
+  min-height: 800px;
+
+
+  background-image: url('../img/background-landing.png');
+  background-position: center;
+  background-size: cover;
+
+  .orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 0;
+    top: 0;
+    background-image: url('../img/orb.png');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .title-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 600px;
+    width: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+    white-space: nowrap;
+    z-index: 1;
+
+    span {
+      position: relative;
+      font-size: 14rem;
+      letter-spacing: 4rem;
+      font-family: $font-disrupt;
+      display: inline-block;
+    }
+
+    span:first-of-type {
+      top: 140px;
+      left: -120px;
+      z-index: 2;
+    }
+
+    span:nth-of-type(2) {
+      top: 330px;
+      left: -125px;
+      z-index: 2;
+    }
+
+    span:last-of-type {
+      top: 190px;
+      left: -20px;
+      z-index: 1;
+    }
+  }
+}

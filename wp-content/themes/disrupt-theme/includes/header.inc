@@ -7,13 +7,9 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, minimal-ui, user-scalable=0'>
 	<?php
 		if (ENVIRONMENT !== 'live') {
-			echo "<meta name='robots' content='noindex, nofollow'>";			
+			echo "<meta name='robots' content='noindex, nofollow'>";
 		}
 	?>
-
-
-	<!-- GENERIC FONTS -->
-	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic'>
 
 
 	<!-- GENERIC CSS -->
@@ -38,6 +34,7 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/slick/slick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/fontawesome/everything.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/generic.min.js'></script>
+	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/z-axis-scroll/z-axis-scroll.js'></script>
 
 
 
@@ -62,6 +59,7 @@
 	<!-- WORDPRESS HEADER -->
 	<?php wp_head(); ?>
 
-
-
+<?php global $wp_query; ?>
 	<!-- PAGE SPECIFIC -->
+</head>
+<body class="page-<?php echo $wp_query->query['pagename']; ?>">

@@ -29,9 +29,6 @@ gulp.task('styles', function() {
 				return file.base;
 			}
 		))
-		.pipe(notify({
-			message: 'Styles Successfully Compiled'
-		}))
 		.pipe(livereload());
 });
 
@@ -39,7 +36,7 @@ gulp.task('styles', function() {
 
 // Scripts task
 gulp.task('scripts', function() {
-	gulp.src(["js/**/!(*min*).js"])
+	gulp.src(["js/!(*min*).js"])
 		.pipe(jsmin())
 		.pipe(rename({
 			suffix: '.min'
@@ -63,5 +60,5 @@ gulp.task('reload', function() {
 gulp.task('watch', function() {
 	var server = livereload.listen();
 	gulp.watch(['css/**/*.scss'], ['styles']);
-	gulp.watch(["js/**/!(*min*).js"], ['scripts']);
+	gulp.watch(["js/!(*min*).js"], ['scripts']);
 });

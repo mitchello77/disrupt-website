@@ -1,6 +1,6 @@
 <?php require_once('includes/header.inc'); ?>
 
-  <section>
+  <!-- <section>
 
     <div class="container">
 
@@ -8,35 +8,428 @@
 
       </div>
 
-      <div class="graduates">
+        <div class="graduates">
 
-        <div class="graduates-group">
+          <div class="frame first">
 
-          <div class="row">
+            <div class="row">
 
-            <div class="circle large sam">
-              <div class="graduate-name">
-                <h1>Samuel Dale</h1>
-                <h2>Samuel Dale</h2>
-                <h3>Samuel Dale</h3>
-                <h4>Samuel Dale</h4>
-                <span class="title">futura</span>
-                <span class="disrupt-title">disrupt</span>
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
               </div>
 
-              <div class="graduate-discipline">
-                UI/UX Design
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
               </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="frame second">
+
+            <div class="row">
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
+              <div class="circle background-image medium sam">
+                <div class="graduate-discipline">
+                  <p>UI/UX Design</p>
+                </div>
+                <div class="graduate-name">
+                  <h2>Samuel Dale</h1>
+                </div>
+              </div>
+
             </div>
 
           </div>
 
         </div>
 
+
+    </div> -->
+
+  <!-- </section> -->
+
+
+<div class="graduates-viewport">
+  <div class="graduate-group first">
+    <div class="row">
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
       </div>
 
     </div>
 
-  </section>
+    <div class="row">
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="graduate-group second">
+    <<div class="row">
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="graduate-group third">
+    <div class="row">
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+      <div class="circle background-image medium sam">
+        <div class="graduate-discipline">
+          <p>UI/UX Design</p>
+        </div>
+        <div class="graduate-name">
+          <h2>Samuel Dale</h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <?php require_once('includes/footer.inc'); ?>
