@@ -10,6 +10,7 @@
 	max-width: 50rem;
 	position: relative;
 	background: radial-gradient(circle at 20rem 20rem, $dark-blue, $purple);
+	margin: 2.5rem;
 
 	&::after {
 		content: '';
@@ -53,6 +54,8 @@
 	max-width: 25rem;
 	text-transform: uppercase;
 	color: $magenta;
+	font-weight: bold;
+	display: none;
 }
 
 .graduate-name {
@@ -62,6 +65,7 @@
 	max-width: 25rem;
 	background: rgba(3, 12, 64, 0.6);
 	padding: 0 1rem;
+	display: none;
 }
 
 
@@ -85,6 +89,9 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin: 2rem 0;
+	width: 100%;
+	white-space: nowrap;
 }
 
 /* BUTTONS

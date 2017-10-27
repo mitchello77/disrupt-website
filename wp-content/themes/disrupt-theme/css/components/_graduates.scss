@@ -1,35 +1,28 @@
 /* GRADUATES
 ---------------------------------------------------------------------------------------------------- */
-
-.graduate-viewport {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+body.page-graduates {
+  height: 10000px;
 }
 
-.graduates {
-  position: fixed;
-  -webkit-perspective-origin:50% 50%;
-  -moz-perspective-origin:50% 50%;
-  -moz-transform-style: preserve-3d;
-  -webkit-perspective:300px;
-  -moz-perspective:300px;
-   width: 120rem;
-   height:60rem;
-    top: 50%;
-    margin-top: -30rem;
+.graduates-viewport {
+ position:fixed;
+ perspective: 100px;
+ perspective-origin:50% 50%;
+ border: 2px solid black;
+ height: 100%;
+ width: 100%;
 }
-
-.frame {
-  position:absolute;
-  width: 100%;
-
-  &.first{
-    transform:translateZ(-500px);
-  }
-
-  &.second {
-    transform: translateZ(-25px);
-  }
+.graduate-group {
+ position:absolute;
+ width: 100%;
+ height: 100%;
+}
+.first {
+ transform:translateZ(-500px);
+}
+.second {
+ transform:translateZ(-250px);
+}
+.third {
+transform:translateZ(-0px);
 }
