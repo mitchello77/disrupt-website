@@ -19,11 +19,13 @@
   <div class="snapchatCodeContainer hidden">
     <i class="fa fa-times close"></i>
     <div class="modal centered scaleIn">
-      <img class="snapchatCode" src="../images/snap-code.png" alt="image">
+      <img class="snapchatCode" src="<?php echo THEME_URL ?>img/snap-code.png" alt="image">
       <h1>ivddisrupt2017</h1>
       <p>Snap or screenshot to add</p>
     </div>
   </div>
+
+  <div class="blur-overlay"></div>
 
 	<?php
 		wp_footer();

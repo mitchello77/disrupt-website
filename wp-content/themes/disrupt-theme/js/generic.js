@@ -524,7 +524,28 @@ function common_abortAPI(handle) {
 // 	footer_sticky();
 // }, 100));
 
+/* SNAPCHAT MODAL
+------------------------------------------------------------------------------------------------------------------------ */
 
+var showSnapcode = function() {
+    $('.snapchatCodeContainer').removeClass('hidden');
+    $('.blur-overlay').addClass('blur');
+  }
+  var hideSnapcode = function() {
+    $('.snapchatCodeContainer').addClass('hidden');
+    $('.blur-overlay').removeClass('blur');
+  }
+
+
+	$(document).ready(function(){
+		$('.snapchat').click(showSnapcode);
+	  $('.snapchatCodeContainer').click(hideSnapcode);
+
+	  $('.snapchatCodeContainer .modal').click(event => {
+	    event.preventDefault();
+	    event.stopPropagation();
+	  })
+	});
 
 /* GRADUATE SLIDER
 ------------------------------------------------------------------------------------------------------------------------ */

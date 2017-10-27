@@ -21,10 +21,29 @@ Example usage:
 }
 
 
-
 /* KEYFRAMES
 ---------------------------------------------------------------------------------------------------- */
 
+@keyframes addBlur {
+  0% {
+    filter: blur(0px);
+  }
+
+  80% {
+    filter: blur(12px);
+  }
+
+  100% {
+    filter: blur(10px);
+  }
+}
+
+.blur {
+  animation-name: addBlur;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
 
 
 /* FUNCTIONS
