@@ -1,4 +1,4 @@
-// /* SNAPCHAT MODAL
+// /* MOUSE INTERACTIONS
 // ------------------------------------------------------------------------------------------------------------------------ */
 //
 // var horizon = 0,
@@ -48,7 +48,7 @@
 //       };
 //     }
 
-/* THROTTLE
+/* Z AXIS SCROLL
   ------------------------------------------------------------------------------------------------- */
 var scrollPosition = document.documentElement.scrollTop,
     boxPositions = [-500, -250, -50];
@@ -67,3 +67,19 @@ function moveCamera() {
   }
 }
 window.addEventListener("scroll", moveCamera, false);
+
+/* SHOW NAME
+  ------------------------------------------------------------------------------------------------- */
+function showGraduateName() {
+  var graduate = $('.graduate')
+
+  graduate.hover(function () {
+    $(this).find('.graduate-name').removeClass('hidden');
+  }, function () {
+    $(this).find('.graduate-name').addClass('hidden');
+  })
+}
+
+$(document).ready(function() {
+  showGraduateName();
+})

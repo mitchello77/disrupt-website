@@ -34,7 +34,7 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/slick/slick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/fontawesome/everything.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/generic.min.js'></script>
-	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/z-axis-scroll/z-axis-scroll.js'></script>
+	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/graduates/graduates.js'></script>
 
 
 

@@ -16,7 +16,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -25,7 +25,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -34,7 +34,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -43,7 +43,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -56,7 +56,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -65,7 +65,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -74,7 +74,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -83,7 +83,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -97,7 +97,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -106,7 +106,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -115,7 +115,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -124,7 +124,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -137,7 +137,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -146,7 +146,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -155,7 +155,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -164,7 +164,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -178,7 +178,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -187,7 +187,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -196,7 +196,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -205,7 +205,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -218,7 +218,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -227,7 +227,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -236,7 +236,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
@@ -245,7 +245,7 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name">
+          <div class="graduate-name hidden">
             <h2>Samuel Dale</h1>
           </div>
         </div>
