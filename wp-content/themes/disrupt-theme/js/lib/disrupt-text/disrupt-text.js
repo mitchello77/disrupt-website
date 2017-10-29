@@ -57,6 +57,8 @@ class DISRUPT {
     this.DOMURL = window.URL || window.webkitURL || window
 
     this.targetClass = 'disrupt'
+    this.activeClass = 'disrupted'
+    this.hoverClass = 'disrupt-hover'
     this.disruptables = {}
 
     this.disruptionCounter = 0
@@ -611,9 +613,11 @@ class DISRUPT {
 
     // Re-show source element
     disruption.elem.style.visibility = 'visible'
+    disruption.elem.classList.remove(this.activeClass)
 
     // Remove disruption canvas
     disruption.canvas.parentElement.removeChild(disruption.canvas)
+
 
     // Delete disruption
     delete this.disruptables[id]
@@ -628,11 +632,36 @@ class DISRUPT {
 
   /* DISRUPTION FUNCTIONS */
 
-  addDisruptions () {
+  setupHoverDisruptions () {
+    let disruptables = Array.from(document.querySelectorAll(`.${this.hoverClass}`))
+    this.addDisruptions(disruptables).then(() => {
+      for (let d of disruptables) {
+        let disruptionID = d.getAttribute('disrupt-id')
+        let canvas = this.disruptables[parseInt(disruptionID)].canvas
+
+        d.addEventListener('mouseover', () => {
+          d.style.visibility = 'hidden'
+          canvas.style.visibility = 'visible'
+        })
+
+        canvas.addEventListener('mouseout', () => {
+          d.style.visibility = 'visible'
+          canvas.style.visibility = 'hidden'
+        })
+      }
+    })
+  }
+
+  addDisruptions (elems = null) {
     let me = this
 
     // Scan through DOM and find disruptable elements
-    let disruptables = Array.from(document.getElementsByClassName(this.targetClass))
+    let disruptables
+    if (elems === null) {
+      disruptables = Array.from(document.querySelectorAll(`.${this.targetClass}:not(.${this.activeClass})`))
+    } else {
+      disruptables = elems
+    }
 
     let canvasLoads = disruptables.map(elem => {
       // Determine disruption type - pick first found class
@@ -663,6 +692,12 @@ class DISRUPT {
 
           disruption.image = img
           disruption.canvas = canvas
+          if (elems !== null) {
+            disruption.canvas.style.visibility = 'hidden'
+            disruption.hideOnInit = false
+          } else {
+            disruption.hideOnInit = true
+          }
 
           me.disruptables[disruption.id] = disruption
 
@@ -670,14 +705,20 @@ class DISRUPT {
           this.positionCanvas(elem, disruption.canvas)
           elem.parentNode.insertBefore(disruption.canvas, elem)
 
+          elem.classList.add(this.activeClass)
+          elem.setAttribute('disrupt-id', disruption.id)
+
           // Resolve after image has loaded
           img.onload = resolve
         })
       })
     })
 
-    Promise.all(canvasLoads).then(() => {
-      me.triggerDisrupt()
+    return new Promise((resolve, reject) => {
+      Promise.all(canvasLoads).then(() => {
+        me.triggerDisrupt()
+        resolve()
+      }).catch(reject)
     })
   }
 
@@ -703,7 +744,10 @@ class DISRUPT {
       let animFunction = disruption.animate
 
       // Hide original element
-      d.elem.style.visibility = 'hidden'
+      if (disruption.hideOnInit) {
+        console.log('hiding: ', hide)
+        d.elem.style.visibility = 'hidden'
+      }
 
       // Do animation
       d.disruptionAnim = new DisruptAnimation(this, d.id, setupData, animFunction, d.loop)
@@ -759,6 +803,7 @@ class DisruptAnimation {
 window.addEventListener('load', () => {
   window.DISRUPT = new DISRUPT()
   window.DISRUPT.addDisruptions()
+  window.DISRUPT.setupHoverDisruptions()
 })
 
 },{"../vendor/html2canvas.min.js":2}],2:[function(require,module,exports){
