@@ -13,38 +13,26 @@
       <div class="row">
 
         <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
           <div class="graduate-name hidden">
             <h3>Samuel Dale</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium meaghan">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Meaghan Strong</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium anna">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Anna Sachs</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium jimmy">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Jimmy Pike</h3>
           </div>
         </div>
 
@@ -52,39 +40,27 @@
 
       <div class="row">
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium liv">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Liv Garvey</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium nicole">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Nicole Nughes</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium brooke">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Brooke Royston</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium douglas">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Douglas Haigh</h3>
           </div>
         </div>
 
@@ -93,39 +69,27 @@
     <div class="graduate-group second">
       <div class="row">
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium monica">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Monica Wong</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium mitchell">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Mitchell Williams</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium nissa">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Nissa Ryan</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium bridget">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Bridget Harbourne</h3>
           </div>
         </div>
 
@@ -133,39 +97,27 @@
 
       <div class="row">
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium julia">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Julia Hall</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium unknown2">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Unsure Name</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium holly">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Holly Nash</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium adam">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Adam Nicholson</h3>
           </div>
         </div>
 
@@ -174,39 +126,27 @@
     <div class="graduate-group third">
       <div class="row">
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium joelle">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Joelle Black</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium eloise">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Eloise Baartz</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium unknown1">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Unsure Name</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium tori">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Tori Walsh</h3>
           </div>
         </div>
 
@@ -214,39 +154,29 @@
 
       <div class="row">
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium lincoln">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Lincoln Ray-Smith</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium amira">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Amira</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium caitlin">
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Caitlin Nicol</h3>
           </div>
         </div>
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-discipline">
-            <p>UI/UX Design</p>
-          </div>
+        <div class="circle graduate background-image medium jennifer">
+          
+        </div>
           <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
+            <h3>Jennifer Park</h3>
           </div>
         </div>
 

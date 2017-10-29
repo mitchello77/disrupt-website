@@ -62,6 +62,7 @@ transform:translateZ(-0px);
   z-index: 50;
   box-sizing: border-box;
   display: block;
+  box-shadow: 3px 3px 3px rgba($background, 1)
 
   h2 {
     margin: 0;
@@ -73,7 +74,7 @@ transform:translateZ(-0px);
   &:hover {
     transform: translate3d(0px, -10px, 0) scale(1.025);
     cursor: pointer;
-    box-shadow: 0px -15px 50px 10px rgba($dark-blue, 0.2) inset;;
+    box-shadow: 0px -15px 50px 10px rgba($dark-blue, 0.2) inset;
   }
 
   &.dull:before {
@@ -83,7 +84,6 @@ transform:translateZ(-0px);
 		background: $radial-gradient;
 		border-radius: 50%;
 		opacity: 0.3;
-    filter: blur(2px);
   }
 }
 
@@ -119,4 +119,94 @@ transform:translateZ(-0px);
       color: $green;
     }
   }
+}
+
+// temporary graduate photo classes
+
+.sam {
+  background-image: url('../img/portraits/sam.png');
+}
+
+.meaghan {
+  background-image: url('../img/portraits/meaghan.png');
+}
+
+.anna {
+  background-image: url('../img/portraits/anna.png');
+}
+
+.jimmy {
+  background-image: url('../img/portraits/jimmy.png');
+}
+
+.liv {
+  background-image: url('../img/portraits/liv.png');
+}
+
+.nicole {
+  background-image: url('../img/portraits/nicole.png');
+}
+
+.brooke {
+  background-image: url('../img/portraits/brooke.png');
+}
+
+.douglas {
+  background-image: url('../img/portraits/douglas.png');
+}
+
+.monica {
+  background-image: url('../img/portraits/monica.png');
+}
+
+.mitchell {
+  background-image: url('../img/portraits/mitchell.png');
+}
+
+.bridget {
+  background-image: url('../img/portraits/bridget.png');
+}
+
+.julia {
+  background-image: url('../img/portraits/julia.png');
+}
+
+.unknown2 {
+  background-image: url('../img/portraits/unknown2.png');
+}
+
+.holly {
+  background-image: url('../img/portraits/holly.png');
+}
+
+.adam {
+  background-image: url('../img/portraits/adam.png');
+}
+
+.joelle {
+  background-image: url('../img/portraits/joelle.png');
+}
+
+.eloise {
+  background-image: url('../img/portraits/eloise.png');
+}
+
+.unknown1 {
+  background-image: url('../img/portraits/unknown1.png');
+}
+
+.tori {
+  background-image: url('../img/portraits/lincoln.png');
+}
+
+.amira {
+  background-image: url('../img/portraits/amira.png');
+}
+
+.caitlin {
+  background-image: url('../img/portraits/caitlin.png');
+}
+
+.jennifer {
+  background-image: url('../img/portraits/jennifer.png');
 }
