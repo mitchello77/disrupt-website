@@ -127,7 +127,7 @@ class NameBackground {
     // Set up and place the canvas
     this.canvas.width = this.w
     this.canvas.height = this.h
-    this.canvas.style.position = 'absolute'
+    this.canvas.style.position = 'fixed'
     this.canvas.style.left = '-1vw'
     this.canvas.style.width = '102vw'
     this.canvas.style.height = '100vh'

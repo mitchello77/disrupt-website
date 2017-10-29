@@ -36,6 +36,30 @@ body.page-graduates {
 transform:translateZ(-0px);
 }
 
+.graduate-discipline {
+	position: absolute;
+	left: -5rem;
+	top: 1.5rem;
+	max-width: 25rem;
+	text-transform: uppercase;
+	color: $magenta;
+	font-weight: bold;
+	display: none;
+}
+
+.graduate-name {
+	position: absolute;
+	right: -5rem;
+	bottom: 1rem;
+	max-width: 25rem;
+	background: rgba(3, 12, 64, 0.6);
+	padding: 0 1rem;
+
+  h2 {
+    margin: 0;
+  }
+}
+
 .graduate {
   &:hover {
     cursor: pointer;
