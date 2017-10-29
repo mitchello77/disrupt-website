@@ -52,8 +52,13 @@ transform:translateZ(-0px);
 	right: -5rem;
 	bottom: 1rem;
 	max-width: 25rem;
-	background: rgba(3, 12, 64, 0.6);
+	background: $background;
 	padding: 0 1rem;
+  margin: 0;
+
+  h2 {
+    margin: 0;
+  }
 
 }
 
@@ -69,6 +74,12 @@ transform:translateZ(-0px);
   left: 0;
   top: 50%;
   margin: 3rem;
+  font-family: $font-nav;
+  font-weight: bold;
+
+  ul {
+    list-style: none;
+  }
 
   li {
     &:hover {
