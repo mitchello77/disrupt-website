@@ -50,22 +50,30 @@
 
 /* Z AXIS SCROLL
   ------------------------------------------------------------------------------------------------- */
-var scrollPosition = document.documentElement.scrollTop,
-    boxPositions = [-750, -500, -250, -50];
-function scrollDelta() {
-  var newScrollPosition = document.documentElement.scrollTop,
-      delta = newScrollPosition - scrollPosition;
-  scrollPosition = document.documentElement.scrollTop;
-  return delta;
+var scrollData = {
+  top: document.documentElement.scrollTop,
+  offset: 0
+};
+var boxPositions = [-500, -250, -50];
+var dotClassCutoff = -150
+var zoomSpeed = 0.25 // 1 is 1:1 with scroll speed
+
+function updateScrollOffset() {
+  scrollData.offset = document.documentElement.scrollTop - scrollData.top;
 }
+
 function moveCamera() {
-  var boxes = document.getElementsByClassName("graduate-group"),
-      delta = scrollDelta();
-  for (var i=0,l=boxes.length;i<l;i++) {
-    boxPositions[i] += parseInt(delta);
-    boxes[i].style["transform"] = "translateZ("+boxPositions[i]+"px)";
+  updateScrollOffset()
+  var boxes = document.getElementsByClassName("graduate-group");
+  let numBoxes = boxes.length;
+  for (var i = 0; i < numBoxes; i++) {
+    var pos = boxPositions[i] + scrollData.offset * zoomSpeed;
+    boxes[i].style.transform = `translate3d(0, 0, ${pos}px)`;
+
+    // Dot
   }
 }
+
 window.addEventListener("scroll", moveCamera, false);
 
 /* SHOW NAME
@@ -81,5 +89,17 @@ function showGraduateName() {
 }
 
 $(document).ready(function() {
+  moveCamera();
   showGraduateName();
 })
+
+/* SHOW NAME
+  ------------------------------------------------------------------------------------------------- */
+
+  function filterHoverEffects() {
+    var graduatesFilter = $('.filter')
+
+    graduateFilter.hover(function () {
+
+    })
+  }
