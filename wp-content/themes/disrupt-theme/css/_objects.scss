@@ -54,7 +54,7 @@
 }
 
 .graduate.circle, .graduate.circle::before {
-	transition: all .5s;
+	transition: opacity .5s width .5s;
 }
 
 // Collapse to purple dots

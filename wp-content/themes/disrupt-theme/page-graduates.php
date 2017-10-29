@@ -3,9 +3,9 @@
 <section>
   <div class="filters">
     <ul>
-      <li class="disrupt dsrpt-rgb-shift loop">Visual Design</li>
-      <li class="disrupt dsrpt-rgb-shift loop">Print Design</li>
-      <li class="disrupt dsrpt-rgb-shift loop">UI/UX Design</li>
+      <li class="">Visual Design</li>
+      <li class="">Print Design</li>
+      <li class="">UI/UX Design</li>
     </ul>
   </div>
   <div class="graduates-viewport">
