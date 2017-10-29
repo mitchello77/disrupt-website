@@ -17,6 +17,7 @@ $light-charcoal: #4B4B4B;
 $grey: #CACACA;
 $red: #DC3D50;
 $blue: #515EA4;
+$navy: #20284C;
 $bright-green: #84F965;
 $dull-green: #8BBE56;
 $yellow: #F8CD60;
@@ -29,8 +30,12 @@ $neon-pink: #ff00ff;
 ---------------------------------------------------------------------------------------------------- */
 $gradient-rainbow: linear-gradient(-225deg, #1A2A6C 0%, #B21F1F 63%, #F58E3E 98%);
 $gradient-orange: linear-gradient(-45deg, #FF9916 0%, #FF5F09 100%);
+$radial-gradient: radial-gradient(circle at 50% 5%,#353b58, $navy);
 
 
+/* BOX SHADOW
+---------------------------------------------------------------------------------------------------- */
+$inner-box-shadow: 0px -15px 50px 10px rgba($background, 0.4) inset;
 
 /* FONTS
 ---------------------------------------------------------------------------------------------------- */
