@@ -57,8 +57,10 @@ transform:translateZ(-0px);
 	bottom: 1rem;
 	max-width: 25rem;
 	background: $background;
-	padding: 0 1rem;
   margin: 0;
+  padding: 0.5rem 1rem;
+  z-index: 50;
+  box-sizing: border-box;
 
   h2 {
     margin: 0;
@@ -68,6 +70,7 @@ transform:translateZ(-0px);
 
 .graduate {
   &:hover {
+    transform: scale(1.1);
     cursor: pointer;
   }
 }

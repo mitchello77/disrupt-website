@@ -17,7 +17,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -26,7 +26,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -35,7 +35,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -44,7 +44,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -57,7 +57,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -66,7 +66,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -75,7 +75,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -84,7 +84,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -98,7 +98,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -107,7 +107,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -116,7 +116,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -125,7 +125,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -138,7 +138,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -147,7 +147,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -156,7 +156,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -165,7 +165,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -179,7 +179,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -188,7 +188,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -197,7 +197,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -206,7 +206,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -219,7 +219,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -228,7 +228,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -237,7 +237,7 @@
             <p>UI/UX Design</p>
           </div>
           <div class="graduate-name hidden">
-            <h2>Samuel Dale</h1>
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 
@@ -245,8 +245,8 @@
           <div class="graduate-discipline">
             <p>UI/UX Design</p>
           </div>
-          <div class="graduate-name disrupt disrupt-once dsrpt-horizontal">
-            <h2>Samuel Dale</h1>
+          <div class="graduate-name hidden">
+            <h3>Samuel Dale</h3>
           </div>
         </div>
 

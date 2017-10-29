@@ -109,6 +109,7 @@ function showGraduateName() {
 
   graduate.hover(function () {
     $(this).find('.graduate-name').removeClass('hidden');
+    // $(this).find('.graduate-name').addClass('disrupt dsrpt-rgb-shift loop');
   }, function () {
     $(this).find('.graduate-name').addClass('hidden');
   })
