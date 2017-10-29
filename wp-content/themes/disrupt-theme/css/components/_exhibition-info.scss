@@ -1,50 +1,34 @@
 section.exhibition-info {
-  height: 800px;
-  background-image: url('../img/background-exhibition.png');
-  background-position: center;
-  background-size: cover;
 
   .columns {
     height: 100%;
+    display: flex;
 
     .column {
       align-self: center;
-      display: flex;
-      padding: 0;
+      flex: 0 0 50%;
 
-      &:first-of-type {
-        justify-content: center;
-        flex: 1 1 40%;
-      }
-
-      &:last-of-type {
-        flex: 1 1 60%;
-        // justify-content: center;
-      }
-
-      .image {
-        height: 450px;
-        width: 350px;
-        background-position: center;
-        background-size: cover;
-        filter: grayscale(1);
-        opacity: .4;
-      }
-
-      .text {
-        max-width: 500px;
-        // margin: auto;
-
-        .caption {
-          color: $green;
-          text-transform: uppercase;
-          margin-bottom: 1rem;
-          display: block;
+      &:nth-of-type(1) {
+        .image {
+          width: 40rem;
+          height: 50rem;
+          opacity: .4;
+          margin: auto;
         }
+      }
 
-        h2 {
-          font-size: 4rem;
-          margin-bottom: 2rem;
+      &:nth-of-type(2) {
+        .text {
+          max-width: 50rem;
+
+          .button {
+            overflow: hidden;
+            position: relative;
+
+            &:hover {
+              @include buttonBackgroundGlitch(graduateButtonAnim, $magenta, $green, $white, alternate);
+            }
+          }
         }
       }
     }

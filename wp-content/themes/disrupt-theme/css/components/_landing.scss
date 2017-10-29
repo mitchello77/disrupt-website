@@ -1,11 +1,5 @@
 section.landing {
   height: 100vh;
-  min-height: 800px;
-
-
-  background-image: url('../img/background-landing.png');
-  background-position: center;
-  background-size: cover;
 
   .orb {
     position: absolute;
@@ -17,6 +11,10 @@ section.landing {
     background-position: center;
     background-size: cover;
     z-index: 1;
+    border-radius: 100%;
+    animation: float 20s infinite linear;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    
   }
 
   .title-wrapper {
@@ -36,24 +34,28 @@ section.landing {
       letter-spacing: 4rem;
       font-family: $font-disrupt;
       display: inline-block;
+
     }
 
     span:first-of-type {
       top: 140px;
       left: -120px;
       z-index: 2;
+      animation: float 5s infinite linear;
     }
 
     span:nth-of-type(2) {
       top: 330px;
       left: -125px;
       z-index: 2;
+      animation: float 10s infinite linear;
     }
 
     span:last-of-type {
       top: 190px;
       left: -20px;
       z-index: 1;
+      animation: float 7.5s infinite linear;
     }
   }
 }

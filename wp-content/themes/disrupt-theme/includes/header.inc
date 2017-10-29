@@ -64,4 +64,15 @@
 	<!-- PAGE SPECIFIC -->
 </head>
 <body class="page-<?php echo $wp_query->query['pagename']; ?>">
+
+	<header>
+		<nav role="navigation">
+			<a href="javascript:;" class="current">Home</a>
+			<a href="javascript:;">Exhibition</a>
+			<img src="<?php echo THEME_URL ?>img/d_logo-web.svg" alt="">
+			<a href="javascript:;">Sponsors</a>
+			<a href="javascript:;">Graduates</a>
+		</nav>
+	</header>
+
 	<main>

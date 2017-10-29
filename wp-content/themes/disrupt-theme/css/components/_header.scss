@@ -1,2 +1,74 @@
-/* HEADER
----------------------------------------------------------------------------------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  z-index: 10;
+
+  background-image: linear-gradient(to bottom, #0A0D20, transparent);
+
+  &:hover {
+    .current {
+      opacity: .4;
+    }
+  }
+
+  nav {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+
+    img {
+      width: 5rem;
+      margin-right: 10rem;
+      vertical-align: middle;
+      opacity: .2;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: .03rem;
+      margin-right: 10rem;
+      cursor: pointer;
+      vertical-align: middle;
+      font-family: $font-heading;
+      letter-spacing: .55rem;
+      font-weight: bold;
+      opacity: .4;
+      transition: opacity .2s ease-in-out;
+
+      &.current {
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 1 !important;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      a {
+        display: table;
+        margin-left: auto;
+        text-align: right;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
