@@ -13,8 +13,9 @@ section.landing {
     z-index: 1;
     border-radius: 100%;
     animation: float 20s infinite linear;
-    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-    
+    // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    box-shadow: 0px -15px 50px 10px rgba($dark-blue, .8) inset;
+    display: none;
   }
 
   .title-wrapper {

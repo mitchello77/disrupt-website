@@ -136,6 +136,7 @@ class NameBackground {
     this.ctx.font = `${this.fontSize}px Disrupt`
     this.ctx.fillStyle = 'rgba(77,13,152,0.7)'
 
+
     this.targetNode.insertBefore(this.canvas, this.targetNode.firstChild)
   }
 
@@ -380,6 +381,8 @@ function randInt(min, max) {
 // This effect is desktop only
 
 window.addEventListener('load', () => {
-  NAME_BG = new NameBackground('body.page-graduates')
-  NAME_BG.init()
+  if ($('body.page-graduates').length > 0) {
+    NAME_BG = new NameBackground('body.page-graduates')
+    NAME_BG.init()  
+  }
 })

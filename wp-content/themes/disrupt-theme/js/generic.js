@@ -549,6 +549,8 @@ var showSnapcode = function() {
 	  })
 	});
 
+
+
 /* GRADUATE SLIDER
 ------------------------------------------------------------------------------------------------------------------------ */
 function init_graduateSlider() {
@@ -563,6 +565,101 @@ function init_graduateSlider() {
 
 $(document).ready(function(){
 	init_graduateSlider();
+});
+
+/* THROTTLE
+------------------------------------------------------------------------------------------------------------------------ */
+function throttle(fn, threshhold, scope) {
+    threshhold || (threshhold = 250);
+    var last,
+        deferTimer;
+    return function() {
+        var context = scope || this;
+
+        var now = +new Date,
+            args = arguments;
+        if (last && now < last + threshhold) {
+            // hold on to it
+            clearTimeout(deferTimer);
+            deferTimer = setTimeout(function() {
+                last = now;
+                fn.apply(context, args);
+            }, threshhold);
+        } else {
+            last = now;
+            fn.apply(context, args);
+        }
+    };
+  }
+
+/* DEBOUNCE
+------------------------------------------------------------------------------------------------------------------------ */
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+
+/* FLOATING ORB
+------------------------------------------------------------------------------------------------------------------------ */
+function init_floatingOrb() {
+
+	var scrollBottom = $(window).scrollTop() + ($(window).innerHeight());
+	var sponsors = $('.sponsors').offset().top + ($('.sponsors').innerHeight() / 2);
+	var exhibition = $('.exhibition-info').offset().top + ($('.exhibition-info').innerHeight() / 2);
+	var graduates = $('.graduates-cta').offset().top + ($('.graduates-cta').innerHeight() / 2);
+
+	if (scrollBottom < exhibition) {
+		$('.floatingOrb').css({
+			left: ($(window).width() / 2) - 250,
+			top: ($('.landing').innerHeight() / 2) - 250,
+			transform: 'scale(1.2)',
+			opacity: 1
+		});
+	}
+
+	if (scrollBottom > exhibition) {
+		$('.floatingOrb').css({
+			left: $('.exhibition-info .container').offset().left + ($('.exhibition-info .container').width()),
+			top: (exhibition / 2),
+			transform: 'scale(1.5)',
+			opacity: .4
+		});
+	}
+
+	if (scrollBottom > sponsors) {
+		$('.floatingOrb').css({
+			left: $('.sponsors .container').offset().left + ($('.sponsors .container').width()),
+			top: (sponsors - 250),
+			transform: 'scale(2)'
+		});
+	}
+
+	if (scrollBottom > graduates) {
+		$('.floatingOrb').css({
+			left: $('.graduates-cta .container').offset().left - 250,
+			top: (graduates + 250),
+			transform: 'scale(2.5)'
+		});
+	}
+}
+
+$(document).ready(function(){
+	init_floatingOrb();
+
+	$(document).scroll(debounce(function() {
+		init_floatingOrb();
+	}, 100));	
 });
 
 
