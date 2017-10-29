@@ -115,18 +115,21 @@ function showGraduateName() {
   })
 }
 
-$(document).ready(function() {
-  moveCamera();
-  showGraduateName();
-})
+
 
 /* SHOW NAME
   ------------------------------------------------------------------------------------------------- */
 
-  function filterHoverEffects() {
-    var graduatesFilter = $('.filter')
+function filterHoverEffects() {
+  var selectedGraduate = $('.graduate')
 
-    graduateFilter.hover(function () {
+  selectedGraduate.hover(function () {
+    $(this).parents('.graduate-group').find('.graduate').not(this).toggleClass('dull')
+  })
+}
 
-    })
-  }
+$(document).ready(function() {
+  moveCamera();
+  showGraduateName();
+  filterHoverEffects();
+})
