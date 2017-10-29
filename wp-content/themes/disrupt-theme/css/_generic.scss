@@ -20,4 +20,16 @@ html, body {
 	background-color: $background;
 	font-family: $font-body;
 	color: $white;
+
+	background-image: url('../img/background-exhibition.png');
+	background-position: center;
+	background-size: cover;
+
+	@media (max-width: 768px) {
+		font-size: 9px;
+	}
+
+	@media (max-width: 640px) {
+		font-size: 8px;
+	}
 }

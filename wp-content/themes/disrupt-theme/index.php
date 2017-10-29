@@ -21,9 +21,10 @@
 
           <div class="column">
             <div class="text">
-              <span class="caption">Interactive and Visual Design</span>
+              <span class="caption magenta">Interactive and Visual Design</span>
               <h2>Disrupt Exhibition</h2>
               <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of countless experimentations, where the 'ending' will always remain a mystery to even.</p>
+              <a class="button" href="javascript:;">Get Directions</a>
             </div>
           </div> <!-- .column -->
         </div> <!-- .columns -->
@@ -32,26 +33,25 @@
 
     <section class="sponsors">
       <div class="container">
-        <div class="content">
-          <div class="text">
-            <span class="caption">Thank you to our</span>
-            <h2>Sponsors</h2>
-            <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of countless experimentations, where the 'ending' will always remain a mystery to even.</p>
-            <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/9a/PlayStation_1_Logo.png/revision/latest?cb=20100130082645" alt="">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/SEGA_logo.png" alt="">
-            <img src="https://vignette2.wikia.nocookie.net/logopedia/images/3/3c/Nintendo_logo.png/revision/latest?cb=20121219042620" alt="">
-          </div>
+        <div class="text">
+          <span class="caption green">Thank you to our</span>
+          <h2>Sponsors</h2>
+          <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of countless experimentations, where the 'ending' will always remain a mystery to even.</p>
+        </div>
+
+        <div class="sponsor-logos">
+          <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/9a/PlayStation_1_Logo.png/revision/latest?cb=20100130082645" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/SEGA_logo.png" alt="">
+          <img src="https://vignette2.wikia.nocookie.net/logopedia/images/3/3c/Nintendo_logo.png/revision/latest?cb=20121219042620" alt="">
         </div>
       </div> <!-- .container -->
     </section> <!-- .sponsors -->
 
     <section class="graduates-cta">
       <div class="container">
-        <div class="content">
-          <div class="text">
-            <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of.Thriving on the thrill and excitement of the unknown.</p>
-            <a class="button" href="javascript:;">Our Graduates</a>
-          </div>
+        <div class="text">
+          <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of.Thriving on the thrill and excitement of the unknown.</p>
+          <a class="button" href="javascript:;">Our Graduates</a>
         </div>
       </div> <!-- .container -->
     </section> <!-- .graduates-cta -->
