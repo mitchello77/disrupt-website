@@ -21,9 +21,13 @@ html, body {
 	font-family: $font-body;
 	color: $white;
 
-	background-image: url('../img/background-exhibition.png');
-	background-position: center;
-	background-size: cover;
+	&:not(.page-graduates) {
+		background-image: url('../img/background-exhibition.png');
+		background-position: center;
+		background-size: cover;
+		background-repeat: repeat;
+	}	
+
 
 	@media (max-width: 768px) {
 		font-size: 9px;

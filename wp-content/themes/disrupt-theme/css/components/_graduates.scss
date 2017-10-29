@@ -36,6 +36,10 @@ body.page-graduates {
 transform:translateZ(-0px);
 }
 
+.fourth {
+  transform:translateZ(-750px);
+}
+
 .graduate-discipline {
 	position: absolute;
 	left: -5rem;
@@ -52,27 +56,165 @@ transform:translateZ(-0px);
 	right: -5rem;
 	bottom: 1rem;
 	max-width: 25rem;
-	background: rgba(3, 12, 64, 0.6);
-	padding: 0 1rem;
+	background: $background;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  z-index: 50;
+  box-sizing: border-box;
+  display: block;
+  box-shadow: 3px 3px 3px rgba($background, 1)
+
+  h2 {
+    margin: 0;
+  }
 
 }
 
 .graduate {
   &:hover {
+    transform: translate3d(0px, -10px, 0) scale(1.025);
     cursor: pointer;
+    box-shadow: 0px -15px 50px 10px rgba($dark-blue, 0.2) inset;
+  }
+
+  &.dull:before {
+    position: absolute;
+		width: 100%;
+		height: 100%;
+		background: $radial-gradient;
+		border-radius: 50%;
+		opacity: 0.3;
   }
 }
+
 
 .filters {
   position: fixed;
   z-index: 2;
-  left: 0;
-  top: 50%;
-  margin: 3rem;
+  right: 0;
+  top: 0;
+  text-align: right;
+  font-family: $font-nav;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  ul {
+    list-style: none;
+  }
 
   li {
-    &:hover {
-      color: red;
+    cursor: pointer;
+    padding: 1rem;
+    transition: 0.2s;
+    text-align: left;
+
+    &.selected {
+      color: $green;
     }
   }
+}
+
+// temporary graduate photo classes
+
+.sam {
+  background-image: url('../img/portraits/sam.png');
+}
+
+.meaghan {
+  background-image: url('../img/portraits/meaghan.png');
+}
+
+.anna {
+  background-image: url('../img/portraits/anna.png');
+}
+
+.jimmy {
+  background-image: url('../img/portraits/jimmy.png');
+}
+
+.liv {
+  background-image: url('../img/portraits/liv.png');
+}
+
+.nicole {
+  background-image: url('../img/portraits/nicole.png');
+}
+
+.brooke {
+  background-image: url('../img/portraits/brooke.png');
+}
+
+.douglas {
+  background-image: url('../img/portraits/douglas.png');
+}
+
+.monica {
+  background-image: url('../img/portraits/monica.png');
+}
+
+.mitchell {
+  background-image: url('../img/portraits/mitchell.png');
+}
+
+.bridget {
+  background-image: url('../img/portraits/bridget.png');
+}
+
+.julia {
+  background-image: url('../img/portraits/julia.png');
+}
+
+.unknown2 {
+  background-image: url('../img/portraits/unknown2.png');
+}
+
+.holly {
+  background-image: url('../img/portraits/holly.png');
+}
+
+.adam {
+  background-image: url('../img/portraits/adam.png');
+}
+
+.joelle {
+  background-image: url('../img/portraits/joelle.png');
+}
+
+.eloise {
+  background-image: url('../img/portraits/eloise.png');
+}
+
+.unknown1 {
+  background-image: url('../img/portraits/unknown1.png');
+}
+
+.tori {
+  background-image: url('../img/portraits/tori.png');
+}
+
+.amira {
+  background-image: url('../img/portraits/amira.png');
+}
+
+.caitlin {
+  background-image: url('../img/portraits/caitlin.png');
+}
+
+.jennifer {
+  background-image: url('../img/portraits/jennifer.png');
+}
+
+.lincoln {
+  background-image: url('../img/portraits/lincoln.png');
+}
+
+.nissa {
+  background-image: url('../img/portraits/nissa.png');
 }

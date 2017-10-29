@@ -63,7 +63,7 @@
 <?php global $wp_query; ?>
 	<!-- PAGE SPECIFIC -->
 </head>
-<body class="page-<?php echo $wp_query->query['pagename']; ?>">
+<body class="page-<?php echo $wp_query->query['pagename'] ? $wp_query->query['pagename'] : $wp_query->query['post_type'] ?>">
 
 	<header>
 		<nav role="navigation">
@@ -75,4 +75,7 @@
 		</nav>
 	</header>
 
-	<main>		
+	<main>
+		<div class="noise-overlay">
+      <img src="<?php echo THEME_URL; ?>img/noise.png" alt="Noise Texture" />
+    </div>

@@ -131,10 +131,10 @@ class NameBackground {
     this.canvas.style.left = '-1vw'
     this.canvas.style.width = '102vw'
     this.canvas.style.height = '100vh'
-    this.canvas.style.opacity = 1
+    this.canvas.style.opacity = 0.7
 
     this.ctx.font = `${this.fontSize}px Disrupt`
-    this.ctx.fillStyle = 'rgba(77,13,152,0.7)'
+    this.ctx.fillStyle = '#20284C'
 
 
     this.targetNode.insertBefore(this.canvas, this.targetNode.firstChild)

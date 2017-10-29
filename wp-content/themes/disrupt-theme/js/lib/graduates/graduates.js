@@ -109,12 +109,27 @@ function showGraduateName() {
 
   graduate.hover(function () {
     $(this).find('.graduate-name').removeClass('hidden');
+    // $(this).find('.graduate-name').addClass('disrupt dsrpt-rgb-shift loop');
   }, function () {
     $(this).find('.graduate-name').addClass('hidden');
+  })
+}
+
+
+
+/* SHOW NAME
+  ------------------------------------------------------------------------------------------------- */
+
+function filterHoverEffects() {
+  var selectedGraduate = $('.graduate')
+
+  selectedGraduate.hover(function () {
+    $(this).parents('.graduate-group').find('.graduate').not(this).toggleClass('dull')
   })
 }
 
 $(document).ready(function() {
   moveCamera();
   showGraduateName();
+  filterHoverEffects();
 })

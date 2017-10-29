@@ -440,7 +440,7 @@ class DISRUPT {
           }
 
           if (!setupData.isGlitching(progress)) {
-            ctx.globalAlpha = 2/3
+            ctx.globalAlpha = 3/4
             ctx.drawImage(domImage, 0, 0)
           }
 

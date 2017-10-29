@@ -9,18 +9,20 @@
 	width: 100%;
 	max-width: 50rem;
 	position: relative;
-	background: radial-gradient(circle at 20rem 20rem, $dark-blue, $purple);
+	background: $radial-gradient;
 	margin: 2.5rem;
 	display: block;
+	box-shadow: $inner-box-shadow;
 
 	&::before {
 		content: '';
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: $purple;
+		background: $radial-gradient;
 		border-radius: 50%;
 		opacity: 0;
+		box-shadow: $inner-box-shadow;
 	}
 
 	&::after {
@@ -45,16 +47,12 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		box-shadow: 0px -15px 50px 10px rgba($dark-blue, 0.4) inset;
-	}
 
-	&.sam {
-		background-image: url('../img/sam.png');
 	}
 }
 
 .graduate.circle, .graduate.circle::before {
-	transition: all .5s;
+	transition: opacity .5s ease-out, max-width .5s ease-out, margin .5s ease-out, transform 0.4s ease-out, box-shadow 0.2s ease;
 }
 
 // Collapse to purple dots
@@ -105,4 +103,28 @@
 	text-decoration: none;
 	font-family: $font-title;
 	letter-spacing: .13rem;
+}
+
+/* NOISE
+---------------------------------------------------------------------------------------------------- */
+
+.noise-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+	opacity: .5;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.15;
+    min-width: 100vw;
+    min-height: 100vh;
+    transform: translate(-50%, -50%);
+    animation: bg-noise-rotate 0.5s steps(4, end) 0s infinite;
+  }
 }
