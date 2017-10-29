@@ -134,7 +134,7 @@ class NameBackground {
     this.canvas.style.opacity = 1
 
     this.ctx.font = `${this.fontSize}px Disrupt`
-    this.ctx.fillStyle = '#20284C'
+    this.ctx.fillStyle = 'rgba(77,13,152,0.7)'
 
     this.targetNode.insertBefore(this.canvas, this.targetNode.firstChild)
   }
