@@ -756,10 +756,10 @@ class DisruptAnimation {
 }
 
 // Auto-create global instance and trigger disruptions
-window.DISRUPT = new DISRUPT()
-
-// TODO: add ability to wait until revealed by scroll
-window.DISRUPT.addDisruptions()
+window.addEventListener('load', () => {
+  window.DISRUPT = new DISRUPT()
+  window.DISRUPT.addDisruptions()
+})
 
 },{"../vendor/html2canvas.min.js":2}],2:[function(require,module,exports){
 (function (global){

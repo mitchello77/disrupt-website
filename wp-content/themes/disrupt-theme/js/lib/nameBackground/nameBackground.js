@@ -275,6 +275,10 @@ class NameBackground {
     if (this.lastDraw === null) { this.lastDraw = timestamp }
     this.dt += timestamp - this.lastDraw
 
+    if (this.dt > this.ms * 10) {
+      this.dt = this.ms
+    }
+
     // Run logic at fps
     while (this.dt > 0) {
       this.dt -= this.ms

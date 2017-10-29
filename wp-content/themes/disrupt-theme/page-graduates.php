@@ -2,7 +2,7 @@
 
 <section>
   <div class="filters">
-    <ul>
+    <ul class="disrupt dsrpt-rgb-shift loop">
       <li>Visual Design</li>
       <li>Print Design</li>
       <li>UI/UX Design</li>
