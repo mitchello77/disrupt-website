@@ -13,6 +13,16 @@
 	margin: 2.5rem;
 	display: block;
 
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $purple;
+		border-radius: 50%;
+		opacity: 0;
+	}
+
 	&::after {
 		content: '';
 		display: block;
@@ -38,10 +48,22 @@
 		box-shadow: 0px -15px 50px 10px rgba($dark-blue, 0.4) inset;
 	}
 
-
-
 	&.sam {
 		background-image: url('../img/sam.png');
+	}
+}
+
+.graduate.circle, .graduate.circle::before {
+	transition: all .5s;
+}
+
+// Collapse to purple dots
+.graduate-group.collapsed .graduate.circle {
+	max-width: 10rem !important;
+	margin: 7.5rem;
+
+	&::before {
+		opacity: 1;
 	}
 }
 

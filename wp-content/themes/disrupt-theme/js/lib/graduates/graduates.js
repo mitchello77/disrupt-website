@@ -55,8 +55,14 @@ var scrollData = {
   offset: 0
 };
 var boxPositions = [-500, -250, -50];
-var dotClassCutoff = -150
-var zoomSpeed = 0.25 // 1 is 1:1 with scroll speed
+var dotClass = 'collapsed'
+var dotClassCutoff = -175
+var zoomSpeed = 0.1 // 1 is 1:1 with scroll speed
+
+var fadeoutThreshold = {
+  min: 20,
+  max: 100
+}
 
 function updateScrollOffset() {
   scrollData.offset = document.documentElement.scrollTop - scrollData.top;
@@ -70,7 +76,27 @@ function moveCamera() {
     var pos = boxPositions[i] + scrollData.offset * zoomSpeed;
     boxes[i].style.transform = `translate3d(0, 0, ${pos}px)`;
 
-    // Dot
+    // Handle application of dot class
+    if (pos > dotClassCutoff && boxes[i].classList.contains(dotClass)) {
+      boxes[i].classList.remove(dotClass)
+    } else if (pos <= dotClassCutoff && !boxes[i].classList.contains(dotClass)) {
+      boxes[i].classList.add(dotClass)
+    }
+
+    // Handle fade out
+    if (pos > fadeoutThreshold.min) {
+      let pct = (pos - fadeoutThreshold.min) / (fadeoutThreshold.max - fadeoutThreshold.min)
+      let blurMax = 20
+
+      let blur = pct * blurMax
+      let opacity = 1 - pct
+      boxes[i].style.opacity = opacity
+      boxes[i].style.filter = `blur(${blur}px)`
+    } else {
+      // Catch-all effect reset
+      boxes[i].style.opacity = 1
+      boxes[i].style.filter = 'none';
+    }
   }
 }
 
