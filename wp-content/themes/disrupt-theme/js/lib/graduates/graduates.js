@@ -51,7 +51,7 @@
 /* Z AXIS SCROLL
   ------------------------------------------------------------------------------------------------- */
 var scrollPosition = document.documentElement.scrollTop,
-    boxPositions = [-500, -250, -50];
+    boxPositions = [-750, -500, -250, -50];
 function scrollDelta() {
   var newScrollPosition = document.documentElement.scrollTop,
       delta = newScrollPosition - scrollPosition;
