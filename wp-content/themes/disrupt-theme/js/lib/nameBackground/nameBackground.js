@@ -134,7 +134,7 @@ class NameBackground {
     this.canvas.style.opacity = 1
 
     this.ctx.font = `${this.fontSize}px Disrupt`
-    this.ctx.fillStyle = '#20284C'
+    this.ctx.fillStyle = 'rgba(77,13,152,0.7)'
 
     this.targetNode.insertBefore(this.canvas, this.targetNode.firstChild)
   }
@@ -274,6 +274,10 @@ class NameBackground {
   animate (timestamp) {
     if (this.lastDraw === null) { this.lastDraw = timestamp }
     this.dt += timestamp - this.lastDraw
+
+    if (this.dt > this.ms * 10) {
+      this.dt = this.ms
+    }
 
     // Run logic at fps
     while (this.dt > 0) {
