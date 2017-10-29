@@ -104,3 +104,26 @@
 	font-family: $font-title;
 	letter-spacing: .13rem;
 }
+
+/* NOISE
+---------------------------------------------------------------------------------------------------- */
+
+#noise-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.15;
+    min-width: 100vw;
+    min-height: 100vh;
+    transform: translate(-50%, -50%);
+    animation: bg-noise-rotate 0.5s steps(4, end) 0s infinite;
+  }
+}

@@ -76,3 +76,6 @@
 	</header>
 
 	<main>
+		<div id="noise-overlay">
+      <img src="<?php echo THEME_URL; ?>img/noise.png" alt="Noise Texture" />
+    </div>

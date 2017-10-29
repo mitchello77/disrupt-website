@@ -173,8 +173,6 @@
         </div>
 
         <div class="circle graduate background-image medium jennifer">
-          
-        </div>
           <div class="graduate-name hidden">
             <h3>Jennifer Park</h3>
           </div>
