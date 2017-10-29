@@ -375,4 +375,7 @@ function randInt(min, max) {
 
 // This effect is desktop only
 
-  window.NAME_BG = new NameBackground('body.page-graduates')
+window.addEventListener('load', () => {
+  NAME_BG = new NameBackground('body.page-graduates')
+  NAME_BG.init()
+})
