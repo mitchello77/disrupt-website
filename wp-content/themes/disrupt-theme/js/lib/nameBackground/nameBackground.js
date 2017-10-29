@@ -133,7 +133,7 @@ class NameBackground {
     this.canvas.style.height = '100vh'
     this.canvas.style.opacity = 1
 
-    this.ctx.font = `${this.fontSize}px disruptheavy`
+    this.ctx.font = `${this.fontSize}px Disrupt`
     this.ctx.fillStyle = '#20284C'
 
     this.targetNode.insertBefore(this.canvas, this.targetNode.firstChild)
@@ -374,6 +374,5 @@ function randInt(min, max) {
 }
 
 // This effect is desktop only
-if (!IS_MOBILE) {
-  window.NAME_BG = new NameBackground('main.fullScreenLayout')
-}
+
+  window.NAME_BG = new NameBackground('body.page-graduates')
