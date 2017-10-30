@@ -109,7 +109,6 @@ function showGraduateName() {
 
   graduate.hover(function () {
     $(this).find('.graduate-name').removeClass('hidden');
-    // $(this).find('.graduate-name').addClass('disrupt dsrpt-rgb-shift loop');
   }, function () {
     $(this).find('.graduate-name').addClass('hidden');
   })
@@ -126,10 +125,29 @@ function filterHoverEffects() {
   selectedGraduate.hover(function () {
     $(this).parents('.graduate-group').find('.graduate').not(this).toggleClass('dull')
   })
-}
+};
 
-$(document).ready(function() {
-  moveCamera();
-  showGraduateName();
-  filterHoverEffects();
-})
+/* move the ghraduate container
+  ------------------------------------------------------------------------------------------------- */
+// function mouseMoveGradName() {
+//   var movementStrength = 25;
+//   var height = movementStrength / $(window).height();
+//   var width = movementStrength / $(window).width();
+//   $(".graduate-name").mousemove(function(e){
+//             var pageX = e.pageX - ($(window).width() / 2);
+//             var pageY = e.pageY - ($(window).height() / 2);
+//             var newvalueX = width * pageX * -1 - 25;
+//             var newvalueY = height * pageY * -1 - 50;
+//             $('.graduate-name').style.transform = `translate(${newvalueX}px, ${newvalueY}px)`
+//   });
+//   };
+
+
+  /* call all the functions
+    ------------------------------------------------------------------------------------------------- */
+  $(document).ready(function() {
+    moveCamera();
+    showGraduateName();
+    filterHoverEffects();
+    mouseMoveGradName();
+  })
