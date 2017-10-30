@@ -2,7 +2,7 @@
 
 <section>
   <div class="graduates-introduction">
-    <h3 class="we-are">We are</h3>
+    <h3 class="we-are disrupt dsrpt-horiztonal">We are</h3>
     <div class="intro-title-container">
       <div class="graduates-title intro-title">
         <span>g</span>
@@ -15,7 +15,7 @@
         <span>e</span>
         <span>s</span>
       </div>
-      <div class="disruptor-title intro-title hidden">
+      <div class="disruptor-title intro-title hidden disrupt dsrpt-rgb-shift loop">
         <span>d</span>
         <span>i</span>
         <span>s</span>
@@ -28,17 +28,17 @@
         <span>s</span>
       </div>
     </div>
+  </div>
 
-    <div class="scroll-prompt hidden">
-      <p>Scroll down to view graduates</p>
-      <i class="fal fa-long-arrow-down down-arrow" data-fa-transform="grow-4"></i>
-    </div>
+  <div class="scroll-prompt hidden">
+    <p>Scroll to explore graduates</p>
+    <i class="fal fa-long-arrow-down down-arrow" data-fa-transform="grow-4"></i>
   </div>
 
   <div class="filters">
     <ul>
       <li class="selected">All</li>
-      <li class="">Graphic Design</li>
+      <li class="disrupt dsrpt-rgb-shift loop">Graphic Design</li>
       <li class="">UI/UX Design</li>
       <li class="">Product Design</li>
       <li class="">Branding</li>

@@ -18,8 +18,8 @@ body.page-graduates {
   // opacity: 0;
   pointer-events: none;
 
-  &.fadeIn {
-    animation-duration: 2s;
+  &.fadeOut {
+    animation-duration: 0.5s;
   }
 }
 
@@ -175,6 +175,21 @@ transform:translateZ(-0px);
     width: 100%;
     text-transform: uppercase;
     opacity: 0;
+
+    &.fadeIn {
+      animation-duration: 2s;
+    }
+
+    &.fadeOut {
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+.we-are {
+  opacity: 0;
+  &.fadeIn {
+    animation-duration: .5s;
   }
 }
 
@@ -184,6 +199,9 @@ transform:translateZ(-0px);
   align-items: center;
   justify-content: center;
   margin: 1.5rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
   p {
     margin-bottom: 1.5rem;
@@ -191,6 +209,14 @@ transform:translateZ(-0px);
 
   .down-arrow {
     animation: float 5s ease infinite;
+  }
+
+  &.fadeIn {
+    animation-duration: 1s;
+  }
+
+  &.fadeOut {
+    animation-duration: 1s;
   }
 }
 

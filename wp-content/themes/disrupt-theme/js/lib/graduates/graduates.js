@@ -148,7 +148,6 @@ function filterHoverEffects() {
 function playIntroduction() {
   var titleContainer = $('.graduates-introduction')
   var weAre = $('.we-are')
-  var introTitle = $('.intro-title')
   var disruptorTitle = $('.disruptor-title')
   var graduatesTitle = $('.graduates-title')
   var scrollPrompt = $('.scroll-prompt')
@@ -157,15 +156,17 @@ function playIntroduction() {
 
   setTimeout(function() {
     weAre.addClass('fadeIn')
-  }, 1000)
+  }, 750)
   setTimeout(function() {
     graduatesTitle.addClass('fadeIn')
-  }, 1500)
+  }, 1000)
   setTimeout(function() {
     graduatesTitle.addClass('fadeOut')
+  }, 4000)
+  setTimeout(function() {
     graduatesTitle.addClass('hidden')
-    disruptorTitle.addClass('fadeIn')
     disruptorTitle.removeClass('hidden')
+    disruptorTitle.addClass('fadeIn')
   }, 5000)
   setTimeout(function() {
     titleContainer.addClass('fadeOut')
@@ -173,7 +174,16 @@ function playIntroduction() {
   setTimeout(function() {
     filters.addClass('fadeIn')
     graduates.addClass('fadeIn')
+  }, 9500)
+  setTimeout(function() {
+    scrollPrompt.removeClass('hidden')
+
+    window.onscroll = function (e) {
+      scrollPrompt.addClass('fadeOut')
+}
+
   }, 10000)
+
 }
 
 
@@ -185,4 +195,5 @@ function playIntroduction() {
     filterHoverEffects();
     // mouseMoveGradName();
     playIntroduction();
+    window.DISRUPT.addDisruptions()
   })
