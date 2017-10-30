@@ -16,24 +16,31 @@
           </div> <!-- .slider -->
         </div> <!-- .circle -->
 
-        <div class="profile circle medium" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div> <!-- .profile -->
+        <div class="profile circle medium graduate" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div> <!-- .profile -->
       </div> <!-- .image -->
 
       <div class="text">
         <?php
 
-          foreach (get_terms() as $i => $term) {
+          $term_list = wp_get_post_terms(get_the_ID(), 'expertise', array("fields" => "all"));
+
+          foreach ($term_list as $i => $term) {
             $terms .= ($i > 0 ? ', ' : '').$term->name;
           }
+
 
           echo "
             <span class=\"caption magenta\">".$terms."</span>
             <h2>".get_the_title()."</h2>
-            <p>".get_field('graduate_philosophy')."</p>
             <p>".get_field('graduate_description')."</p>
-            ".(get_field('graduate_linkedin') ? "<a href=\"".get_field('graduate_linkedin')."\"><i class=\"fab fa-linkedin-in\"></i></a>" : false)."
-            ".(get_field('graduate_instagram') ? "<a href=\"".get_field('graduate_instagram')."\"><i class=\"fab fa-instagram\"></i></a>" : false)."
-            ".(get_field('graduate_behance') ? "<a href=\"".get_field('graduate_behance')."\"><i class=\"fab fa-behance\"></i></a>" : false)."
+            <hr>
+            <p>".get_field('graduate_philosophy')."</p>
+            <div class=\"graduate-socials\">
+              ".(get_field('graduate_website') ? "<a href=\"".get_field('graduate_website')."\"><i class=\"fal fa-globe\"></i></a>" : false)."
+              ".(get_field('graduate_linkedin') ? "<a href=\"".get_field('graduate_linkedin')."\"><i class=\"fab fa-linkedin-in\"></i></a>" : false)."
+              ".(get_field('graduate_instagram') ? "<a href=\"".get_field('graduate_instagram')."\"><i class=\"fab fa-instagram\"></i></a>" : false)."
+              ".(get_field('graduate_behance') ? "<a href=\"".get_field('graduate_behance')."\"><i class=\"fab fa-behance\"></i></a>" : false)."
+            </div>
           ";
 
          ?>

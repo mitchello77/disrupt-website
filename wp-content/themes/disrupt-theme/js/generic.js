@@ -558,7 +558,8 @@ function init_graduateSlider() {
 
 	if (slider.length) {
 		slider.slick({
-			fade: true
+			fade: true,
+			dots: true
 		});
 	}
 }

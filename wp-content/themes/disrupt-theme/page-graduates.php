@@ -3,185 +3,71 @@
 <section>
   <div class="filters">
     <ul>
-      <li class="selected">All</li>
-      <li class="">Graphic Design</li>
-      <li class="">UI/UX Design</li>
-      <li class="">Product Design</li>
-      <li class="">Branding</li>
+      <?php
+      $taxonomies = get_object_taxonomies( (object) array( 'post_type' => 'graduate' ) );
+
+      foreach( $taxonomies as $taxonomy ) {
+         $terms = get_terms( $taxonomy );
+
+         foreach( $terms as $term ) {
+           echo "<li>".$term->name."</li>";
+         }
+       }
+      ?>
     </ul>
   </div>
   <div class="graduates-viewport">
-    <div class="graduate-group first">
-      <div class="row">
+    <?php
+      foreach( $taxonomies as $taxonomy ) {
 
-        <div class="circle graduate background-image medium sam">
-          <div class="graduate-name hidden">
-            <h3>Samuel Dale</h3>
-          </div>
-        </div>
+         foreach( $terms as $term ) {
 
-        <div class="circle graduate background-image medium meaghan">
-          <div class="graduate-name hidden">
-            <h3>Meaghan Strong</h3>
-          </div>
-        </div>
+          echo "<div class=\"graduate-group\">";
 
-        <div class="circle graduate background-image medium anna">
-          <div class="graduate-name hidden">
-            <h3>Anna Sachs</h3>
-          </div>
-        </div>
+          $query = new WP_Query([
+            'post_type' => 'graduate',
+            'taxonomy' => $taxonomy,
+            'term' => $term->slug
+          ]);
 
-        <div class="circle graduate background-image medium jimmy">
-          <div class="graduate-name hidden">
-            <h3>Jimmy Pike</h3>
-          </div>
-        </div>
+          if ( $query->have_posts() ) {
+            $i = 0;
+            while ( $query->have_posts() ) {
+              $query->the_post();
 
-      </div>
+              if ($i == 0 || $i == 5) {
+                if ($i == 5) {
+                  echo "</div>";
+                }
 
-      <div class="row">
+                echo "<div class=\"row\">";
+              }
 
-        <div class="circle graduate background-image medium liv">
-          <div class="graduate-name hidden">
-            <h3>Liv Garvey</h3>
-          </div>
-        </div>
+              echo "
+                <div
+                  class=\"circle graduate background-image medium\"
+                  style=\"background-image: url(".get_the_post_thumbnail_url().");\"
+                  onclick=\"window.open('".ROOT_URL."graduates/anna-sachs')\"
+                >
+                  <div class=\"graduate-name hidden\">
+                    <h3>".get_the_title()."</h3>
+                  </div>
+                </div>
+              ";
 
-        <div class="circle graduate background-image medium nicole">
-          <div class="graduate-name hidden">
-            <h3>Nicole Nughes</h3>
-          </div>
-        </div>
+              $i++;
+            }
 
-        <div class="circle graduate background-image medium brooke">
-          <div class="graduate-name hidden">
-            <h3>Brooke Royston</h3>
-          </div>
-        </div>
+            echo "</div>";
 
-        <div class="circle graduate background-image medium douglas">
-          <div class="graduate-name hidden">
-            <h3>Douglas Haigh</h3>
-          </div>
-        </div>
+          }
 
-      </div>
-    </div>
-    <div class="graduate-group second">
-      <div class="row">
+          echo "</div>";
 
-        <div class="circle graduate background-image medium monica">
-          <div class="graduate-name hidden">
-            <h3>Monica Wong</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium mitchell">
-          <div class="graduate-name hidden">
-            <h3>Mitchell Williams</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium nissa">
-          <div class="graduate-name hidden">
-            <h3>Nissa Ryan</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium bridget">
-          <div class="graduate-name hidden">
-            <h3>Bridget Harbourne</h3>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row">
-
-        <div class="circle graduate background-image medium julia">
-          <div class="graduate-name hidden">
-            <h3>Julia Hall</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium unknown2">
-          <div class="graduate-name hidden">
-            <h3>Unsure Name</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium holly">
-          <div class="graduate-name hidden">
-            <h3>Holly Nash</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium adam">
-          <div class="graduate-name hidden">
-            <h3>Adam Nicholson</h3>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="graduate-group third">
-      <div class="row">
-
-        <div class="circle graduate background-image medium joelle">
-          <div class="graduate-name hidden">
-            <h3>Joelle Black</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium eloise">
-          <div class="graduate-name hidden">
-            <h3>Eloise Baartz</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium unknown1">
-          <div class="graduate-name hidden">
-            <h3>Unsure Name</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium tori">
-          <div class="graduate-name hidden">
-            <h3>Tori Walsh</h3>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row">
-
-        <div class="circle graduate background-image medium lincoln">
-          <div class="graduate-name hidden">
-            <h3>Lincoln Ray-Smith</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium amira">
-          <div class="graduate-name hidden">
-            <h3>Amira</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium caitlin">
-          <div class="graduate-name hidden">
-            <h3>Caitlin Nicol</h3>
-          </div>
-        </div>
-
-        <div class="circle graduate background-image medium jennifer">
-          <div class="graduate-name hidden">
-            <h3>Jennifer Park</h3>
-          </div>
-        </div>
-
-      </div>
-    </div>
+         }
+      }
+     ?>
+   </div> <!-- .graduate-viewport -->
 
   </div>
 </section>
