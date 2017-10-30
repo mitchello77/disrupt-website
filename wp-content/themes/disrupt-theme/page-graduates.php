@@ -3,7 +3,11 @@
 <section>
   <div class="graduates-introduction">
     <h3>We are</h3>
-    <h1 class="title disrupt drspt-rgb-shift loop">disrupters</h1>
+    <h1 class="title disrupt drspt-rgb-shift loop"></h1>
+
+    <div class="scroll-prompt">
+
+    </div>
   </div>
   <div class="filters hidden">
     <ul>
