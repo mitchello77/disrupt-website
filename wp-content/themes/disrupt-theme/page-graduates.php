@@ -3,9 +3,11 @@
 <section>
   <div class="filters">
     <ul>
-      <li class="">Visual Design</li>
-      <li class="">Print Design</li>
+      <li class="selected">All</li>
+      <li class="">Graphic Design</li>
       <li class="">UI/UX Design</li>
+      <li class="">Product Design</li>
+      <li class="">Branding</li>
     </ul>
   </div>
   <div class="graduates-viewport">
