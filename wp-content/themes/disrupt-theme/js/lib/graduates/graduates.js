@@ -220,5 +220,4 @@ function playIntroduction() {
     filterHoverEffects();
     // mouseMoveGradName();
     playIntroduction();
-    window.DISRUPT.addDisruptions()
   })

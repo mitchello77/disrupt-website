@@ -559,7 +559,9 @@ function init_graduateSlider() {
 	if (slider.length) {
 		slider.slick({
 			fade: true,
-			dots: true
+			dots: true,
+			// nextArrow: '<span><i class="fal fa-chevron-right slick-prev" data-fa-transform="grow-8"></i></span>',
+  		// prevArrow: '<span><i class="fal fa-chevron-left slick-next" data-fa-transform="grow-8"></i></span>',
 		});
 	}
 }

@@ -73,6 +73,7 @@
             position: absolute;
             top: 50%;
             z-index: 10;
+            color: red;
 
             &.slick-prev {
               left: calc(50% - 4rem);
@@ -82,6 +83,10 @@
             &.slick-next {
               right: calc(50% - 4rem);
               transform: translate(100%, -50%);
+            }
+
+            &.fa-chevron-right {
+              right: 0;
             }
           }
 
