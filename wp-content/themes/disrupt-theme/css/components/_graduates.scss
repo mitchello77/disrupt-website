@@ -78,7 +78,6 @@ transform:translateZ(-0px);
   box-shadow: -1px 9px 25px 6px rgba($background, 0.6);
   transition: background .2s ease;
   overflow: hidden;
-  border: 1px solid $white;
 
   h2 {
     margin: 0;
@@ -127,6 +126,8 @@ transform:translateZ(-0px);
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  text-align: right;
 
 
   ul {
@@ -136,11 +137,16 @@ transform:translateZ(-0px);
   li {
     cursor: pointer;
     padding: 1rem;
-    transition: 0.2s;
-    text-align: left;
+    transition: all 0.4s ease;
+    color: rgba($white, 0.4);
+
+    &:not(.selected):hover {
+      color: $white;
+      transform: translateX(-1rem);
+    }
 
     &.selected {
-      color: $green;
+      color: $white;
     }
   }
 }
