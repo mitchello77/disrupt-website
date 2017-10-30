@@ -614,6 +614,10 @@ function debounce(func, wait, immediate) {
 ------------------------------------------------------------------------------------------------------------------------ */
 function init_floatingOrb() {
 
+	if ($('.floatingOrb').length < 1) {
+		return;
+	}
+
 	var scrollBottom = $(window).scrollTop() + ($(window).innerHeight());
 	var sponsors = $('.sponsors').offset().top + ($('.sponsors').innerHeight() / 2);
 	var exhibition = $('.exhibition-info').offset().top + ($('.exhibition-info').innerHeight() / 2);

@@ -54,7 +54,7 @@ var scrollData = {
   top: document.documentElement.scrollTop,
   offset: 0
 };
-var boxPositions = [-500, -250, -50];
+var boxPositions = [-50];
 var dotClass = 'collapsed'
 var dotClassCutoff = -175
 var zoomSpeed = 0.1 // 1 is 1:1 with scroll speed
@@ -62,6 +62,25 @@ var zoomSpeed = 0.1 // 1 is 1:1 with scroll speed
 var fadeoutThreshold = {
   min: 20,
   max: 100
+}
+
+function setBoxPositions() {
+  var previous = 0;
+
+  $('.filters li').each(function(index) {
+    previous -= 250;
+    boxPositions.push(previous);
+  });
+}
+
+function setFilterMovement() {
+  $(".filters li").each(function(index){
+    $(this).on('click', function() {
+      $('html, body').animate({
+        scrollTop: Math.abs(boxPositions[index] + 50) / .1
+      }, 200);
+    });
+  });
 }
 
 function updateScrollOffset() {
@@ -130,15 +149,19 @@ function filterHoverEffects() {
 /* move the ghraduate container
   ------------------------------------------------------------------------------------------------- */
 // function mouseMoveGradName() {
-//   var movementStrength = 25;
-//   var height = movementStrength / $(window).height();
-//   var width = movementStrength / $(window).width();
-//   $(".graduate-name").mousemove(function(e){
-//             var pageX = e.pageX - ($(window).width() / 2);
-//             var pageY = e.pageY - ($(window).height() / 2);
-//             var newvalueX = width * pageX * -1 - 25;
-//             var newvalueY = height * pageY * -1 - 50;
-//             $('.graduate-name').style.transform = `translate(${newvalueX}px, ${newvalueY}px)`
+//   var movementStrength = 10;
+//   var height = movementStrength / $('.graduate').height();
+//   var width = movementStrength / $('.graduate').width();
+//
+//   $(".graduate").mousemove(function(e){
+//     var pageX = e.pageX - ($(this).width() / 2);
+//     var pageY = e.pageY - ($(this).height() / 2);
+//     var newvalueX = width * pageX * -1 + 25;
+//     var newvalueY = height * pageY * -1 + 100;
+//
+//     $(this).children().css({
+//       transform: `translate(${newvalueX}px, ${newvalueY}px)`
+//     });
 //   });
 //   };
 
@@ -146,8 +169,12 @@ function filterHoverEffects() {
   /* call all the functions
     ------------------------------------------------------------------------------------------------- */
   $(document).ready(function() {
+    setBoxPositions();
+    setFilterMovement();
     moveCamera();
     showGraduateName();
     filterHoverEffects();
-    mouseMoveGradName();
-  })
+    // mouseMoveGradName();
+
+
+  });

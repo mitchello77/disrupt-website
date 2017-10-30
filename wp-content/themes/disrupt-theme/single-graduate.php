@@ -27,7 +27,7 @@
           }
 
           echo "
-            <span class=\"caption\">".$terms."</span>
+            <span class=\"caption magenta\">".$terms."</span>
             <h2>".get_the_title()."</h2>
             <p>".get_field('graduate_philosophy')."</p>
             <p>".get_field('graduate_description')."</p>

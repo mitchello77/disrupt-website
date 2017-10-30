@@ -1,6 +1,8 @@
 /* GRADUATE SINGLE
 ---------------------------------------------------------------------------------------------------- */
 .graduate-single {
+  height: 100vh;
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -22,6 +24,10 @@
         position: relative;
         overflow: hidden;
         box-shadow: 5px -5px 20px rgba($black, .4);
+        animation-name: float;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
 
         .slider {
           height: 100%;
@@ -58,10 +64,12 @@
       }
 
       .profile {
-        transform: translateY(-50%);
         background-position: center;
         background-size: cover;
         box-shadow: 5px -5px 20px rgba($black, .4);
+        top: -12.5rem;
+
+        animation: float 10s infinite;
 
         @media (max-width: 500px) {
           max-width: 17.5rem;
@@ -71,29 +79,7 @@
 
     .text {
       flex: 1 1 50%;
-      z-index: 10;
       padding-left: 2.5rem;
-
-      .caption {
-        margin-bottom: 1.25rem;
-        display: inline-block;
-        color: $magenta;
-      }
-
-      a {
-        display: inline-block;
-        color: $white;
-        font-size: 3.2rem;
-        margin-right: 1.5rem;
-
-        &:last-of-type {
-          margin: 0;
-        }
-
-        &:hover {
-          color: rgba($white, .6);
-        }
-      }
     }
 
     @media (max-width: 768px) {

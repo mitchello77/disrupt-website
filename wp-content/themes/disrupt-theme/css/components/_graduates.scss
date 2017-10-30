@@ -25,20 +25,9 @@ body.page-graduates {
  display: flex;
  flex-direction: column;
  justify-content: space-around;
-}
-.first {
- transform:translateZ(-500px);
-}
-.second {
- transform:translateZ(-250px);
-}
-.third {
-transform:translateZ(-0px);
+
 }
 
-.fourth {
-  transform:translateZ(-750px);
-}
 
 .graduate-discipline {
 	position: absolute;
@@ -53,18 +42,18 @@ transform:translateZ(-0px);
 
 .graduate-name {
 	position: absolute;
-	right: -5rem;
-	bottom: 1rem;
 	max-width: 25rem;
+  left: 50%;
+  top: 75%;
 	background: $background;
   margin: 0;
   padding: 0.5rem 1rem;
   z-index: 50;
-  box-sizing: border-box;
   display: block;
   box-shadow: -1px 9px 25px 6px rgba($background, 0.6);
   transition: background .2s ease;
   overflow: hidden;
+
 
   h2 {
     margin: 0;
