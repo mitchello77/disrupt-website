@@ -149,5 +149,5 @@ function filterHoverEffects() {
     moveCamera();
     showGraduateName();
     filterHoverEffects();
-    mouseMoveGradName();
+    // mouseMoveGradName();
   })

@@ -1,14 +1,18 @@
 <?php require_once('includes/header.inc'); ?>
 
 <section>
-  <div class="filters">
+  <div class="graduates-introduction">
+    <h3>We are</h3>
+    <h1 class="title disrupt drspt-rgb-shift loop">disrupters</h1>
+  </div>
+  <div class="filters hidden">
     <ul>
       <li class="">Visual Design</li>
       <li class="">Print Design</li>
       <li class="">UI/UX Design</li>
     </ul>
   </div>
-  <div class="graduates-viewport">
+  <div class="graduates-viewport hidden">
     <div class="graduate-group first">
       <div class="row">
 
