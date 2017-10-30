@@ -145,6 +145,37 @@ transform:translateZ(-0px);
   }
 }
 
+// test dsrupt title
+.test-disrupt-title {
+  width: 100%;
+
+  .intro-title {
+    font-family: $font-disrupt;
+    font-size: 10rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+.scroll-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  .down-arrow {
+    animation: float 5s ease infinite;
+  }
+}
+
 // temporary graduate photo classes
 
 .sam {

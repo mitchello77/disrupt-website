@@ -3,12 +3,38 @@
 <section>
   <div class="graduates-introduction">
     <h3>We are</h3>
-    <h1 class="title disrupt drspt-rgb-shift loop"></h1>
+    <div class="test-disrupt-title">
+      <!-- <div class="disruptor intro-title">
+        <span>d</span>
+        <span>i</span>
+        <span>s</span>
+        <span>r</span>
+        <span>u</span>
+        <span>p</span>
+        <span>t</span>
+        <span>o</span>
+        <span>r</span>
+        <span>s</span>
+      </div> -->
+      <div class="graduates-title intro-title">
+        <span>g</span>
+        <span>r</span>
+        <span>a</span>
+        <span>d</span>
+        <span>u</span>
+        <span>a</span>
+        <span>t</span>
+        <span>e</span>
+        <span>s</span>
+      </div>
+    </div>
 
-    <div class="scroll-prompt">
-
+    <div class="scroll-prompt hidden">
+      <p>Scroll down to view graduates</p>
+      <i class="fal fa-long-arrow-down down-arrow" data-fa-transform="grow-4"></i>
     </div>
   </div>
+
   <div class="filters hidden">
     <ul>
       <li class="">Visual Design</li>
