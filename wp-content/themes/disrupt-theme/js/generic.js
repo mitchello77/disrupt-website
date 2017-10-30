@@ -659,7 +659,7 @@ $(document).ready(function(){
 
 	$(document).scroll(debounce(function() {
 		init_floatingOrb();
-	}, 100));
+	}, 50));
 });
 
 
