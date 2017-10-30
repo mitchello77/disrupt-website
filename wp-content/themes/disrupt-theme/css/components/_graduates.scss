@@ -1,7 +1,7 @@
 /* GRADUATES
 ---------------------------------------------------------------------------------------------------- */
 body.page-graduates {
-  height: 10000px;
+  height: 7000px;
 }
 
 .graduates-viewport {
@@ -62,10 +62,20 @@ transform:translateZ(-0px);
   z-index: 50;
   box-sizing: border-box;
   display: block;
-  box-shadow: 3px 3px 3px rgba($background, 1)
+  box-shadow: -1px 9px 25px 6px rgba($background, 0.6);
+  transition: background .2s ease;
+  overflow: hidden;
 
   h2 {
     margin: 0;
+  }
+
+  &:hover {
+    @include buttonBackgroundGlitch(graduateNameAnim, $navy, $blue, $neon-pink, normal);
+
+    h2 {
+      transform: translateX(10px);
+    }
   }
 
 }
@@ -103,6 +113,8 @@ transform:translateZ(-0px);
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  text-align: right;
 
 
   ul {
@@ -112,11 +124,16 @@ transform:translateZ(-0px);
   li {
     cursor: pointer;
     padding: 1rem;
-    transition: 0.2s;
-    text-align: left;
+    transition: all 0.4s ease;
+    color: rgba($white, 0.4);
+
+    &:not(.selected):hover {
+      color: $white;
+      transform: translateX(-1rem);
+    }
 
     &.selected {
-      color: $green;
+      color: $white;
     }
   }
 }
