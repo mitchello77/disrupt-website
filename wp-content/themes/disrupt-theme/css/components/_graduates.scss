@@ -4,6 +4,25 @@ body.page-graduates {
   height: 7000px;
 }
 
+.graduates-introduction {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  // opacity: 0;
+  pointer-events: none;
+
+  &.fadeOut {
+    animation-duration: 0.5s;
+  }
+}
+
 .graduates-viewport {
  position:fixed;
  perspective: 100px;
@@ -16,6 +35,11 @@ body.page-graduates {
  bottom: 0;
  right: 0;
  z-index: 1;
+ opacity: 0;
+
+ &.fadeIn {
+   animation-duration: 2s;
+ }
 
 }
 .graduate-group {
@@ -26,8 +50,7 @@ body.page-graduates {
  flex-direction: column;
  justify-content: space-around;
 
-}
-
+ }
 
 .graduate-discipline {
 	position: absolute;
@@ -104,7 +127,11 @@ body.page-graduates {
   justify-content: center;
   height: 100vh;
   text-align: right;
+  opacity: 0;
 
+  &.fadeIn {
+    animation-duration: 2s;
+  }
 
   ul {
     list-style: none;
@@ -124,6 +151,64 @@ body.page-graduates {
     &.selected {
       color: $white;
     }
+  }
+}
+
+// test dsrupt title
+.intro-title-container {
+  width: 100%;
+
+  .intro-title {
+    font-family: $font-disrupt;
+    font-size: 10rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    text-transform: uppercase;
+    opacity: 0;
+
+    &.fadeIn {
+      animation-duration: 2s;
+    }
+
+    &.fadeOut {
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+.we-are {
+  opacity: 0;
+  &.fadeIn {
+    animation-duration: .5s;
+  }
+}
+
+.scroll-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  .down-arrow {
+    animation: float 5s ease infinite;
+  }
+
+  &.fadeIn {
+    animation-duration: 1s;
+  }
+
+  &.fadeOut {
+    animation-duration: 1s;
   }
 }
 
