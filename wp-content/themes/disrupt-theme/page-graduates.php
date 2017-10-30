@@ -69,8 +69,8 @@
             while ( $query->have_posts() ) {
               $query->the_post();
 
-              if ($i == 0 || $i == 5) {
-                if ($i == 5) {
+              if ($i == 0 || $i == 4) {
+                if ($i == 4) {
                   echo "</div>";
                 }
 

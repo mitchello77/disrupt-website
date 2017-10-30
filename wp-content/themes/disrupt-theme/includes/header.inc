@@ -63,15 +63,15 @@
 <?php global $wp_query; ?>
 	<!-- PAGE SPECIFIC -->
 </head>
-<body class="page-<?php echo $wp_query->query['pagename'] ? $wp_query->query['pagename'] : $wp_query->query['post_type'] ?>">
+<body class="<?php echo is_front_page() ? 'front-page' : false ?> page-<?php echo $wp_query->query['pagename'] ? $wp_query->query['pagename'] : $wp_query->query['post_type'] ?>">
 
 	<header>
 		<nav role="navigation">
-			<a href="javascript:;" class="current">Home</a>
-			<a href="javascript:;">Exhibition</a>
+			<a href="javascript:;" data-hash="home">Home</a>
+			<a href="javascript:;" data-hash="exhibition">Exhibition</a>
 			<img src="<?php echo THEME_URL ?>img/d_logo-web.svg" alt="">
-			<a href="javascript:;">Sponsors</a>
-			<a href="javascript:;">Graduates</a>
+			<a href="javascript:;" data-hash="sponsors">Sponsors</a>
+			<a <?php echo is_page('graduates') || is_singular('graduate') ? 'class="current"' : false ?> href="<?php echo ROOT_URL.'graduates' ?>" >Graduates</a>
 		</nav>
 	</header>
 

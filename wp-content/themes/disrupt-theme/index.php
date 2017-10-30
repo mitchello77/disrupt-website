@@ -2,7 +2,7 @@
 
   <div class="floatingOrb"></div>
 
-  <section class="landing">
+  <section class="landing" id="home">
     <div class="container">
       <div class="title-wrapper">
         <span>DI</span>
@@ -14,7 +14,7 @@
     </div> <!-- .container -->
   </section> <!-- .landing -->
 
-  <section class="exhibition-info">
+  <section class="exhibition-info" id="exhibition">
     <div class="container">
       <div class="columns">
         <div class="column">
@@ -26,14 +26,15 @@
             <span class="caption magenta">Interactive and Visual Design</span>
             <h2>Disrupt Exhibition</h2>
             <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of countless experimentations, where the 'ending' will always remain a mystery to even.</p>
-            <a class="button" href="javascript:;">Get Directions</a>
+            <a class="button" href="http://maps.apple.com/maps?daddr=5%20Musk%20Avenue,%20Kelvin%20Grove%20QLD%204059,%20Australia&dirflg=d">Get Directions</a>            
+            <a class="button" href="https://www.facebook.com/events/863477550472940/?acontext=%7B%22source%22%3A5%2C%22page_id_source%22%3A1338212982954191%2C%22action_history%22%3A[%7B%22surface%22%3A%22page%22%2C%22mechanism%22%3A%22main_list%22%2C%22extra_data%22%3A%22%7B%5C%22page_id%5C%22%3A1338212982954191%2C%5C%22tour_id%5C%22%3Anull%7D%22%7D]%2C%22has_source%22%3Atrue%7D">Facebook Event</a>
           </div>
         </div> <!-- .column -->
       </div> <!-- .columns -->
     </div> <!-- .container -->
   </section> <!-- .exhibition-info -->
 
-  <section class="sponsors">
+  <section class="sponsors" id="sponsors">
     <div class="container">
       <div class="text">
         <span class="caption green">Thank you to our</span>
@@ -50,11 +51,11 @@
   </section> <!-- .sponsors -->
 
 
-  <section class="graduates-cta">
+  <section class="graduates-cta" id="graduates">
     <div class="container">
       <div class="text">
         <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of.Thriving on the thrill and excitement of the unknown.</p>
-        <a class="button" href="javascript:;">Our Graduates</a>
+        <a class="button" href="<?php echo ROOT_URL ?>graduates">Our Graduates</a>
       </div>
     </div> <!-- .container -->
   </section> <!-- .graduates-cta -->
