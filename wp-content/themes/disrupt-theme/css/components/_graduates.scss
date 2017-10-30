@@ -124,7 +124,7 @@ transform:translateZ(-0px);
   li {
     cursor: pointer;
     padding: 1rem;
-    transition: color 0.2s ease, transform 0.2 ease;
+    transition: all 0.4s ease;
     color: rgba($white, 0.4);
 
     &:not(.selected):hover {
