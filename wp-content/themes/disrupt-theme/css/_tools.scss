@@ -81,6 +81,7 @@ Example usage:
   }
 }
 
+
 /*
   (TEXT) PARAMS
   =================
@@ -283,6 +284,28 @@ Example usage:
 	100% {
 		opacity: 1;
 	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
 }
 
 /* FUNCTIONS

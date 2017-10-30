@@ -143,6 +143,40 @@ function filterHoverEffects() {
 //   };
 
 
+// graduates cinematic intro
+
+function playIntroduction() {
+  var titleContainer = $('.graduates-introduction')
+  var weAre = $('.we-are')
+  var introTitle = $('.intro-title')
+  var disruptorTitle = $('.disruptor-title')
+  var graduatesTitle = $('.graduates-title')
+  var scrollPrompt = $('.scroll-prompt')
+  var filters = $('.filters')
+  var graduates = $('.graduates-viewport')
+
+  setTimeout(function() {
+    weAre.addClass('fadeIn')
+  }, 1000)
+  setTimeout(function() {
+    graduatesTitle.addClass('fadeIn')
+  }, 1500)
+  setTimeout(function() {
+    graduatesTitle.addClass('fadeOut')
+    graduatesTitle.addClass('hidden')
+    disruptorTitle.addClass('fadeIn')
+    disruptorTitle.removeClass('hidden')
+  }, 5000)
+  setTimeout(function() {
+    titleContainer.addClass('fadeOut')
+  }, 9000)
+  setTimeout(function() {
+    filters.addClass('fadeIn')
+    graduates.addClass('fadeIn')
+  }, 10000)
+}
+
+
   /* call all the functions
     ------------------------------------------------------------------------------------------------- */
   $(document).ready(function() {
@@ -150,4 +184,5 @@ function filterHoverEffects() {
     showGraduateName();
     filterHoverEffects();
     // mouseMoveGradName();
+    playIntroduction();
   })

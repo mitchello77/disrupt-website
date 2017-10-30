@@ -15,6 +15,12 @@ body.page-graduates {
   justify-content: center;
   align-items: center;
   z-index: 200;
+  // opacity: 0;
+  pointer-events: none;
+
+  &.fadeIn {
+    animation-duration: 2s;
+  }
 }
 
 .graduates-viewport {
@@ -29,6 +35,11 @@ body.page-graduates {
  bottom: 0;
  right: 0;
  z-index: 1;
+ opacity: 0;
+
+ &.fadeIn {
+   animation-duration: 2s;
+ }
 
 }
 .graduate-group {
@@ -47,10 +58,6 @@ body.page-graduates {
 }
 .third {
 transform:translateZ(-0px);
-}
-
-.fourth {
-  transform:translateZ(-750px);
 }
 
 .graduate-discipline {
@@ -128,7 +135,11 @@ transform:translateZ(-0px);
   justify-content: center;
   height: 100vh;
   text-align: right;
+  opacity: 0;
 
+  &.fadeIn {
+    animation-duration: 2s;
+  }
 
   ul {
     list-style: none;
@@ -152,7 +163,7 @@ transform:translateZ(-0px);
 }
 
 // test dsrupt title
-.test-disrupt-title {
+.intro-title-container {
   width: 100%;
 
   .intro-title {
@@ -163,6 +174,7 @@ transform:translateZ(-0px);
     flex-wrap: nowrap;
     width: 100%;
     text-transform: uppercase;
+    opacity: 0;
   }
 }
 
