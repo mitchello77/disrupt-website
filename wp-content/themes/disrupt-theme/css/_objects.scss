@@ -52,7 +52,13 @@
 }
 
 .graduate.circle, .graduate.circle::before {
-	transition: opacity .5s ease-out, max-width .5s ease-out, margin .5s ease-out, transform 0.4s ease-out, box-shadow 0.2s ease;
+	transition:
+		opacity .5s cubic-bezier(0.83, 0.28, 0.48, 0.99),
+		max-width .5s cubic-bezier(0.83, 0.28, 0.48, 0.99),
+		margin .5s cubic-bezier(0.83, 0.28, 0.48, 0.99),
+		transform 0.4s ease-out,
+		box-shadow 0.2s ease,
+		filter 0.2s ease;
 }
 
 // Collapse to purple dots
