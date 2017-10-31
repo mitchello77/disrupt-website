@@ -2,8 +2,8 @@
 ---------------------------------------------------------------------------------------------------- */
 .floatingOrb {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 200px;
+  left: calc(50% - 250px);
   height: 500px;
   width: 500px;
   border-radius: 100%;
@@ -14,7 +14,6 @@
   background-size: cover;
   transition: left 1s, top 1s, transform 1s, opacity 1s;
 }
-
 
 main {
   overflow: hidden !important;

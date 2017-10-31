@@ -21,10 +21,7 @@
 	<script type='text/javascript'>
 		var THEME_URL = "<?php echo THEME_URL; ?>";
 		var ROOT_URL = "<?php echo ROOT_URL; ?>";
-	</script>
-
-	<script src="https://use.typekit.net/nlt7cfp.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	</script>	
 
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery-3.2.1.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery.easing.min.js'></script>

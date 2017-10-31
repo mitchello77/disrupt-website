@@ -3,6 +3,12 @@
 .graduate-single {
   height: 100vh;
 
+  @media (max-width: 768px) {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 10rem 0;
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
