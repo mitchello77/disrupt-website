@@ -22,7 +22,6 @@
       .circle.large {
         margin: auto;
         position: relative;
-        overflow: hidden;
         box-shadow: 5px -5px 20px rgba($black, .4);
         animation-name: float;
         animation-duration: 15s;
@@ -74,25 +73,40 @@
             top: 50%;
             z-index: 10;
             color: red;
+            transform: translate(0, -50%);
+            color: rgba($white, 0.5);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color .3s ease, transform .5s ease;
+            padding: 2rem;
+
+            &:hover {
+              color: $white;
+            }
 
             &.slick-prev {
-              left: calc(50% - 4rem);
-              transform: translate(-100%, -50%);
+              left: -4.5rem;
+              &:hover {
+                transform: translate(-1rem, -50%);
+              }
             }
 
             &.slick-next {
-              right: calc(50% - 4rem);
-              transform: translate(100%, -50%);
-            }
-
-            &.fa-chevron-right {
-              right: 0;
+              right: -4.5rem;
+              &:hover {
+                transform: translate(1rem, -50%);
+              }
             }
           }
 
           .slick-list,
           .slick-track {
             height: 100%;
+          }
+
+          .slick-list {
+            border-radius: 100%;
+            overflow: hidden;
           }
 
           .slide {
