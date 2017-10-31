@@ -186,50 +186,43 @@ function handleFilters() {
 
 function playIntroduction() {
 
-  window.onload = function () {
-    if (localStorage.getItem("hasCodeRunBefore") === null) {
-      var titleContainer = $('.graduates-introduction')
-      var weAre = $('.we-are')
-      var disruptorTitle = $('.disruptor-title')
-      var graduatesTitle = $('.graduates-title')
-      var scrollPrompt = $('.scroll-prompt')
-      var filters = $('.filters')
-      var graduates = $('.graduates-viewport')
+    var titleContainer = $('.graduates-introduction')
+    var weAre = $('.we-are')
+    var disruptorTitle = $('.disruptor-title')
+    var graduatesTitle = $('.graduates-title')
+    var scrollPrompt = $('.scroll-prompt')
+    var filters = $('.filters')
+    var graduates = $('.graduates-viewport')
 
-      setTimeout(function() {
-        weAre.addClass('fadeIn')
-      }, 750)
-      setTimeout(function() {
-        graduatesTitle.addClass('fadeIn')
-      }, 1000)
-      setTimeout(function() {
-        graduatesTitle.addClass('fadeOut')
-      }, 4000)
-      setTimeout(function() {
-        graduatesTitle.addClass('hidden')
-        disruptorTitle.removeClass('hidden')
-        disruptorTitle.addClass('fadeIn')
-      }, 5000)
-      setTimeout(function() {
-        titleContainer.addClass('fadeOut')
-      }, 9000)
-      setTimeout(function() {
-        filters.addClass('fadeIn')
-        graduates.addClass('fadeIn')
-      }, 9500)
-      setTimeout(function() {
-        scrollPrompt.removeClass('hidden')
+    setTimeout(function() {
+      weAre.addClass('fadeIn')
+    }, 750)
+    setTimeout(function() {
+      graduatesTitle.addClass('fadeIn')
+    }, 1000)
+    setTimeout(function() {
+      graduatesTitle.addClass('fadeOut')
+    }, 4000)
+    setTimeout(function() {
+      graduatesTitle.addClass('hidden')
+      disruptorTitle.removeClass('hidden')
+      disruptorTitle.addClass('fadeIn')
+    }, 5000)
+    setTimeout(function() {
+      titleContainer.addClass('fadeOut')
+    }, 9000)
+    setTimeout(function() {
+      filters.addClass('fadeIn')
+      graduates.addClass('fadeIn')
+    }, 9500)
+    setTimeout(function() {
+      scrollPrompt.removeClass('hidden')
 
-        window.onscroll = function (e) {
-          scrollPrompt.addClass('fadeOut')
-    }
+      window.onscroll = function (e) {
+        scrollPrompt.addClass('fadeOut')
+  }
 
-      }, 10000)
-
-        localStorage.setItem("hasCodeRunBefore", true);
-    }
-}
-
+    }, 10000)
 
 }
 

@@ -15,7 +15,6 @@ body.page-graduates {
   justify-content: center;
   align-items: center;
   z-index: 200;
-  // opacity: 0;
   pointer-events: none;
 
   &.fadeOut {
@@ -140,7 +139,7 @@ body.page-graduates {
   justify-content: center;
   height: 100vh;
   text-align: right;
-  // opacity: 0;
+  opacity: 0;
 
   &.fadeIn {
     animation-duration: 2s;
