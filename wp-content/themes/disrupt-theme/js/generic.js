@@ -686,7 +686,7 @@ function init_floatingOrb() {
 		});
 
 		$('header nav a').removeClass('current');
-		$('header nav a[data-hash=graduates]').addClass('current');
+		$('header nav a:last').addClass('current');
 	}
 }
 
