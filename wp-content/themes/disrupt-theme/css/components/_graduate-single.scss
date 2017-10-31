@@ -152,11 +152,23 @@
 
       .graduate-socials {
 
+        &:hover {
+          a {
+            opacity: .4;
+          }
+        }
+
         a {
           display: inline-flex;
           color: $white;
-          font-size: 2rem;
+          font-size: 1.5rem;
           margin-right: 4rem;
+          transition: opacity .3s ease, transform .5s ease;;
+
+          &:hover {
+            opacity: 1;
+            transform: translateY(-0.25rem);
+          }
         }
       }
     }
