@@ -559,7 +559,7 @@ function init_graduateSlider() {
 	if (slider.length) {
 		slider.slick({
 			fade: true,
-			dots: true,
+			dots: false,
 			nextArrow: '<span class="slick-arrow slick-next"><i class="far fa-chevron-right slick-prev" data-fa-transform="grow-8"></i></span>',
   		prevArrow: '<span class="slick-arrow slick-prev"><i class="far fa-chevron-left slick-next" data-fa-transform="grow-8"></i></span>',
 		});
