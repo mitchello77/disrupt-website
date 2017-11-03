@@ -2,7 +2,7 @@
 
 <section>
   <div class="graduates-introduction">
-    <h3 class="we-are disrupt dsrpt-horiztonal">We are</h3>
+    <h3 class="we-are disrupt dsrpt-horizontal">We are</h3>
     <div class="intro-title-container">
       <div class="graduates-title intro-title">
         <span>g</span>
@@ -15,7 +15,7 @@
         <span>e</span>
         <span>s</span>
       </div>
-      <div class="disruptor-title intro-title hidden disrupt dsrpt-rgb-shift loop">
+      <div class="disruptor-title intro-title hidden disrupt dsrpt-blocks">
         <span>d</span>
         <span>i</span>
         <span>s</span>

@@ -21,7 +21,7 @@
 	<script type='text/javascript'>
 		var THEME_URL = "<?php echo THEME_URL; ?>";
 		var ROOT_URL = "<?php echo ROOT_URL; ?>";
-	</script>	
+	</script>
 
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery-3.2.1.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery.easing.min.js'></script>
@@ -31,8 +31,8 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/slick/slick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/fontawesome/everything.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/generic.min.js'></script>
-	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/graduates/graduates.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/disrupt-text/disrupt-text.js'></script>
+	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/graduates/graduates.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/nameBackground/nameBackground.js'></script>
 
 

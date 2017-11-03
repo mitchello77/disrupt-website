@@ -52,8 +52,10 @@
   ------------------------------------------------------------------------------------------------- */
 var scrollData = {
   top: document.documentElement.scrollTop,
-  offset: 0
+  offset: 0,
+  target: 0
 };
+var graduateLayers = document.getElementsByClassName("graduate-group")
 var boxPositions = [-50];
 var dotClass = 'collapsed'
 var dotClassCutoff = -175
@@ -84,22 +86,29 @@ function setFilterMovement() {
 }
 
 function updateScrollOffset() {
-  scrollData.offset = document.documentElement.scrollTop - scrollData.top;
+  scrollData.target = document.documentElement.scrollTop - scrollData.top
 }
 
+function animateScroll() {
+  if (scrollData.offset !== scrollData.target) {
+    scrollData.offset += (scrollData.target - scrollData.offset) * 0.15
+  }
+  moveCamera()
+  window.requestAnimationFrame(animateScroll)
+}
+window.requestAnimationFrame(animateScroll)
+
 function moveCamera() {
-  updateScrollOffset()
-  var boxes = document.getElementsByClassName("graduate-group");
-  let numBoxes = boxes.length;
-  for (var i = 0; i < numBoxes; i++) {
+  let numLayers = graduateLayers.length;
+  for (var i = 0; i < numLayers; i++) {
     var pos = boxPositions[i] + scrollData.offset * zoomSpeed;
-    boxes[i].style.transform = `translate3d(0, 0, ${pos}px)`;
+    graduateLayers[i].style.transform = `translate3d(0, 0, ${pos}px)`;
 
     // Handle application of dot class
-    if (pos > dotClassCutoff && boxes[i].classList.contains(dotClass)) {
-      boxes[i].classList.remove(dotClass)
-    } else if (pos <= dotClassCutoff && !boxes[i].classList.contains(dotClass)) {
-      boxes[i].classList.add(dotClass)
+    if (pos > dotClassCutoff && graduateLayers[i].classList.contains(dotClass)) {
+      graduateLayers[i].classList.remove(dotClass)
+    } else if (pos <= dotClassCutoff && !graduateLayers[i].classList.contains(dotClass)) {
+      graduateLayers[i].classList.add(dotClass)
     }
 
     // Handle fade out
@@ -109,17 +118,17 @@ function moveCamera() {
 
       let blur = pct * blurMax
       let opacity = 1 - pct
-      boxes[i].style.opacity = opacity
-      boxes[i].style.filter = `blur(${blur}px)`
+      graduateLayers[i].style.opacity = opacity
+      graduateLayers[i].style.filter = `blur(${blur}px)`
     } else {
       // Catch-all effect reset
-      boxes[i].style.opacity = 1
-      boxes[i].style.filter = 'none';
+      graduateLayers[i].style.opacity = 1
+      graduateLayers[i].style.filter = 'none';
     }
   }
 }
 
-window.addEventListener("scroll", moveCamera, false);
+window.addEventListener("scroll", updateScrollOffset, false);
 
 /* SHOW NAME
   ------------------------------------------------------------------------------------------------- */
@@ -193,6 +202,7 @@ function playIntroduction() {
     var scrollPrompt = $('.scroll-prompt')
     var filters = $('.filters')
     var graduates = $('.graduates-viewport')
+    console.log(document.querySelector('.disruptor-title'))
 
     setTimeout(function() {
       weAre.addClass('fadeIn')
@@ -206,7 +216,7 @@ function playIntroduction() {
     setTimeout(function() {
       graduatesTitle.addClass('hidden')
       disruptorTitle.removeClass('hidden')
-      disruptorTitle.addClass('fadeIn')
+      window.DISRUPT.addDisruptions([document.querySelector('.disruptor-title')], false)
     }, 5000)
     setTimeout(function() {
       titleContainer.addClass('fadeOut')
@@ -220,8 +230,7 @@ function playIntroduction() {
 
       window.onscroll = function (e) {
         scrollPrompt.addClass('fadeOut')
-  }
-
+      }
     }, 10000)
 
 }
@@ -238,4 +247,6 @@ function playIntroduction() {
     // mouseMoveGradName();
     playIntroduction();
     handleFilters();
+
+    console.dir(window.DISRUPT)
   })

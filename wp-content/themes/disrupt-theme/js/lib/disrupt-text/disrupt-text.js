@@ -198,12 +198,12 @@ class DISRUPT {
        */
       'dsrpt-blocks': {
         setup: (canvas, domImage, generators) => {
-          let numblocks = 15
+          let numblocks = 30
           let blocks = []
           for (let i = 0; i < numblocks; i++) {
             let block = generators.randomRect(canvas)
 
-            let maxOffset = 20
+            let maxOffset = 15
 
             let xOff = Math.random() * maxOffset * 2 - maxOffset
             let yOff = Math.random() * maxOffset * 2 - maxOffset
@@ -216,7 +216,7 @@ class DISRUPT {
           }
 
           return {
-            runtime: 2500,
+            runtime: 3500,
             blocks: blocks
           }
         },
@@ -652,13 +652,14 @@ class DISRUPT {
     })
   }
 
-  addDisruptions (elems = null) {
+  addDisruptions (elems = null, autohide = true) {
     let me = this
 
     // Scan through DOM and find disruptable elements
     let disruptables
     if (elems === null) {
       disruptables = Array.from(document.querySelectorAll(`.${this.targetClass}:not(.${this.activeClass})`))
+      console.dir(disruptables)
     } else {
       disruptables = elems
     }
@@ -692,11 +693,10 @@ class DISRUPT {
 
           disruption.image = img
           disruption.canvas = canvas
-          if (elems !== null) {
+          disruption.hideOnInit = true
+          if (elems !== null && autohide) {
             disruption.canvas.style.visibility = 'hidden'
             disruption.hideOnInit = false
-          } else {
-            disruption.hideOnInit = true
           }
 
           me.disruptables[disruption.id] = disruption
@@ -744,8 +744,7 @@ class DISRUPT {
       let animFunction = disruption.animate
 
       // Hide original element
-      if (disruption.hideOnInit) {
-        console.log('hiding: ', hide)
+      if (d.hideOnInit) {
         d.elem.style.visibility = 'hidden'
       }
 
@@ -799,12 +798,8 @@ class DisruptAnimation {
   }
 }
 
-// Auto-create global instance and trigger disruptions
-window.addEventListener('load', () => {
-  window.DISRUPT = new DISRUPT()
-  window.DISRUPT.addDisruptions()
-  window.DISRUPT.setupHoverDisruptions()
-})
+// Auto-create global instance
+window.DISRUPT = new DISRUPT()
 
 },{"../vendor/html2canvas.min.js":2}],2:[function(require,module,exports){
 (function (global){
