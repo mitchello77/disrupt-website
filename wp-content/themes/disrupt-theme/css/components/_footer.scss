@@ -6,9 +6,10 @@ footer {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0 2rem 2rem;
+  padding: 2rem;
   align-items: center;
   z-index: 999;
+  background: linear-gradient(to top,#0a0d20,transparent);
 }
 
 .hidden {
