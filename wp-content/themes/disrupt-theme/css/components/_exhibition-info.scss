@@ -22,11 +22,13 @@ section.exhibition-info {
       &:nth-of-type(2) {
         .text {
           max-width: 50rem;
+          padding-left: 2rem;
 
           .button {
             overflow: hidden;
             position: relative;
             margin-right: 2rem;
+            margin-bottom: 2rem;
 
             &:last-of-type {
               margin-right: 0;
@@ -38,6 +40,32 @@ section.exhibition-info {
           }
         }
       }
+    }
+
+    @media (max-width: 932px) and (min-width: 769px) {
+      .text {
+        .button {
+          display: block;
+          text-align: center;
+          margin-right: 2rem !important;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .column:first-of-type {
+        display:  none;
+      }
+
+      .column {
+        flex: 1 1 100%;
+
+        .text {
+          margin-left: auto;
+          text-align: right;
+        }
+      }
+
     }
   }
 }

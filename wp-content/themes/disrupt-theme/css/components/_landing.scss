@@ -1,23 +1,6 @@
 section.landing {
   height: 100vh;
 
-  .orb {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    left: 0;
-    top: 0;
-    background-image: url('../img/orb.png');
-    background-position: center;
-    background-size: cover;
-    z-index: 1;
-    border-radius: 100%;
-    animation: float 20s infinite linear;
-    // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-    box-shadow: 0px -15px 50px 10px rgba($dark-blue, .8) inset;
-    display: none;
-  }
-
   .title-wrapper {
     position: absolute;
     top: 50%;
@@ -35,6 +18,7 @@ section.landing {
       letter-spacing: 4rem;
       font-family: $font-disrupt;
       display: inline-block;
+      transition: opacity 1s ease-in-out;
     }
 
     span:first-of-type {
@@ -56,6 +40,34 @@ section.landing {
       left: -20px;
       z-index: 1;
       animation: float 7.5s infinite linear;
+    }
+
+    @media (max-width: 769px) {
+      height: 300px;
+      width: 300px;
+      margin-left: -150px;
+      margin-top: -150px;
+
+      span {
+        font-size: 9rem;
+        position: relative;
+        letter-spacing: 1.5rem;
+      }
+
+      span:first-of-type {
+        left: -40px;
+        top: 90px;
+      }
+
+      span:nth-of-type(2) {
+        left: -40px;
+        top: 200px;
+      }
+
+      span:last-of-type {
+        left: -10px;
+        top: 120px;
+      }
     }
   }
 }
