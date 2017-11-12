@@ -185,3 +185,51 @@
     }
   }
 }
+
+.graduate-navigation {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-nav;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 1rem;
+  transition: transform 0.2s ease;
+
+  &::after {
+    opacity: 1;
+  }
+
+  &.left {
+    left: 0;
+
+    &:hover {
+      transform: translateX(1rem);
+      &::before {
+        position: absolute;
+        display: none;
+        content: "\f30a";
+        font-family: "Font Awesome 5 Light";
+        color: red;
+      }
+    }
+  }
+
+  &.right {
+    right: 0;
+
+    &:hover {
+      transform: translateX(-1rem);
+      &::after {
+        content: 'Next';
+        position: absolute;
+      }
+    }
+  }
+}
