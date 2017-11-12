@@ -56,6 +56,7 @@ var scrollData = {
   target: 0
 };
 var graduateLayers = document.getElementsByClassName("graduate-group")
+// var graduateCircle = document.getElementsByClassName("graduate")
 var boxPositions = [-50];
 var dotClass = 'collapsed'
 var dotClassCutoff = -175
@@ -119,11 +120,12 @@ function moveCamera() {
       let blur = pct * blurMax
       let opacity = 1 - pct
       graduateLayers[i].style.opacity = opacity
-      graduateLayers[i].style.filter = `blur(${blur}px)`
+      // graduateCircle[i].style.filter = `blur(${blur}px)`
+      // graduateLayers[i].style.filter = `blur(${blur}px)`
     } else {
       // Catch-all effect reset
       graduateLayers[i].style.opacity = 1
-      graduateLayers[i].style.filter = 'none';
+      // graduateCircle[i].style.filter = 'none';
     }
   }
 }
@@ -202,7 +204,8 @@ function playIntroduction() {
     var scrollPrompt = $('.scroll-prompt')
     var filters = $('.filters')
     var graduates = $('.graduates-viewport')
-    console.log(document.querySelector('.disruptor-title'))
+
+    $(this).scrollTop(0);
 
     setTimeout(function() {
       weAre.addClass('fadeIn')
@@ -247,6 +250,4 @@ function playIntroduction() {
     // mouseMoveGradName();
     playIntroduction();
     handleFilters();
-
-    console.dir(window.DISRUPT)
   })
