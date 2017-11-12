@@ -18,13 +18,6 @@
 			'DB_COLLATE' => ''
 		],
 
-		// 'local' => [
-		// 	'DB_HOST' => 'localhost',
-		// 	'DB_NAME' => 'disrupt_local',
-		// 	'DB_USER' => 'root',
-		// 	'DB_PASSWORD' => ''
-		// ],
-
 		'local' => [
 			'DB_HOST' => '45.125.247.27',
 			'DB_NAME' => 'zacharym_disrupt',
@@ -34,9 +27,9 @@
 
 		'staging' => [
 			'DB_HOST' => 'localhost',
-			'DB_NAME' => 'disrupt_staging',
-			'DB_USER' => 'root',
-			'DB_PASSWORD' => ''
+			'DB_NAME' => 'zacharym_disrupt_staging',
+			'DB_USER' => 'zacharym_disrupt_admin',
+			'DB_PASSWORD' => '9mGGEmDoMOiV'
 		],
 
 		'live' => [
