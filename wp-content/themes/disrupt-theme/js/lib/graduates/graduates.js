@@ -205,6 +205,8 @@ function playIntroduction() {
     var filters = $('.filters')
     var graduates = $('.graduates-viewport')
 
+    $(this).scrollTop(0);
+
     setTimeout(function() {
       weAre.addClass('fadeIn')
     }, 750)
@@ -248,5 +250,4 @@ function playIntroduction() {
     // mouseMoveGradName();
     playIntroduction();
     handleFilters();
-    $(this).scrollTop(0);
   })
