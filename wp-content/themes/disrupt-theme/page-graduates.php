@@ -15,7 +15,7 @@
         <span>e</span>
         <span>s</span>
       </div>
-      <div class="disruptor-title intro-title hidden disrupt dsrpt-blocks">
+      <div class="disruptor-title intro-title hidden disrupt dsrpt-rgb-shift loop">
         <span>d</span>
         <span>i</span>
         <span>s</span>
