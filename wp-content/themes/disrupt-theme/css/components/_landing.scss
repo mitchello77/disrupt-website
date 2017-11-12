@@ -11,6 +11,7 @@ section.landing {
     margin-top: -300px;
     white-space: nowrap;
     z-index: 1;
+    transition: opacity .4s ease-in-out, transform 1s ease-in-out;
 
     span {
       position: relative;
@@ -18,7 +19,6 @@ section.landing {
       letter-spacing: 4rem;
       font-family: $font-disrupt;
       display: inline-block;
-      transition: opacity 1s ease-in-out;
     }
 
     span:first-of-type {
@@ -49,24 +49,24 @@ section.landing {
       margin-top: -150px;
 
       span {
-        font-size: 9rem;
+        font-size: 7rem;
         position: relative;
-        letter-spacing: 1.5rem;
+        letter-spacing: 1rem;
       }
 
       span:first-of-type {
-        left: -40px;
-        top: 90px;
+        left: 0px;
+        top: 110px;
       }
 
       span:nth-of-type(2) {
-        left: -40px;
-        top: 200px;
+        left: 0px;
+        top: 190px;
       }
 
       span:last-of-type {
-        left: -10px;
-        top: 120px;
+        left: 20px;
+        top: 140px;
       }
     }
   }
