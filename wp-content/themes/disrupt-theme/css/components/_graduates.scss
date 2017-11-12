@@ -170,6 +170,7 @@ body.page-graduates {
 
 // test dsrupt title
 .intro-title-container {
+  position: relative;
   width: 100%;
 
   .intro-title {
@@ -181,6 +182,10 @@ body.page-graduates {
     width: 100%;
     text-transform: uppercase;
     opacity: 0;
+
+    &.disruptor-title {
+      opacity: 1;
+    }
 
     &.fadeIn {
       animation-duration: 2s;
