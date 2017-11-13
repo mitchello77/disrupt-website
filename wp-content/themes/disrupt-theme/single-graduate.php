@@ -2,7 +2,8 @@
 
 <section class="graduate-single">
   <div class="graduate-navigation left">
-    <h4>prev graduate</h4>
+    <div class="fal fa-long-arrow-left arrow-left"></div>
+    <div class="nav-text">prev</div>
   </div>
   <div class="container">
 
@@ -52,7 +53,8 @@
 
   </div> <!-- .container -->
   <div class="graduate-navigation right">
-    <h4>next graduate</h4>
+    <div class="nav-text">next</div>
+    <div class="fal fa-long-arrow-right arrow-right"></div>
   </div>
 </section> <!-- .graduate-single -->
 

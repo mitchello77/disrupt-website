@@ -199,24 +199,32 @@
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  padding: 0 1rem;
-  transition: transform 0.2s ease;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
 
-  &::after {
-    opacity: 1;
+  .nav-text {
+    position: absolute;
+    transition: transform 0.2s ease;
+    padding: 0.5rem;
+  }
+
+  .arrow-left, .arrow-right {
+    position: absolute;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0;
   }
 
   &.left {
     left: 0;
 
     &:hover {
-      transform: translateX(1rem);
-      &::before {
-        position: absolute;
-        display: none;
-        content: "\f30a";
-        font-family: "Font Awesome 5 Light";
-        color: red;
+      .nav-text {
+        transform: translateX(1rem);
+      }
+
+      .arrow-left {
+        transform: translateX(-0.5rem);
+        opacity: 1;
       }
     }
   }
@@ -225,10 +233,13 @@
     right: 0;
 
     &:hover {
-      transform: translateX(-1rem);
-      &::after {
-        content: 'Next';
-        position: absolute;
+      .nav-text {
+        transform: translateX(-1rem);
+      }
+
+      .arrow-right {
+        transform: translateX(0.5rem);
+        opacity: 1;
       }
     }
   }
