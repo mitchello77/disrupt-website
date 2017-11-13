@@ -383,6 +383,6 @@ function randInt(min, max) {
 window.addEventListener('load', () => {
   if ($('body.page-graduates').length > 0) {
     NAME_BG = new NameBackground('body.page-graduates')
-    NAME_BG.init()  
+    NAME_BG.init()
   }
 })

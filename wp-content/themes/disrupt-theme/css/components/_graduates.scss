@@ -51,6 +51,7 @@ body.page-graduates {
  display: flex;
  flex-direction: column;
  justify-content: center;
+ will-change: transform, opacity;
 
 
   @for $i from 10 through 1 {
