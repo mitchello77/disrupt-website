@@ -648,10 +648,15 @@ function init_floatingOrb() {
 	var graduates = $('.graduates-cta').offset().top + $('.graduates-cta').innerHeight();
 
 
-	// $('.floatingOrb').css({
-	// 	top: (scrollTop + (windowHeight / 2)) - ($('.floatingOrb').height() / 2),
-	// 	left: ($(window).width() / 2) - ($('.floatingOrb').width() / 2),
-	// });
+	console.log(scrollTop);
+
+	if (scrollTop > 25) {
+		$('.floatingOrb').removeClass('loaded');
+	} else {
+		$('.floatingOrb').addClass('loaded');
+	}
+
+	
   //
   //
 	// if (scrollTop > windowHeight / 3) {
@@ -712,16 +717,17 @@ function init_floatingOrb() {
 	// 	$('header nav a:last').addClass('current');
 	// }
 
-	window.requestAnimationFrame(init_floatingOrb)
 }
 
 $(document).ready(function(){
 	init_floatingOrb();
 
+	$('.floatingOrb').addClass('loaded');
+
 	// $(document).scroll(throttle(function() {
-	// $(document).scroll(function() {
+	$(document).scroll(function() {
 		window.requestAnimationFrame(init_floatingOrb)
-	// });
+	});
 	// }, 50));
 });
 

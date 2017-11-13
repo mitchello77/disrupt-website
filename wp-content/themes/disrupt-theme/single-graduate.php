@@ -9,8 +9,10 @@
         <div class="circle large">
           <div class="slider">
             <?php
-              foreach (get_field('graduate_slider') as  $slide) {
-                echo "<div class=\"slide\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
+              if (get_field('graduate_slider')) {
+                foreach (get_field('graduate_slider') as  $slide) {
+                  echo "<div class=\"slide\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
+                }
               }
             ?>
           </div> <!-- .slider -->
@@ -23,11 +25,11 @@
         <?php
 
           $term_list = wp_get_post_terms(get_the_ID(), 'expertise', array("fields" => "all"));
-
-          foreach ($term_list as $i => $term) {
-            $terms .= ($i > 0 ? ', ' : '').$term->name;
+          if ($term_list) {
+            foreach ($term_list as $i => $term) {
+              $terms .= ($i > 0 ? ', ' : '').$term->name;
+            }
           }
-
 
           echo "
             <span class=\"caption magenta\">".$terms."</span>

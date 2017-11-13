@@ -209,6 +209,16 @@ Example usage:
 /* KEYFRAMES
 ---------------------------------------------------------------------------------------------------- */
 
+@keyframes slideUp {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: inherit;
+  }
+}
+
 @keyframes addBlur {
   0% {
     filter: blur(0px);
