@@ -1,10 +1,6 @@
 <?php require_once('includes/header.inc'); ?>
 
 <section class="graduate-single">
-  <div class="graduate-navigation left">
-    <div class="fal fa-long-arrow-left arrow-left"></div>
-    <div class="nav-text">prev</div>
-  </div>
   <div class="container">
 
     <div class="wrapper">
@@ -52,9 +48,15 @@
     </div> <!-- .wrapper -->
 
   </div> <!-- .container -->
-  <div class="graduate-navigation right">
-    <div class="nav-text">next</div>
-    <div class="fal fa-long-arrow-right arrow-right"></div>
+  <div class="graduate-navigation-container">
+    <div class="graduate-navigation left">
+      <div class="fal fa-long-arrow-left arrow-left"></div>
+      <div class="nav-text">prev</div>
+    </div>
+    <div class="graduate-navigation right">
+      <div class="nav-text">next</div>
+      <div class="fal fa-long-arrow-right arrow-right"></div>
+    </div>
   </div>
 </section> <!-- .graduate-single -->
 

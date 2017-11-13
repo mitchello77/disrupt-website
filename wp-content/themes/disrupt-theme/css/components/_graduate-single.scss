@@ -186,6 +186,17 @@
   }
 }
 
+.graduate-navigation-container {
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+
 .graduate-navigation {
   writing-mode: vertical-lr;
   text-orientation: upright;
@@ -202,16 +213,36 @@
   padding: 0 1.5rem;
   font-size: 1.2rem;
 
+  @media (max-width: 768px) {
+    position: relative;
+    width: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 1.5rem;
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+  }
+
   .nav-text {
     position: absolute;
     transition: transform 0.2s ease;
     padding: 0.5rem;
+
+    @media (max-width: 768px) {
+      position: relative;
+    }
   }
 
   .arrow-left, .arrow-right {
     position: absolute;
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 0;
+
+    @media (max-width: 768px) {
+      position: relative;
+      opacity: 1;
+    }
   }
 
   &.left {
