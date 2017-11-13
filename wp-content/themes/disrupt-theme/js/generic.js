@@ -641,29 +641,44 @@ function init_floatingOrb() {
 	if ($('.floatingOrb').length < 1) {
 		return;
 	}
+
 	var scrollTop = $(window).scrollTop();
-	var scrollBottom = $(window).scrollTop() + ($(window).innerHeight());
-	var sponsors = $('.sponsors').offset().top + ($('.sponsors').innerHeight() / 2);
-	var exhibition = $('.exhibition-info').offset().top + ($('.exhibition-info').innerHeight() / 2);
-	var graduates = $('.graduates-cta').offset().top + ($('.graduates-cta').innerHeight() / 2);
-
-	$('.title-wrapper span').css({
-		opacity: Math.abs(scrollTop / ($(window).innerHeight()) - 1)
-	});
-
-	$('.floatingOrb').css({
-		top: ($(window).scrollTop() + ($(window).height() / 2)) - ($('.floatingOrb').height() / 2),
-		left: ($(window).width() / 2) - ($('.floatingOrb').width() / 2),
-	});
+	var windowHeight = $(window).innerHeight();
+	var scrollBottom = scrollTop + (windowHeight / 2);
+	var sponsors = $('.sponsors').offset().top + $('.sponsors').innerHeight();
+	var exhibition = $('.exhibition-info').offset().top + $('.exhibition-info').innerHeight();
+	var graduates = $('.graduates-cta').offset().top + $('.graduates-cta').innerHeight();
 
 
-	// if (scrollBottom < exhibition) {
+	console.log(scrollTop);
+
+	if (scrollTop > 25) {
+		$('.floatingOrb').removeClass('loaded');
+	} else {
+		$('.floatingOrb').addClass('loaded');
+	}
+
+	
+  //
+  //
+	// if (scrollTop > windowHeight / 3) {
 	// 	$('.floatingOrb').css({
-	// 		left: ($(window).width() / 2) - ($('.floatingOrb').innerWidth() / 2),
-	// 		// top: ($('.landing').innerHeight() / 2) - ($('.floatingOrb').innerWidth() / 2),
-	// 		// transform: 'scale(1.2)',
+	// 		opacity: .4
+	// 	});
+	// 	$('.title-wrapper').css({
+	// 		opacity: 0,
+	// 		transform: 'translateY(100px)'
+	// 	});
+	// } else {
+	// 	$('.floatingOrb, .title-wrapper').css({
 	// 		opacity: 1
 	// 	});
+	// 	$('.title-wrapper').css({
+	// 		opacity: 1,
+	// 		transform: 'translateY(0)'
+	// 	});
+	// }
+
   //
 	// 	$('header nav a').removeClass('current');
 	// 	$('header nav a[data-hash=home]').addClass('current');
@@ -672,8 +687,8 @@ function init_floatingOrb() {
 	// if (scrollBottom > exhibition) {
 	// 	$('.floatingOrb').css({
 	// 		left: $('.exhibition-info .container').offset().left + ($('.exhibition-info .container').width()),
-	// 		// top: (exhibition / 2),
-	// 		// transform: 'scale(1.5)',
+	// 		top: (exhibition / 2),
+	// 		transform: 'scale(1.5)',
 	// 		opacity: .4
 	// 	});
   //
@@ -704,16 +719,17 @@ function init_floatingOrb() {
 	// 	$('header nav a:last').addClass('current');
 	// }
 
-	window.requestAnimationFrame(init_floatingOrb)
 }
 
 $(document).ready(function(){
 	init_floatingOrb();
 
+	$('.floatingOrb').addClass('loaded');
+
 	// $(document).scroll(throttle(function() {
-	// $(document).scroll(function() {
+	$(document).scroll(function() {
 		window.requestAnimationFrame(init_floatingOrb)
-	// });
+	});
 	// }, 50));
 });
 

@@ -65,7 +65,16 @@ section.exhibition-info {
           text-align: right;
         }
       }
+    }
 
+    @media (max-width: 400px) {
+      .text {
+        .button {
+          display: block;
+          text-align: center;
+          margin-right: 0 !important;
+        }
+      }
     }
   }
 }

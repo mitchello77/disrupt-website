@@ -23,11 +23,11 @@
         <?php
 
           $term_list = wp_get_post_terms(get_the_ID(), 'expertise', array("fields" => "all"));
-
-          foreach ($term_list as $i => $term) {
-            $terms .= ($i > 0 ? ', ' : '').$term->name;
+          if ($term_list) {
+            foreach ($term_list as $i => $term) {
+              $terms .= ($i > 0 ? ', ' : '').$term->name;
+            }
           }
-
 
           echo "
             <span class=\"caption magenta\">".$terms."</span>

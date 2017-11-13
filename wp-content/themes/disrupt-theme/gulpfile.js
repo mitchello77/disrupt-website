@@ -20,7 +20,7 @@ gulp.task('default', ['watch', 'styles', 'scripts']);
 gulp.task('styles', function() {
 	gulp.src(['css/*.scss'])
 		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer('last 7 versions', 'safari 5', 'ie 10', 'opera 12.1', 'ios 6', 'android 4'))
+		.pipe(autoprefixer())
 		.pipe(uglifycss({
 			"max-line-len": 80
 		}))

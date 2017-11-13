@@ -1,15 +1,14 @@
 <?php require_once('includes/header.inc'); ?>
 
-  <div class="floatingOrb"></div>
+  <div class="floatingOrb">
+    <span>DI</span>
+    <span>SRU</span>
+    <span>PT</span>
+  </div> <!-- .floatingOrb -->
 
   <section class="landing" id="home">
     <div class="container">
-      <div class="title-wrapper">
-        <span>DI</span>
-        <span>SRU</span>
-        <span>PT</span>
 
-      </div> <!-- .title-wrapper -->
     </div> <!-- .container -->
   </section> <!-- .landing -->
 

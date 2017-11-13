@@ -22,4 +22,16 @@ section.sponsors {
       }
     }
   }
+
+  @media (max-width: 400px) {
+   .sponsor-logos {
+     img {
+       height: 5rem;
+
+       display: inline-block;
+       margin-right: 4rem;
+       margin-bottom: 4rem;
+     }
+   }
+  }
 }
