@@ -10,7 +10,7 @@
           <div class="slider">
             <?php
               foreach (get_field('graduate_slider') as  $slide) {
-                echo "<div class=\"slide\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
+                echo "<div class=\"slide disrupt dsrpt-horizontal loop\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
               }
             ?>
           </div> <!-- .slider -->
