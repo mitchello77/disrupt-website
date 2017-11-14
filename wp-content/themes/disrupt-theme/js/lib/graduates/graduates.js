@@ -90,11 +90,24 @@ function updateScrollOffset() {
   scrollData.target = document.documentElement.scrollTop - scrollData.top
 }
 
+let limiter = 0
+let limiterMax = 0
+
+// Limit performance if on battery power
+navigator.getBattery().then(batteryManager => {
+  if (batteryManager) {
+    limiterMax = 1 * (!batteryManager.charging)
+  }
+})
+
 function animateScroll() {
   if (scrollData.offset !== scrollData.target) {
     scrollData.offset += (scrollData.target - scrollData.offset) * 0.15
   }
-  moveCamera()
+  if (limiter++ === limiterMax) {
+    moveCamera()
+    limiter = 0
+  }
   window.requestAnimationFrame(animateScroll)
 }
 window.requestAnimationFrame(animateScroll)
@@ -248,6 +261,15 @@ function playIntroduction() {
     showGraduateName();
     filterHoverEffects();
     // mouseMoveGradName();
-    playIntroduction();
     handleFilters();
+
+    localStorage.removeItem('showedGraduatesIntro')
+
+    // Only play this once!
+    if (!localStorage.getItem('showedGraduatesIntro')) {
+      playIntroduction();
+      localStorage.setItem('showedGraduatesIntro', true)
+    } else {
+      $('.graduates-viewport').addClass('fadeIn')
+    }
   })

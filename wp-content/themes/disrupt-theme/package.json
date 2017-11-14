@@ -2,8 +2,11 @@
   "name": "wordpress-default",
   "version": "1.0.0",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
     "gulp-jsmin": "^0.1.5",
     "gulp-livereload": "^3.8.1",
     "gulp-notify": "^3.0.0",

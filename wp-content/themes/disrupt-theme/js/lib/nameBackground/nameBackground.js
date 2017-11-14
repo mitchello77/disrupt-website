@@ -77,6 +77,9 @@ class NameBackground {
     this.bumpRight = 0
     this.bumpChance = 0.15
 
+    this.lowPower = this.useLowPower()
+    this.lowPowerDraw = 0
+
     this.setTimer(0)
   }
 
@@ -105,6 +108,14 @@ class NameBackground {
   }
 
   // INIT FUNCTIONS
+
+  async useLowPower() {
+    const batteryManager = await navigator.getBattery()
+    if (batteryManager) {
+      return (!batteryManager.charging)
+    }
+    return false
+  }
 
   init () {
     this.initCanvas()
@@ -135,7 +146,6 @@ class NameBackground {
 
     this.ctx.font = `${this.fontSize}px Disrupt`
     this.ctx.fillStyle = '#20284C'
-
 
     this.targetNode.insertBefore(this.canvas, this.targetNode.firstChild)
   }
@@ -291,6 +301,7 @@ class NameBackground {
         } else {
           this.setTimer(this.bumpTimer)
           this.bumping = this.doBump()
+
           this.draw()
         }
       }
@@ -359,13 +370,18 @@ class NameBackground {
   }
 
   draw () {
-    this.clearCanvas()
-    for (let i = 0; i < this.numColumns; i++) {
-      this.ctx.drawImage(
-        this.srcImage,
-        i * this.columnWidth, 0, this.columnWidth, this.h,
-        i * this.columnWidth, this.columnOffset * this.columns[i], this.columnWidth, this.h
-      )
+    if (!this.lowPower || this.lowPowerDraw === 0) {
+      this.clearCanvas()
+      for (let i = 0; i < this.numColumns; i++) {
+        this.ctx.drawImage(
+          this.srcImage,
+          i * this.columnWidth, 0, this.columnWidth, this.h,
+          i * this.columnWidth, this.columnOffset * this.columns[i], this.columnWidth, this.h
+        )
+      }
+    }
+    if (this.lowPowerDraw++ > 0) {
+      this.lowPowerDraw = 0
     }
   }
 }

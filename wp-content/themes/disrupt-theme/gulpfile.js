@@ -1,6 +1,7 @@
 // Required Gulp Plugins
 var gulp            = require('gulp'),
 		sass            = require('gulp-sass'),
+		babel						= require('gulp-babel'),
 		gulpPipelog     = require('gulp-pipelog'),
 		autoprefixer    = require('gulp-autoprefixer'),
 		notify          = require('gulp-notify'),
@@ -37,6 +38,9 @@ gulp.task('styles', function() {
 // Scripts task
 gulp.task('scripts', function() {
 	gulp.src(["js/!(*min*).js"])
+		.pipe(babel({
+			presets: ['env']
+		}))
 		.pipe(jsmin())
 		.pipe(rename({
 			suffix: '.min'
