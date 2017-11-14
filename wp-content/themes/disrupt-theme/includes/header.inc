@@ -32,6 +32,7 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/fontawesome/everything.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/generic.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/disrupt-text/disrupt-text.js'></script>
+	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/text-scramble/textScramble.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/graduates/graduates.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/nameBackground/nameBackground.js'></script>
 

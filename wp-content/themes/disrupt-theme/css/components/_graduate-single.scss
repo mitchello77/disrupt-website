@@ -120,6 +120,7 @@
         background-size: cover;
         box-shadow: $inner-box-shadow;
         top: -12.5rem;
+        border-radius: 12.5rem;
 
         &:after {
           content: '';
