@@ -110,9 +110,13 @@ class NameBackground {
   // INIT FUNCTIONS
 
   async useLowPower() {
-    const batteryManager = await navigator.getBattery()
-    if (batteryManager) {
-      return (!batteryManager.charging)
+    try {
+      const batteryManager = await navigator.getBattery()
+      if (batteryManager) {
+        return (!batteryManager.charging)
+      }
+    } catch (e) {
+      console.warn('navigator.getBattery() not supported.')
     }
     return false
   }

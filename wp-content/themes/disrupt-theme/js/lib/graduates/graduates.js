@@ -87,22 +87,35 @@ function setFilterMovement() {
 }
 
 function updateScrollOffset() {
-  scrollData.target = document.documentElement.scrollTop - scrollData.top
+  console.log(document.documentElement.scrollTop)
+  scrollData.target = window.pageYOffset - scrollData.top
 }
 
 let limiter = 0
 let limiterMax = 0
+const isMac = (navigator.platform.toLowerCase().indexOf('mac') > -1)
 
 // Limit performance if on battery power
-navigator.getBattery().then(batteryManager => {
-  if (batteryManager) {
-    limiterMax = 1 * (!batteryManager.charging)
-  }
-})
+try {
+  navigator.getBattery().then(batteryManager => {
+    if (batteryManager) {
+      limiterMax = 1 * (!batteryManager.charging)
+    }
+  })
+} catch (e) {
+  console.warn('navigator.getBattery() not supported.')
+}
 
 function animateScroll() {
+  updateScrollOffset()
   if (scrollData.offset !== scrollData.target) {
-    scrollData.offset += (scrollData.target - scrollData.offset) * 0.15
+    if (isMac) {
+      // Mac does auto inertial scrolling
+      scrollData.offset = scrollData.target
+    } else {
+      // Fake inertial scrolling
+      scrollData.offset += (scrollData.target - scrollData.offset) * 0.15
+    }
   }
   if (limiter++ === limiterMax) {
     moveCamera()
@@ -142,8 +155,6 @@ function moveCamera() {
     }
   }
 }
-
-window.addEventListener("scroll", updateScrollOffset, false);
 
 /* SHOW NAME
   ------------------------------------------------------------------------------------------------- */
@@ -262,8 +273,6 @@ function playIntroduction() {
     filterHoverEffects();
     // mouseMoveGradName();
     handleFilters();
-
-    localStorage.removeItem('showedGraduatesIntro')
 
     // Only play this once!
     if (!localStorage.getItem('showedGraduatesIntro')) {
