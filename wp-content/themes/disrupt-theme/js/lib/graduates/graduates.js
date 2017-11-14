@@ -50,8 +50,10 @@
 
 /* Z AXIS SCROLL
   ------------------------------------------------------------------------------------------------- */
+
+const scrollZoomStart = 100000
 var scrollData = {
-  top: document.documentElement.scrollTop,
+  top: scrollZoomStart,
   offset: 0,
   target: 0
 };
@@ -87,19 +89,18 @@ function setFilterMovement() {
 }
 
 function updateScrollOffset() {
-  console.log(document.documentElement.scrollTop)
   scrollData.target = window.pageYOffset - scrollData.top
 }
 
 let limiter = 0
-let limiterMax = 0
+let lowPower = true
 const isMac = (navigator.platform.toLowerCase().indexOf('mac') > -1)
 
 // Limit performance if on battery power
 try {
   navigator.getBattery().then(batteryManager => {
     if (batteryManager) {
-      limiterMax = 1 * (!batteryManager.charging)
+      lowPower = (!batteryManager.charging)
     }
   })
 } catch (e) {
@@ -117,7 +118,7 @@ function animateScroll() {
       scrollData.offset += (scrollData.target - scrollData.offset) * 0.15
     }
   }
-  if (limiter++ === limiterMax) {
+  if (!lowPower || limiter++ === 1) {
     moveCamera()
     limiter = 0
   }
@@ -146,12 +147,15 @@ function moveCamera() {
       let blur = pct * blurMax
       let opacity = 1 - pct
       graduateLayers[i].style.opacity = opacity
-      // graduateCircle[i].style.filter = `blur(${blur}px)`
-      // graduateLayers[i].style.filter = `blur(${blur}px)`
+      if (!lowPower) {
+        graduateLayers[i].style.filter = `blur(${blur}px)`
+      }
     } else {
       // Catch-all effect reset
       graduateLayers[i].style.opacity = 1
-      // graduateCircle[i].style.filter = 'none';
+      if (!lowPower) {
+        graduateLayers[i].style.filter = 'none';
+      }
     }
   }
 }
@@ -251,17 +255,48 @@ function playIntroduction() {
     setTimeout(function() {
       filters.addClass('fadeIn')
       graduates.addClass('fadeIn')
+
+      // Start graduate zoom animation
+      $(scrollData).animate({ top: 0 }, {
+        duration: 1500,
+        easing: 'easeOutSine',
+        done: removeScrollBlockers
+      })
     }, 9500)
     setTimeout(function() {
+      scrollPrompt.addClass('fadeIn')
       scrollPrompt.removeClass('hidden')
 
       window.onscroll = function (e) {
         scrollPrompt.addClass('fadeOut')
       }
     }, 10000)
-
 }
 
+function blockScroll (event) {
+  event = (event || window.event)
+  if (event.preventDefault) {
+    event.preventDefault()
+  }
+  event.returnValue = false
+  return false
+}
+
+function addScrollBlockers () {
+  window.addEventListener("wheel", blockScroll)
+  window.addEventListener("mousewheel", blockScroll)
+  window.addEventListener("DOMMouseScroll", blockScroll)
+  window.addEventListener("touchmove", blockScroll)
+}
+
+function removeScrollBlockers () {
+  window.removeEventListener("wheel", blockScroll)
+  window.removeEventListener("mousewheel", blockScroll)
+  window.removeEventListener("DOMMouseScroll", blockScroll)
+  window.removeEventListener("touchmove", blockScroll)
+}
+
+addScrollBlockers()
 
   /* call all the functions
     ------------------------------------------------------------------------------------------------- */
@@ -274,11 +309,19 @@ function playIntroduction() {
     // mouseMoveGradName();
     handleFilters();
 
+    // Uncomment next line for testing intro
+    // localStorage.removeItem('showedGraduatesIntro')
+
     // Only play this once!
     if (!localStorage.getItem('showedGraduatesIntro')) {
       playIntroduction();
       localStorage.setItem('showedGraduatesIntro', true)
     } else {
+      // Skip intro
+      scrollData.top = 0
+      scrollData.offset = -1000
+      $('.filters').addClass('fadeIn')
       $('.graduates-viewport').addClass('fadeIn')
+      window.removeEventListener(blockScroll)
     }
   })
