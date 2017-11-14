@@ -9,14 +9,14 @@
         <div class="circle large">
           <div class="slider">
             <?php
-              foreach (get_field('graduate_slider') as  $slide) {
-                echo "<div class=\"slide disrupt dsrpt-horizontal loop\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
+              foreach (get_field('graduate_slider') as $slide) {
+                echo "<div class=\"slide\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
               }
             ?>
           </div> <!-- .slider -->
         </div> <!-- .circle -->
 
-        <div class="profile circle medium graduate" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div> <!-- .profile -->
+        <div class="profile circle medium graduate disrupt dsrpt-blocks" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div> <!-- .profile -->
       </div> <!-- .image -->
 
       <div class="text">

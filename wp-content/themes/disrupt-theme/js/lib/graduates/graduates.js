@@ -296,11 +296,22 @@ function removeScrollBlockers () {
   window.removeEventListener("touchmove", blockScroll)
 }
 
-addScrollBlockers()
+// For animating scrambled texts
+let scrambledTexts = []
+function animateScrambledTexts () {
+  for (let text of scrambledTexts) {
+    if (text.scrambler.update()) {
+      text.elem.innerHTML = text.scrambler.value
+    }
+  }
+  window.requestAnimationFrame(animateScrambledTexts)
+}
 
-  /* call all the functions
-    ------------------------------------------------------------------------------------------------- */
-  $(document).ready(function() {
+/* call all the functions
+  ------------------------------------------------------------------------------------------------- */
+$(document).ready(function() {
+  // ALL GRADUATES
+  if (document.querySelector('body').classList.contains('page-graduates')) {
     setBoxPositions();
     setFilterMovement();
     moveCamera();
@@ -308,6 +319,7 @@ addScrollBlockers()
     filterHoverEffects();
     // mouseMoveGradName();
     handleFilters();
+    addScrollBlockers()
 
     // Uncomment next line for testing intro
     // localStorage.removeItem('showedGraduatesIntro')
@@ -322,6 +334,34 @@ addScrollBlockers()
       scrollData.offset = -1000
       $('.filters').addClass('fadeIn')
       $('.graduates-viewport').addClass('fadeIn')
-      window.removeEventListener(blockScroll)
+      removeScrollBlockers()
     }
-  })
+  }
+
+  // SINGLE GRADUATE
+  if (document.querySelector('body').classList.contains('page-graduate')) {
+    window.DISRUPT.addDisruptions()
+    // Scramble text in
+
+    const gradName = document.querySelector('.graduate-single .text > h2')
+    const gradDesc = Array.from(document.querySelectorAll('.graduate-single .text > p'))
+
+    // Add and show title
+    gradName.classList.remove('hidden')
+    scrambledTexts.push({
+      elem: gradName,
+      scrambler: new DisruptedText(gradName.innerHTML, 50, 0.5, false)
+    })
+
+    // Add and show descriptions
+    for (let p of gradDesc) {
+      p.classList.remove('hidden')
+      scrambledTexts.push({
+        elem: p,
+        scrambler: new DisruptedText(p.innerHTML, 100, 0.25, false, true)
+      })
+    }
+
+    window.requestAnimationFrame(animateScrambledTexts)
+  }
+})
