@@ -43,7 +43,7 @@
               ".(get_field('graduate_instagram') ? "<a href=\"".get_field('graduate_instagram')."\" target=\"_blank\"><i class=\"fab fa-instagram icon\"></i></a>" : false)."
               ".(get_field('graduate_behance') ? "<a href=\"".get_field('graduate_behance')."\" target=\"_blank\"><i class=\"fab fa-behance icon\"></i></a>" : false)."
               ".(get_field('graduate_facebook') ? "<a href=\"".get_field('graduate_facebook')."\" target=\"_blank\"><i class=\"fab fa-facebook-f icon\"></i></a>" : false)."
-              ".(get_field('graduate_github') ? "<a href=\"".get_field('graduate_github')."\"> target=\"_blank\"<i class=\"fab fa-github icon\"></i></a>" : false)."
+              ".(get_field('graduate_github') ? "<a href=\"".get_field('graduate_github')."\" target=\"_blank\"></a><i class=\"fab fa-github icon\"></i></a>" : false)."
               ".(get_field('graduate_twitter') ? "<a href=\"".get_field('graduate_twitter')."\" target=\"_blank\"><i class=\"fab fa-twitter icon\"></i></a>" : false)."
             </div>
           ";
