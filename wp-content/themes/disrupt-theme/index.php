@@ -23,7 +23,8 @@
           <div class="text">
             <span class="caption magenta">Interactive and Visual Design</span>
             <h2>Disrupt Exhibition</h2>
-            <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of countless experimentations, where the 'ending' will always remain a mystery to even.</p>
+            <p>Be bold. Be daring. Be disruptive.</p>
+            <p>Disrupt is the Interactive and Visual Design exhibition for Queensland University of Technology's graduating class of 2017.</p>
             <a class="button" href="http://maps.apple.com/maps?daddr=5%20Musk%20Avenue,%20Kelvin%20Grove%20QLD%204059,%20Australia&dirflg=d">Get Directions</a>
             <a class="button" href="https://www.facebook.com/events/863477550472940/?acontext=%7B%22source%22%3A5%2C%22page_id_source%22%3A1338212982954191%2C%22action_history%22%3A[%7B%22surface%22%3A%22page%22%2C%22mechanism%22%3A%22main_list%22%2C%22extra_data%22%3A%22%7B%5C%22page_id%5C%22%3A1338212982954191%2C%5C%22tour_id%5C%22%3Anull%7D%22%7D]%2C%22has_source%22%3Atrue%7D">Facebook Event</a>
           </div>
@@ -37,7 +38,7 @@
       <div class="text">
         <span class="caption green">Thank you to our</span>
         <h2>Sponsors</h2>
-        <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of countless experimentations, where the 'ending' will always remain a mystery to even.</p>
+        <p>The Disrupt 2017 Exhibition would not have been possible without the generosity of our sponsors. Thank you for your support in showcasing the talent of the QUT IVD graduating class of 2017.</p>
       </div>
 
       <div class="sponsor-logos">
@@ -52,7 +53,7 @@
   <section class="graduates-cta" id="graduates">
     <div class="container">
       <div class="text">
-        <p>Thriving on the thrill and excitement of the unknown, Kim's creations are a product of.Thriving on the thrill and excitement of the unknown.</p>
+        <p>We are designers, we are innovators, we are disruptors. We are the QUT Interactive and Visual Design Graduates of 2017, disrupting the modern age of design.</p>
         <a class="button" href="<?php echo ROOT_URL ?>graduates">Our Graduates</a>
       </div>
     </div> <!-- .container -->
