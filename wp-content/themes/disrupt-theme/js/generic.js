@@ -650,17 +650,9 @@ function init_floatingOrb() {
 	var graduates = $('.graduates-cta').offset().top + $('.graduates-cta').innerHeight();
 
 
-	console.log(scrollTop);
-
-	if (scrollTop > 25) {
-		$('.floatingOrb').removeClass('loaded');
-	} else {
-		$('.floatingOrb').addClass('loaded');
+	if ((scrollBottom - 100) < (windowHeight / 2)) {
+		console.log("asd");
 	}
-
-	
-  //
-  //
 	// if (scrollTop > windowHeight / 3) {
 	// 	$('.floatingOrb').css({
 	// 		opacity: .4

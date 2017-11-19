@@ -212,7 +212,7 @@ function handleFilters() {
     var scrollPos = $(window).scrollTop();
 
     $('.filters li').each(function(index){
-      if (scrollPos >= Math.abs(boxPositions[index] + 50) / .1 && scrollPos > Math.abs(boxPositions[index - 1] + 50) / .1) {
+      if (scrollPos >= Math.abs(boxPositions[index] + 100) / .1 && scrollPos < Math.abs(boxPositions[index + 1] + 100) / .1) {
         $('.filters li').removeClass('selected');
         $('.filters li').eq(index).addClass('selected');
       }
@@ -220,6 +220,7 @@ function handleFilters() {
 
   });
 }
+
 
 // graduates cinematic intro
 

@@ -38,15 +38,15 @@
   <div class="filters">
     <ul>
       <?php
-      $taxonomies = get_object_taxonomies( (object) array( 'post_type' => 'graduate' ) );
+        $taxonomies = get_object_taxonomies( (object) array( 'post_type' => 'graduate' ) );
 
-      foreach( $taxonomies as $taxonomy ) {
-         $terms = get_terms( $taxonomy );
+        foreach( $taxonomies as $taxonomy ) {
+           $terms = get_terms( $taxonomy );
 
-         foreach( $terms as $term ) {
-           echo "<li>".$term->name."</li>";
+           foreach( $terms as $i => $term ) {
+             echo "<li ".($i == 0 ? "class=\"selected\"" : false).">".$term->name."</li>";
+           }
          }
-       }
       ?>
     </ul>
   </div>
@@ -66,34 +66,29 @@
 
           if ( $query->have_posts() ) {
             $i = 0;
+
+            echo "<div class=\"row\">";
+
             while ( $query->have_posts() ) {
               $query->the_post();
 
-              if ($i == 0 || $i == 4) {
-                if ($i == 4) {
-                  echo "</div>";
-                }
-
-                echo "<div class=\"row\">";
-              }
-
-              echo "
-                <div
-                  class=\"circle graduate background-image medium\"
-                  style=\"background-image: url(".get_the_post_thumbnail_url().");\"
-                  onclick=\"window.location.href = '".get_the_permalink()."'\"
-                >
-                  <div class=\"graduate-name hidden\">
-                    <h3>".get_the_title()."</h3>
+                echo "
+                  <div
+                    class=\"circle graduate background-image medium\"
+                    style=\"background-image: url(".get_the_post_thumbnail_url().");\"
+                    onclick=\"window.location.href = '".get_the_permalink()."'\"
+                  >
+                    <div class=\"graduate-name hidden\">
+                      <h3>".get_the_title()."</h3>
+                    </div>
                   </div>
-                </div>
-              ";
+                ";
+
 
               $i++;
             }
 
             echo "</div>";
-
           }
 
           echo "</div>";
