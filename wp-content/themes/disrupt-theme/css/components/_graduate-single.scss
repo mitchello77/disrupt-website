@@ -207,28 +207,23 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: $font-nav;
-  text-transform: uppercase;
-  font-weight: bold;
   cursor: pointer;
   padding: 0 1.5rem;
-  font-size: 1.2rem;
 
-  @media (max-width: 768px) {
-    position: relative;
-    width: auto;
-    display: inline-flex;
-    justify-content: space-between;
-    flex-direction: row;
-    font-size: 1.5rem;
-    writing-mode: horizontal-tb;
-    text-orientation: initial;
-  }
 
   .nav-text {
     position: absolute;
     transition: transform 0.2s ease;
     padding: 0.5rem;
+
+    a {
+      font-size: 1.2rem;
+      font-family: $font-nav;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $white;
+      text-decoration: none;
+    }
 
     @media (max-width: 768px) {
       position: relative;
@@ -271,6 +266,43 @@
 
       .arrow-right {
         transform: translateX(0.5rem);
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    width: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 1.5rem;
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+  }
+}
+
+.touchDevice {
+  .graduate-single {
+    .left {
+      .nav-text {
+        transform: translateX(2rem);
+      }
+
+      .arrow-left {
+        transform: translateX(0rem);
+        opacity: 1;
+      }
+    }
+
+    .right {
+      .nav-text {
+        transform: translateX(-2rem);
+      }
+
+      .arrow-right {
+        transform: translateX(0rem);
         opacity: 1;
       }
     }

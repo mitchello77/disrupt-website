@@ -9,8 +9,10 @@
         <div class="circle large">
           <div class="slider">
             <?php
-              foreach (get_field('graduate_slider') as $slide) {
-                echo "<div class=\"slide\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
+              if (get_field('graduate_slider')) {
+                foreach (get_field('graduate_slider') as $slide) {
+                  echo "<div class=\"slide\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
+                }
               }
             ?>
           </div> <!-- .slider -->
@@ -53,10 +55,10 @@
   <div class="graduate-navigation-container">
     <div class="graduate-navigation left">
       <div class="fal fa-long-arrow-left arrow-left"></div>
-      <div class="nav-text">prev</div>
+      <div class="nav-text"><?php echo previous_post_link( '%link', '%title' ) ?></div>
     </div>
     <div class="graduate-navigation right">
-      <div class="nav-text">next</div>
+      <div class="nav-text"><?php echo next_post_link( '%link', '%title' ) ?></div>
       <div class="fal fa-long-arrow-right arrow-right"></div>
     </div>
   </div>
