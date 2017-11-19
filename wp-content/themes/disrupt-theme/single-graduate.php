@@ -38,10 +38,10 @@
             <hr>
             <p>".get_field('graduate_philosophy')."</p>
             <div class=\"graduate-socials\">
-              ".(get_field('graduate_website') ? "<a href=\"".get_field('graduate_website')."\"><i class=\"fal fa-globe icon\"></i></a>" : false)."
-              ".(get_field('graduate_linkedin') ? "<a href=\"".get_field('graduate_linkedin')."\"><i class=\"fab fa-linkedin-in icon\"></i></a>" : false)."
-              ".(get_field('graduate_instagram') ? "<a href=\"".get_field('graduate_instagram')."\"><i class=\"fab fa-instagram icon\"></i></a>" : false)."
-              ".(get_field('graduate_behance') ? "<a href=\"".get_field('graduate_behance')."\"><i class=\"fab fa-behance icon\"></i></a>" : false)."
+              ".(get_field('graduate_website') ? "<a target=\"_blank\" href=\"".get_field('graduate_website')."\"><i class=\"fal fa-globe icon\"></i></a>" : false)."
+              ".(get_field('graduate_linkedin') ? "<a target=\"_blank\" href=\"".get_field('graduate_linkedin')."\"><i class=\"fab fa-linkedin-in icon\"></i></a>" : false)."
+              ".(get_field('graduate_instagram') ? "<a target=\"_blank\" href=\"".get_field('graduate_instagram')."\"><i class=\"fab fa-instagram icon\"></i></a>" : false)."
+              ".(get_field('graduate_behance') ? "<a target=\"_blank\" href=\"".get_field('graduate_behance')."\"><i class=\"fab fa-behance icon\"></i></a>" : false)."
             </div>
           ";
 
