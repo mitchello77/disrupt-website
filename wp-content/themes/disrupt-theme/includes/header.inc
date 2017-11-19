@@ -67,7 +67,13 @@
 		<nav role="navigation">
 			<a href="javascript:;" data-hash="home">Home</a>
 			<a href="javascript:;" data-hash="exhibition">Exhibition</a>
-			<img src="<?php echo THEME_URL ?>img/d_logo-web.svg" alt="">
+			<?php
+				if (is_front_page()) {
+					echo "<img src=\"".THEME_URL."img/d_logo-web.svg\" onclick=\"common_slideTo(body)\">";
+				} else {
+					echo "<img src=\"".THEME_URL."img/d_logo-web.svg\" onclick=\"window.location.href = '".ROOT_URL."'\">";
+				}
+			 ?>
 			<a href="javascript:;" data-hash="sponsors">Sponsors</a>
 			<a <?php echo is_page('graduates') || is_singular('graduate') ? 'class="current"' : false ?> href="<?php echo ROOT_URL.'graduates' ?>" >Graduates</a>
 		</nav>

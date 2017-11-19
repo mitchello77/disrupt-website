@@ -81,7 +81,7 @@
                 <div
                   class=\"circle graduate background-image medium\"
                   style=\"background-image: url(".get_the_post_thumbnail_url().");\"
-                  onclick=\"window.open('".get_the_permalink()."')\"
+                  onclick=\"window.location.href = '".get_the_permalink()."'\"
                 >
                   <div class=\"graduate-name hidden\">
                     <h3>".get_the_title()."</h3>
