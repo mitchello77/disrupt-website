@@ -44,6 +44,7 @@
               ".(get_field('graduate_behance') ? "<a href=\"".get_field('graduate_behance')."\"><i class=\"fab fa-behance icon\"></i></a>" : false)."
               ".(get_field('graduate_facebook') ? "<a href=\"".get_field('graduate_facebook')."\"><i class=\"fab fa-facebook-f icon\"></i></a>" : false)."
               ".(get_field('graduate_github') ? "<a href=\"".get_field('graduate_github')."\"><i class=\"fab fa-github icon\"></i></a>" : false)."
+              ".(get_field('graduate_twitter') ? "<a href=\"".get_field('graduate_twitter')."\"><i class=\"fab fa-twitter icon\"></i></a>" : false)."
             </div>
           ";
 
