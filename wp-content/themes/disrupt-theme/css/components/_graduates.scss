@@ -90,18 +90,11 @@ body.page-graduates {
   box-shadow: -1px 9px 25px 6px rgba($background, 0.6);
   transition: background .2s ease;
   overflow: hidden;
+  animation: scaleIn 0.2s ease;
 
 
   h2 {
     margin: 0;
-  }
-
-  &:hover {
-    @include buttonBackgroundGlitch(graduateNameAnim, $navy, $blue, $neon-pink, normal);
-
-    h2 {
-      transform: translateX(10px);
-    }
   }
 
 }

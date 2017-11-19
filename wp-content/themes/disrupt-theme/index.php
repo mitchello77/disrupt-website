@@ -42,7 +42,7 @@
       </div>
 
       <div class="sponsor-logos">
-        <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/9a/PlayStation_1_Logo.png/revision/latest?cb=20100130082645" alt="">
+        <img src="<?php echo THEME_URL ?>img/tanda.png" alt="">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/SEGA_logo.png" alt="">
         <img src="https://vignette2.wikia.nocookie.net/logopedia/images/3/3c/Nintendo_logo.png/revision/latest?cb=20121219042620" alt="">
       </div>
