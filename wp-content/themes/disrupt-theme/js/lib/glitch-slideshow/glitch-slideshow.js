@@ -20,6 +20,11 @@ class GlitchSlideshow {
     this.glitchFunction = this.startGlitch.bind(this)
     this.doGlitchFunction = this.doGlitch.bind(this)
 
+    // Click event
+    this.tapFunction = this.handleTap.bind(this)
+    this.target.addEventListener('click', this.tapFunction)
+
+    this.nextChange = null
     this.scheduleChange()
   }
 
@@ -88,7 +93,15 @@ class GlitchSlideshow {
 
   // Schedule for the image to change
   scheduleChange () {
-    window.setTimeout(this.glitchFunction, this.waitTime)
+    this.nextChange = window.setTimeout(this.glitchFunction, this.waitTime)
+  }
+
+  // Skip waiting for the next transition
+  handleTap () {
+    if (!this.glitching) {
+      window.clearTimeout(this.nextChange)
+      this.startGlitch()
+    }
   }
 }
 
