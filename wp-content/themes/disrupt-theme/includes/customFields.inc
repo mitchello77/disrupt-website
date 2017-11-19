@@ -25,8 +25,7 @@
   				'key' => 'graduate_instagram',
   				'label' => 'Instagram',
   				'name' => 'graduate_instagram',
-  				'type' => 'text',
-          'prepend' => '@',
+  				'type' => 'url',
           'wrapper' => [
             'width' => '50%'
           ]
@@ -44,6 +43,24 @@
   				'key' => 'graduate_linkedin',
   				'label' => 'LinkedIn',
   				'name' => 'graduate_linkedin',
+  				'type' => 'url',
+          'wrapper' => [
+            'width' => '50%'
+          ]
+  			],
+        [
+  				'key' => 'graduate_facebook',
+  				'label' => 'Facebook',
+  				'name' => 'graduate_facebook',
+  				'type' => 'url',
+          'wrapper' => [
+            'width' => '50%'
+          ]
+  			],
+        [
+  				'key' => 'graduate_github',
+  				'label' => 'Github',
+  				'name' => 'graduate_github',
   				'type' => 'url',
           'wrapper' => [
             'width' => '50%'

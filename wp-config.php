@@ -20,7 +20,7 @@
 
 		'local' => [
 			'DB_HOST' => '45.125.247.27',
-			'DB_NAME' => 'zacharym_disrupt_staging',
+			'DB_NAME' => 'zacharym_disrupt',
 			'DB_USER' => 'zacharym_disrupt_admin',
 			'DB_PASSWORD' => '9mGGEmDoMOiV'
 		],
