@@ -38,10 +38,20 @@
             <hr>
             <p>".get_field('graduate_philosophy')."</p>
             <div class=\"graduate-socials\">
+<<<<<<< HEAD
               ".(get_field('graduate_website') ? "<a target=\"_blank\" href=\"".get_field('graduate_website')."\"><i class=\"fal fa-globe icon\"></i></a>" : false)."
               ".(get_field('graduate_linkedin') ? "<a target=\"_blank\" href=\"".get_field('graduate_linkedin')."\"><i class=\"fab fa-linkedin-in icon\"></i></a>" : false)."
               ".(get_field('graduate_instagram') ? "<a target=\"_blank\" href=\"".get_field('graduate_instagram')."\"><i class=\"fab fa-instagram icon\"></i></a>" : false)."
               ".(get_field('graduate_behance') ? "<a target=\"_blank\" href=\"".get_field('graduate_behance')."\"><i class=\"fab fa-behance icon\"></i></a>" : false)."
+=======
+              ".(get_field('graduate_website') ? "<a href=\"".get_field('graduate_website')."\" target=\"_blank\"><i class=\"fal fa-globe icon\"></i></a>" : false)."
+              ".(get_field('graduate_linkedin') ? "<a href=\"".get_field('graduate_linkedin')."\" target=\"_blank\"><i class=\"fab fa-linkedin-in icon\"></i></a>" : false)."
+              ".(get_field('graduate_instagram') ? "<a href=\"".get_field('graduate_instagram')."\" target=\"_blank\"><i class=\"fab fa-instagram icon\"></i></a>" : false)."
+              ".(get_field('graduate_behance') ? "<a href=\"".get_field('graduate_behance')."\" target=\"_blank\"><i class=\"fab fa-behance icon\"></i></a>" : false)."
+              ".(get_field('graduate_facebook') ? "<a href=\"".get_field('graduate_facebook')."\" target=\"_blank\"><i class=\"fab fa-facebook-f icon\"></i></a>" : false)."
+              ".(get_field('graduate_github') ? "<a href=\"".get_field('graduate_github')."\"> target=\"_blank\"<i class=\"fab fa-github icon\"></i></a>" : false)."
+              ".(get_field('graduate_twitter') ? "<a href=\"".get_field('graduate_twitter')."\" target=\"_blank\"><i class=\"fab fa-twitter icon\"></i></a>" : false)."
+>>>>>>> 4f63615a7f169c263a031b9f5b108c5176b3531f
             </div>
           ";
 
