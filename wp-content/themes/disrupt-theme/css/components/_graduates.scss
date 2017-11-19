@@ -1,7 +1,7 @@
 /* GRADUATES
 ---------------------------------------------------------------------------------------------------- */
 body.page-graduates {
-  height: 16500px;
+  height: 12904px;
 }
 
 .graduates-introduction {
@@ -100,11 +100,10 @@ body.page-graduates {
 }
 
 .row {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .graduate {
-
   &:hover {
     transform: translate3d(0px, -10px, 0) scale(1.025);
     cursor: pointer;

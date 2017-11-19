@@ -67,10 +67,12 @@
           if ( $query->have_posts() ) {
             $i = 0;
 
-            echo "<div class=\"row\">";
-
             while ( $query->have_posts() ) {
               $query->the_post();
+
+              if ($i === 0) {
+                echo "<div class=\"row\">";
+              }
 
                 echo "
                   <div
@@ -83,6 +85,11 @@
                     </div>
                   </div>
                 ";
+
+                if (($i == ceil($query->found_posts / 2) - 1) && $query->found_posts > 4) {
+                  echo "</div>";
+                  echo "<div class=\"row\">";
+                }
 
 
               $i++;
