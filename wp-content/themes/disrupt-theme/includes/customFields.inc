@@ -66,6 +66,15 @@
             'width' => '50%'
           ]
   			],
+        [
+  				'key' => 'graduate_twitter',
+  				'label' => 'Twitter',
+  				'name' => 'graduate_twitter',
+  				'type' => 'url',
+          'wrapper' => [
+            'width' => '50%'
+          ]
+  			],
   			[
   				'key' => 'graduate_description',
   				'label' => 'Exhibit Piece Description',
