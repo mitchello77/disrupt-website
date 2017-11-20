@@ -259,10 +259,15 @@
       font-weight: bold;
       color: $white;
       text-decoration: none;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
     }
 
     @media (max-width: 768px) {
       position: relative;
+      letter-spacing: 0.3rem;
     }
   }
 
