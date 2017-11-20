@@ -170,6 +170,10 @@ body.page-graduates {
   position: relative;
   width: 100%;
 
+  @media (max-width: 500px) {
+    width: 87%;
+  }
+
   .intro-title {
     font-family: $font-disrupt;
     font-size: 10rem;
@@ -179,6 +183,10 @@ body.page-graduates {
     width: 100%;
     text-transform: uppercase;
     opacity: 0;
+
+    @media (max-width: 500px) {
+      font-size: 5.5rem;
+    }
 
     &.disruptor-title {
       opacity: 1;
