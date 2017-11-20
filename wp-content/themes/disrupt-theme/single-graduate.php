@@ -3,10 +3,7 @@
 <?php
   // Function to turn a graduate_slider slide image into a base64 string
   // ALL IMAGES MUST BE .JPG FOR THE EFFECT TO WORK NICELY
-  function create_base64_image ($slide) {
-    // Get URL and type
-    $url = $slide['image']['url'];
-
+  function create_base64_image ($url) {
     // Get base64 image
     $img = @file_get_contents($url);
     if ($img === FALSE) {
@@ -17,15 +14,22 @@
   }
 
   // Create base64 image array
-  $b64Images = array_map(create_base64_image, get_field('graduate_slider'));
-
-  function add_quotes($str) {
-    return '"' . $str . '"';
+  $b64Images = "";
+  foreach (get_field('graduate_slider') as $slide) {
+    $url = $slide['image']['url'];
+    $img = @file_get_contents($url);
+    $dataUrl = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
+    if ($img !== FALSE) {
+      // Return a 1px black GIF (fallback)
+      $dataUrl = 'data:image/jpg;base64,' . base64_encode($img);
+    }
+    $b64Images .= $dataUrl . ',';
   }
+  rtrim($b64Images, ',');
 
   // Print JS to init slider
   echo '<script type="text/javascript">';
-  echo '$(document).ready(function(){initGlitchSlideshow([' . join(',', array_map("add_quotes", $b64images)) . '])})';
+  echo '$(document).ready(function(){initGlitchSlideshow([' . $b64images . '])})';
   echo '</script>'
 ?>
 
