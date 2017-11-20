@@ -16,7 +16,7 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <div class="image" style="background-image: url('<?php echo THEME_URL ?>img/image-exhibition.jpg')"></div>
+          <div class="image" style="background-image: url('<?php echo THEME_URL ?>img/exhibition.jpg')"></div>
         </div> <!-- .column -->
 
         <div class="column">
