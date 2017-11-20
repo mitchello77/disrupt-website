@@ -5,6 +5,7 @@
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 	<meta http-equiv='content-type' content='text/html; charset=utf-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, minimal-ui, user-scalable=0'>
+	<title>Disrupt 17</title>
 	<?php
 		if (ENVIRONMENT !== 'live') {
 			echo "<meta name='robots' content='noindex, nofollow'>";
@@ -27,6 +28,7 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery.easing.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery.mobile.custom.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery.mobile.swipeupdown.min.js'></script>
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/retina/retina.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/slick/slick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/fontawesome/everything.min.js'></script>
