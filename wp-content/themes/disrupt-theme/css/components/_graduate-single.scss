@@ -3,6 +3,29 @@
 .graduate-single {
   height: 100vh;
 
+  canvas {
+    border-radius: 100% !important;
+    overflow: hidden;
+  }
+
+  &.noWorks {
+    .circle.large {
+      display: none;
+    }
+
+    .profile {
+      margin: auto;
+      top: auto !important;
+      max-width: 45rem;
+      border-radius: 100% !important;
+      overflow: hidden;
+    }
+
+    .image {
+      margin-bottom: 0 !important;
+    }
+  }
+
   @media (max-width: 768px) {
     height: auto !important;
     min-height: 100vh;

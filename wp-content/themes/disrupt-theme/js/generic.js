@@ -685,7 +685,7 @@ function init_floatingOrb() {
 			$('header nav a[data-hash=sponsors]').addClass('current');
 	}
 
-	if ($(window).scrollTop() + $(window).innerHeight() > $(document).innerHeight() - 200) {
+	if ($(window).scrollTop() + $(window).innerHeight() > $(document).innerHeight() - 100) {
 			$('.floatingOrb').css({
 				top: graduates + $('.graduates-cta').innerHeight(),
 				left: '0%',

@@ -1,39 +1,41 @@
 <?php require_once('includes/header.inc'); ?>
 
 <?php
-  // Function to turn a graduate_slider slide image into a base64 string
-  // ALL IMAGES MUST BE .JPG FOR THE EFFECT TO WORK NICELY
-  function create_base64_image ($url) {
-    // Get base64 image
-    $img = @file_get_contents($url);
-    if ($img === FALSE) {
-      // Return a 1px black GIF (fallback)
-      return 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
+  if (get_field('graduate_slider')) {
+    // Function to turn a graduate_slider slide image into a base64 string
+    // ALL IMAGES MUST BE .JPG FOR THE EFFECT TO WORK NICELY
+    function create_base64_image ($url) {
+      // Get base64 image
+      $img = @file_get_contents($url);
+      if ($img === FALSE) {
+        // Return a 1px black GIF (fallback)
+        return 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
+      }
+      return 'data:image/jpg;base64,' . base64_encode($img);
     }
-    return 'data:image/jpg;base64,' . base64_encode($img);
-  }
 
-  // Create base64 image array
-  $b64Images = "";
-  foreach (get_field('graduate_slider') as $slide) {
-    $url = $slide['image']['url'];
-    $img = @file_get_contents($url);
-    $dataUrl = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
-    if ($img) {
-      // Return a 1px black GIF (fallback)
-      $dataUrl = 'data:image/jpg;base64,' . base64_encode($img);
+    // Create base64 image array
+    $b64Images = "";
+    foreach (get_field('graduate_slider') as $slide) {
+      $url = $slide['image']['url'];
+      $img = @file_get_contents($url);
+      $dataUrl = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
+      if ($img) {
+        // Return a 1px black GIF (fallback)
+        $dataUrl = 'data:image/jpg;base64,' . base64_encode($img);
+      }
+      $b64Images .= '"' . $dataUrl . '",';
     }
-    $b64Images .= '"' . $dataUrl . '",';
-  }
-  rtrim($b64Images, ',');
+    rtrim($b64Images, ',');
 
-  // Print JS to init slider
-  echo '<script type="text/javascript">';
-  echo '$(document).ready(function(){initGlitchSlideshow([' . $b64Images . '])})';
-  echo '</script>'
+    // Print JS to init slider
+    echo '<script type="text/javascript">';
+    echo '$(document).ready(function(){initGlitchSlideshow([' . $b64Images . '])})';
+    echo '</script>';
+  }
 ?>
 
-<section class="graduate-single">
+<section class="graduate-single <?php echo !get_field('graduate_slider') ? 'noWorks' : false  ?>">
   <div class="container">
 
     <div class="wrapper">
@@ -68,7 +70,7 @@
               ".(get_field('graduate_instagram') ? "<a href=\"".get_field('graduate_instagram')."\" target=\"_blank\"><i class=\"fab fa-instagram icon\"></i></a>" : false)."
               ".(get_field('graduate_behance') ? "<a href=\"".get_field('graduate_behance')."\" target=\"_blank\"><i class=\"fab fa-behance icon\"></i></a>" : false)."
               ".(get_field('graduate_facebook') ? "<a href=\"".get_field('graduate_facebook')."\" target=\"_blank\"><i class=\"fab fa-facebook-f icon\"></i></a>" : false)."
-              ".(get_field('graduate_github') ? "<a href=\"".get_field('graduate_github')."\" target=\"_blank\"></a><i class=\"fab fa-github icon\"></i></a>" : false)."
+              ".(get_field('graduate_github') ? "<a href=\"".get_field('graduate_github')."\" target=\"_blank\"><i class=\"fab fa-github icon\"></i></a>" : false)."
               ".(get_field('graduate_twitter') ? "<a href=\"".get_field('graduate_twitter')."\" target=\"_blank\"><i class=\"fab fa-twitter icon\"></i></a>" : false)."
             </div>
           ";
