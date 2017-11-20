@@ -1,5 +1,38 @@
 <?php require_once('includes/header.inc'); ?>
 
+<?php
+  // Function to turn a graduate_slider slide image into a base64 string
+  // ALL IMAGES MUST BE .JPG FOR THE EFFECT TO WORK NICELY
+  function create_base64_image ($url) {
+    // Get base64 image
+    $img = @file_get_contents($url);
+    if ($img === FALSE) {
+      // Return a 1px black GIF (fallback)
+      return 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
+    }
+    return 'data:image/jpg;base64,' . base64_encode($img);
+  }
+
+  // Create base64 image array
+  $b64Images = "";
+  foreach (get_field('graduate_slider') as $slide) {
+    $url = $slide['image']['url'];
+    $img = @file_get_contents($url);
+    $dataUrl = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
+    if ($img) {
+      // Return a 1px black GIF (fallback)
+      $dataUrl = 'data:image/jpg;base64,' . base64_encode($img);
+    }
+    $b64Images .= '"' . $dataUrl . '",';
+  }
+  rtrim($b64Images, ',');
+
+  // Print JS to init slider
+  echo '<script type="text/javascript">';
+  echo '$(document).ready(function(){initGlitchSlideshow([' . $b64Images . '])})';
+  echo '</script>'
+?>
+
 <section class="graduate-single">
   <div class="container">
 
@@ -7,15 +40,7 @@
 
       <div class="image">
         <div class="circle large">
-          <div class="slider">
-            <?php
-              if (get_field('graduate_slider')) {
-                foreach (get_field('graduate_slider') as $slide) {
-                  echo "<div class=\"slide\" style=\"background-image: url(".$slide['image']['url'].")\"></div>";
-                }
-              }
-            ?>
-          </div> <!-- .slider -->
+          <div class="img-container"></div>
         </div> <!-- .circle -->
 
         <div class="profile circle medium graduate disrupt dsrpt-blocks" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div> <!-- .profile -->

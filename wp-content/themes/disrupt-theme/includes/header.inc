@@ -35,6 +35,7 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/text-scramble/textScramble.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/graduates/graduates.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/nameBackground/nameBackground.js'></script>
+	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/glitch-slideshow/glitch-slideshow.js'></script>
 
 
 	<!-- FAVICON -->
