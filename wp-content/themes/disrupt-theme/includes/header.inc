@@ -27,6 +27,7 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery.easing.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery.mobile.custom.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/jquery/jquery.mobile.swipeupdown.min.js'></script>
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/retina/retina.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/slick/slick.min.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/fontawesome/everything.min.js'></script>

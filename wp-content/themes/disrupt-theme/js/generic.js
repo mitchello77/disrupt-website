@@ -303,7 +303,28 @@ $.fn.extend({
 	}
 });
 
+/**
+ * Add randomly add random chars to a string
+ * @param {number} intensity - Intensity of symbols added.
+ * @param {character[]} [chars] - Characters to add randomly.
+ */
+String.prototype.scramble = function(n, char) {
+  var arr = this.split(''),
+      char= char || ['!','@','#','$','%','^','&','*','(',')','_','-','+','=','|',':',';',"'",'"','<','>','.',',','?','\\','/','{','}'];
 
+  while(n--) {
+    arr.splice(Math.floor(Math.random() * (arr.length+1)), 0, char[Math.floor(Math.random() * (char.length+1))]);
+  }
+
+  return arr.join('');
+}
+
+/**
+ * Randomly reorder the characters in a string
+ */
+String.prototype.shuffle = function() {
+  return this.split('').sort(function(){return 0.5-Math.random()}).join('');
+}
 
 /* COMMON FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------ */
@@ -713,6 +734,25 @@ $(window).on('resize.a', function() {
 	init_floatingOrb();
 });
 
+/* TITLE SCRAMBLE
+------------------------------------------------------------------------------------------------------------------------ */
+
+/**
+ * Shuffle the Document Title on loop.
+ * @param {number} delay - ms tnterval to Scramble on .
+ * @param {number} restore - ms to display the scrambled text for.
+ * @param {number} intensity - Intensity of symbols added.
+ * @param {character[]} [chars] - Characters to add randomly.
+ */
+function documentTitleDisrupter(delay, restore, intensity, chars) {
+  var org = document.title;
+  setInterval(function() {
+      document.title = org.shuffle().scramble(intensity, chars);
+      setTimeout(function(){
+        document.title = org;
+      }, restore);
+  }, delay);
+};
 
 /* WINDOW EVENTS
 ------------------------------------------------------------------------------------------------------------------------ */
@@ -732,6 +772,8 @@ $(document).ready(function() {
 
 	retinajs();
 	common_escBlurFields();
+	documentTitleDisrupter(2000, 1000, 3);
+	FastClick.attach(document.body);
 });
 
 // Resize
