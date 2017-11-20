@@ -1,6 +1,6 @@
 section.sponsors {
   margin-bottom: -4rem;
-  
+
   .text {
     max-width: 50rem;
     margin-bottom: 5rem;
@@ -11,13 +11,7 @@ section.sponsors {
       height: 4rem;
       margin-right: 5rem;
       transition: all 0.2s ease;
-      cursor: pointer;
       margin-bottom: 4rem;
-
-      &:hover {
-        // opacity: 1;
-        // filter: grayscale(0);
-      }
 
       &:last-of-type {
         margin-right: 0;
