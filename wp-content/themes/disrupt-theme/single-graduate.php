@@ -19,17 +19,17 @@
     $url = $slide['image']['url'];
     $img = @file_get_contents($url);
     $dataUrl = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
-    if ($img !== FALSE) {
+    if ($img) {
       // Return a 1px black GIF (fallback)
       $dataUrl = 'data:image/jpg;base64,' . base64_encode($img);
     }
-    $b64Images .= $dataUrl . ',';
+    $b64Images .= '"' . $dataUrl . '",';
   }
   rtrim($b64Images, ',');
 
   // Print JS to init slider
   echo '<script type="text/javascript">';
-  echo '$(document).ready(function(){initGlitchSlideshow([' . $b64images . '])})';
+  echo '$(document).ready(function(){initGlitchSlideshow([' . $b64Images . '])})';
   echo '</script>'
 ?>
 
