@@ -37,7 +37,7 @@ This website uses code and technologies from several open source packages.
 
 See also the list of [contributors](https://github.com/zacharymctague/disrupt-website/contributors) who participated in this project.
 
-Also check out the [splash] (https://github.com/kelvinoshea/disrupt-splash) developed by the same team.
+Also check out the [splash site](https://github.com/kelvinoshea/disrupt-splash) developed by the same team.
 
 ## License
 
