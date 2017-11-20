@@ -1,10 +1,10 @@
 /* FLOATING ORB
 ---------------------------------------------------------------------------------------------------- */
 .floatingOrb {
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -50%);
   height: 700px;
   width: 700px;
   display: block;
@@ -19,13 +19,14 @@
   background-size: cover;
 
   opacity: 0;
-  transition: transform 2s ease-in-out, opacity 1.5s 1s ease-in-out;  
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out, top 1s ease-in-out, left 1s ease-in-out;
 
-  &.loaded {
-    transform: translate(-50%, -50%);
-    opacity: 1;
+  &.hideText {
+    span {
+      opacity: 0 !important;
+      transition: opacity 1s ease-in-out;
+    }
   }
-
 
   span {
     display: none;

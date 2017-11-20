@@ -20,13 +20,19 @@ html, body {
 	background-color: $background;
 	font-family: $font-body;
 	color: $white;
+	background-image: url('../img/background-exhibition.png');
 
 	&:not(.page-graduates) {
-		background-image: url('../img/background-exhibition.png');
 		background-position: center;
 		background-size: cover;
 		background-repeat: repeat;
-	}	
+	}
+
+	&.page-graduates {
+		background-attachment: fixed;
+		background-size: 100% auto;
+
+	}
 
 
 	@media (max-width: 768px) {

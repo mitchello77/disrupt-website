@@ -645,72 +645,55 @@ function init_floatingOrb() {
 	var scrollTop = $(window).scrollTop();
 	var windowHeight = $(window).innerHeight();
 	var scrollBottom = scrollTop + (windowHeight / 2);
-	var sponsors = $('.sponsors').offset().top + $('.sponsors').innerHeight();
-	var exhibition = $('.exhibition-info').offset().top + $('.exhibition-info').innerHeight();
-	var graduates = $('.graduates-cta').offset().top + $('.graduates-cta').innerHeight();
+	var sponsors = $('.sponsors').offset().top;
+	var exhibition = $('.exhibition-info').offset().top;
+	var graduates = $('.graduates-cta').offset().top;
 
-
-	if ((scrollBottom - 100) < (windowHeight / 2)) {
-		console.log("asd");
+	if (scrollTop > 100) {
+		$('.floatingOrb').addClass('hideText')
+	} else {
+		$('.floatingOrb').removeClass('hideText')
 	}
-	// if (scrollTop > windowHeight / 3) {
-	// 	$('.floatingOrb').css({
-	// 		opacity: .4
-	// 	});
-	// 	$('.title-wrapper').css({
-	// 		opacity: 0,
-	// 		transform: 'translateY(100px)'
-	// 	});
-	// } else {
-	// 	$('.floatingOrb, .title-wrapper').css({
-	// 		opacity: 1
-	// 	});
-	// 	$('.title-wrapper').css({
-	// 		opacity: 1,
-	// 		transform: 'translateY(0)'
-	// 	});
-	// }
 
-  //
-	// 	$('header nav a').removeClass('current');
-	// 	$('header nav a[data-hash=home]').addClass('current');
-	// }
-  //
-	// if (scrollBottom > exhibition) {
-	// 	$('.floatingOrb').css({
-	// 		left: $('.exhibition-info .container').offset().left + ($('.exhibition-info .container').width()),
-	// 		top: (exhibition / 2),
-	// 		transform: 'scale(1.5)',
-	// 		opacity: .4
-	// 	});
-  //
-	// 	$('header nav a').removeClass('current');
-	// 	$('header nav a[data-hash=exhibition]').addClass('current');
-	// }
-  //
-	// if (scrollBottom > sponsors) {
-	// 	$('.floatingOrb').css({
-	// 		left: $('.sponsors .container').offset().left + ($('.sponsors .container').width()),
-	// 		// top: (sponsors - 250),
-	// 		// transform: 'scale(2)'
-	// 	});
-  //
-	// 	$('header nav a').removeClass('current');
-	// 	$('header nav a[data-hash=sponsors]').addClass('current');
-	// }
-  //
-	// if (scrollBottom > graduates) {
-	// 	$('.floatingOrb').css({
-	// 		left: $('.graduates-cta .container').offset().left - 250,
-	// 		top: (graduates + 250),
-	// 		transform: 'scale(2.5)'
-	// 	});
-	// }
-  //
-	// 	$('header nav a').removeClass('current');
-	// 	$('header nav a:last').addClass('current');
-	// }
+	if (scrollBottom < exhibition) {
+		$('.floatingOrb').css({
+			top: $('.landing').innerHeight() / 2,
+			left: '50%',
+			opacity: '1'
+		});
+		$('header nav a').removeClass('current');
+		$('header nav a[data-hash=home]').addClass('current');
+	}
 
+	if (scrollBottom > exhibition) {
+			$('.floatingOrb').css({
+				top: exhibition + ($('.exhibition-info').innerHeight() / 2),
+				left: '100%',
+				opacity: '.2'
+			});
+			$('header nav a').removeClass('current');
+			$('header nav a[data-hash=exhibition]').addClass('current');
+	}
+
+	if (scrollBottom > sponsors) {
+			$('.floatingOrb').css({
+				top: sponsors + ($('.sponsors').innerHeight() / 2),
+				left: '0%',
+				transform: 'scale(1) translate(-50%, -50%)'
+			});
+			$('header nav a').removeClass('current');
+			$('header nav a[data-hash=sponsors]').addClass('current');
+	}
+
+	if ($(window).scrollTop() + $(window).innerHeight() > $(document).innerHeight() - 200) {
+			$('.floatingOrb').css({
+				top: graduates + $('.graduates-cta').innerHeight(),
+				left: '0%',
+				transform: 'scale(2) translate(0%, 0%)'
+			});
+			$('header nav a').removeClass('current');
+			$('header nav a[data-hash=sponsors]').next().addClass('current');
+	}
 }
 
 $(document).ready(function(){
