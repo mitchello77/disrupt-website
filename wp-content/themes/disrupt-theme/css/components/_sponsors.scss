@@ -8,14 +8,12 @@ section.sponsors {
     img {
       height: 4rem;
       margin-right: 5rem;
-      filter: grayscale(1);
-      transition: all 0.2s ease; 
-      opacity: .6;
+      transition: all 0.2s ease;
       cursor: pointer;
 
       &:hover {
-        opacity: 1;
-        filter: grayscale(0);
+        // opacity: 1;
+        // filter: grayscale(0);
       }
 
       &:last-of-type {
