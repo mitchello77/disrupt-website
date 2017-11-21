@@ -16,6 +16,7 @@
 	<!-- GENERIC CSS -->
 	<link type='text/css' rel='stylesheet' href='<?php echo THEME_URL; ?>js/lib/slick/slick.css'>
 	<link type='text/css' rel='stylesheet' href='<?php echo THEME_URL; ?>css/style.css'>
+	<link href="https://fonts.googleapis.com/css?family=Karla|Saira+Condensed:100,400,700" rel="stylesheet"> 
 
 
 	<!-- GENERIC JS -->
