@@ -9,6 +9,12 @@ document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function() {
 	$_GET[decode(arguments[1])] = decode(arguments[2]);
 });
 
+// Clear service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+    registration.unregister();
+  })
+};
 
 
 /* HELPER FUNCTIONS
