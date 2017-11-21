@@ -659,7 +659,6 @@ class DISRUPT {
     let disruptables
     if (elems === null) {
       disruptables = Array.from(document.querySelectorAll(`.${this.targetClass}:not(.${this.activeClass})`))
-      console.dir(disruptables)
     } else {
       disruptables = elems
     }

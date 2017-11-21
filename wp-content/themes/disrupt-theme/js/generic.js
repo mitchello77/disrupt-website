@@ -731,7 +731,6 @@ $(document).ready(function(){
 	// $(document).scroll(throttle(function() {
 	$(document).scroll(function() {
 		window.requestAnimationFrame(init_floatingOrb)
-		console.log($(window).scrollTop());
 	});
 	// }, 50));
 });
