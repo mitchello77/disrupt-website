@@ -16,7 +16,7 @@
 	<!-- GENERIC CSS -->
 	<link type='text/css' rel='stylesheet' href='<?php echo THEME_URL; ?>js/lib/slick/slick.css'>
 	<link type='text/css' rel='stylesheet' href='<?php echo THEME_URL; ?>css/style.css'>
-	<link href="https://fonts.googleapis.com/css?family=Karla|Saira+Condensed:100,400,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Karla|Saira+Condensed:100,400,700" rel="stylesheet">
 
 
 	<!-- GENERIC JS -->
@@ -37,7 +37,7 @@
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/disrupt-text/disrupt-text.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/text-scramble/textScramble.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/graduates/graduates.js'></script>
-	<!-- <script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/nameBackground/nameBackground.js'></script> -->
+	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/nameBackground/nameBackground.js'></script>
 	<script type='text/javascript' src='<?php echo THEME_URL; ?>js/lib/glitch-slideshow/glitch-slideshow.js'></script>
 
 

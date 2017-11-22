@@ -716,7 +716,8 @@ function init_floatingOrb() {
 			$('.floatingOrb').css({
 				top: graduates + $('.graduates-cta').innerHeight(),
 				left: '0%',
-				transform: 'scale(2) translate(0%, 0%)'
+				transform: 'scale(2) translate(0%, 0%)',
+				opacity: 0.7,
 			});
 			$('header nav a').removeClass('current');
 			$('header nav a[data-hash=sponsors]').next().addClass('current');

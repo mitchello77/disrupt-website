@@ -142,11 +142,13 @@ class NameBackground {
     // Set up and place the canvas
     this.canvas.width = this.w
     this.canvas.height = this.h
-    this.canvas.style.position = 'fixed'
+    this.canvas.style.position = 'absolute'
     this.canvas.style.left = '-1vw'
     this.canvas.style.width = '102vw'
     this.canvas.style.height = '100vh'
-    this.canvas.style.opacity = 0.7
+    this.canvas.style.opacity = 0.8
+    this.canvas.style.top = '-10rem'
+    this.canvas.style.zIndex = -1
 
     this.ctx.font = `${this.fontSize}px Disrupt`
     this.ctx.fillStyle = '#20284C'
@@ -401,8 +403,8 @@ function randInt(min, max) {
 // This effect is desktop only
 
 window.addEventListener('load', () => {
-  if ($('body.page-graduates').length > 0) {
-    NAME_BG = new NameBackground('body.page-graduates')
+  if ($('#graduates').length > 0) {
+    NAME_BG = new NameBackground('#graduates')
     NAME_BG.init()
   }
 })
