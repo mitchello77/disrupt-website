@@ -1,3 +1,53 @@
+// /* MOUSE INTERACTIONS
+// ------------------------------------------------------------------------------------------------------------------------ */
+//
+// var horizon = 0,
+// 		vertical = 0,
+// 		mouseX,
+// 		mouseY,
+// 		range = 1;
+//
+// function gradsFollowMouse() {
+// 	horizon = ((range * 2) * (mouseX / $(document).width())) - range;
+// 	vertical = -(((range * 2) * (mouseY / $(window).height())) - range);
+// 	$(".third").css("transform", "rotateX(" + vertical + "deg) rotateY(" + horizon + "deg)");
+// }
+//
+// function resetSplash() {
+// 	$(".third").css("transform", "rotateX(0deg) rotateY(0deg)");
+// }
+//
+// $(document).on('mousemove.page-graduates', throttle(function (e) {
+// 	mouseX = e.pageX;
+// 	mouseY = e.pageY;
+// 	gradsFollowMouse();
+// }, 25));
+//
+// /* THROTTLE
+//   ------------------------------------------------------------------------------------------------- */
+//   function throttle(fn, threshhold, scope) {
+//       threshhold || (threshhold = 250);
+//       var last,
+//           deferTimer;
+//       return function() {
+//           var context = scope || this;
+//
+//           var now = +new Date,
+//               args = arguments;
+//           if (last && now < last + threshhold) {
+//               // hold on to it
+//               clearTimeout(deferTimer);
+//               deferTimer = setTimeout(function() {
+//                   last = now;
+//                   fn.apply(context, args);
+//               }, threshhold);
+//           } else {
+//               last = now;
+//               fn.apply(context, args);
+//           }
+//       };
+//     }
+
 /* Z AXIS SCROLL
   ------------------------------------------------------------------------------------------------- */
 
@@ -12,7 +62,7 @@ var graduateLayers = document.getElementsByClassName("graduate-group")
 var boxPositions = [-50];
 var dotClass = 'collapsed'
 var dotClassCutoff = -175
-var zoomSpeed = 0.1 // 1 is 1:1 with scroll speed
+var zoomSpeed = 0.2 // 1 is 1:1 with scroll speed
 
 var fadeoutThreshold = {
   min: 20,
@@ -32,7 +82,7 @@ function setFilterMovement() {
   $(".filters li").each(function(index){
     $(this).on('click', function() {
       $('html, body').animate({
-        scrollTop: Math.abs(boxPositions[index] + 50) / .1
+        scrollTop: Math.abs(boxPositions[index] + 50) / zoomSpeed
       }, 200);
     });
   });
@@ -162,7 +212,7 @@ function handleFilters() {
     var scrollPos = $(window).scrollTop();
 
     $('.filters li').each(function(index){
-      if (scrollPos >= Math.abs(boxPositions[index] + 100) / .1 && scrollPos < Math.abs(boxPositions[index + 1] + 100) / .1) {
+      if (scrollPos >= Math.abs(boxPositions[index] + 100) / zoomSpeed && scrollPos < Math.abs(boxPositions[index + 1] + 100) / zoomSpeed) {
         $('.filters li').removeClass('selected');
         $('.filters li').eq(index).addClass('selected');
       }
