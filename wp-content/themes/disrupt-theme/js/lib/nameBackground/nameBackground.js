@@ -146,7 +146,7 @@ class NameBackground {
     this.canvas.style.left = '-1vw'
     this.canvas.style.width = '102vw'
     this.canvas.style.height = '100vh'
-    this.canvas.style.opacity = 0.8
+    this.canvas.style.opacity = 0.75
     this.canvas.style.top = '-10rem'
     this.canvas.style.zIndex = -1
 
