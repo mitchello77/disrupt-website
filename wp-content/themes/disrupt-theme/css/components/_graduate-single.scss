@@ -19,6 +19,12 @@
       max-width: 45rem;
       border-radius: 100% !important;
       overflow: hidden;
+
+      @media (max-width: 500px) {
+        max-width: 30rem !important;
+        max-height: 30rem !important;
+      }
+
     }
 
     .image {

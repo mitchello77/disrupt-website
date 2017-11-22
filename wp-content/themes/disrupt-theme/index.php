@@ -1,7 +1,7 @@
 <?php require_once('includes/header.inc'); ?>
 
   <div class="floatingOrb">
-    <span>DI</span>
+    <span class="disrupt dsrpt-rgb-shift">DI</span>
     <span>SRU</span>
     <span>PT</span>
   </div> <!-- .floatingOrb -->
