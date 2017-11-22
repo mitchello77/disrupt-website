@@ -9,6 +9,12 @@ document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function() {
 	$_GET[decode(arguments[1])] = decode(arguments[2]);
 });
 
+// Clear service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+    registration.unregister();
+  })
+};
 
 
 /* HELPER FUNCTIONS
@@ -725,7 +731,6 @@ $(document).ready(function(){
 	// $(document).scroll(throttle(function() {
 	$(document).scroll(function() {
 		window.requestAnimationFrame(init_floatingOrb)
-		console.log($(window).scrollTop());
 	});
 	// }, 50));
 });

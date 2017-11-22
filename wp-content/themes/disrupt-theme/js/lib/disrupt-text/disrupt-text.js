@@ -388,7 +388,7 @@ class DISRUPT {
             this.glitchBars = []
             for (let i = 0; i < numBars; i++) {
               this.glitchBars.push(new function () {
-                this.w = 0
+                this.w = 1
                 this.h = 1
                 this.x = 0
                 this.y = 0
@@ -406,7 +406,7 @@ class DISRUPT {
                 }
 
                 this.updateSize = () => {
-                  this.w = Math.random() * canvas.width
+                  this.w = Math.max(1, Math.random() * canvas.width)
                   let xLeft = canvas.width - this.w
                   this.x = Math.random() * xLeft
                 }
@@ -659,7 +659,6 @@ class DISRUPT {
     let disruptables
     if (elems === null) {
       disruptables = Array.from(document.querySelectorAll(`.${this.targetClass}:not(.${this.activeClass})`))
-      console.dir(disruptables)
     } else {
       disruptables = elems
     }
