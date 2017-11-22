@@ -12,7 +12,7 @@ var graduateLayers = document.getElementsByClassName("graduate-group")
 var boxPositions = [-50];
 var dotClass = 'collapsed'
 var dotClassCutoff = -175
-var zoomSpeed = 0.2 // 1 is 1:1 with scroll speed
+var zoomSpeed = 0.1 // 1 is 1:1 with scroll speed
 
 var fadeoutThreshold = {
   min: 20,
@@ -32,7 +32,7 @@ function setFilterMovement() {
   $(".filters li").each(function(index){
     $(this).on('click', function() {
       $('html, body').animate({
-        scrollTop: Math.abs(boxPositions[index] + 50) / zoomSpeed
+        scrollTop: Math.abs(boxPositions[index] + 50) / .1
       }, 200);
     });
   });
@@ -142,7 +142,7 @@ function handleFilters() {
     var scrollPos = $(window).scrollTop();
 
     $('.filters li').each(function(index){
-      if (scrollPos >= Math.abs(boxPositions[index] + 100) / zoomSpeed && scrollPos < Math.abs(boxPositions[index + 1] + 100) / zoomSpeed) {
+      if (scrollPos >= Math.abs(boxPositions[index] + 100) / .1 && scrollPos < Math.abs(boxPositions[index + 1] + 100) / .1) {
         $('.filters li').removeClass('selected');
         $('.filters li').eq(index).addClass('selected');
       }
